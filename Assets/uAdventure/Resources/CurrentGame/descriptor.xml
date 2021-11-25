@@ -6,14 +6,17 @@
   <application-identifier>
   </application-identifier>
   <configuration keepShowing="no" keyboard-navigation="disabled" defaultClickAction="showDetails" perspective="regular" dragBehaviour="considerNonTargets" show-save-load="yes" show-reset="yes" autosave="no" save-on-suspend="no" restore-after-open="no">
-    <gui type="contextual" inventoryPosition="top_bottom" />
+    <gui type="contextual" inventoryPosition="none" />
     <mode playerTransparent="yes" />
     <graphics mode="windowed" />
   </configuration>
-  <extension-objects />
+  <extension-objects>
+    <tracker rawCopy="yes" storageType="LOCAL" traceFormat="CSV" host="" trackingCode="" flushInterval="3" debug="no" />
+  </extension-objects>
   <contents>
     <chapter path="chapter1.xml">
-      <title>ChapterTitle</title>
+      <title>
+      </title>
       <description>
       </description>
     </chapter>

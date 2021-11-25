@@ -4,4 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/uAdventure/Scenes/_Scene1.unity
+    guid: b352354f2b25ab44dbc72d700538ae19
+  - enabled: 1
+    path: Assets/uAdventure/Scenes/_MenuScene.unity
+    guid: 2aa8f75754fe0a045afd951c9013ed6b
+  - enabled: 1
+    path: Assets/uAdventure/Scenes/Quiniela.unity
+    guid: 48c45867413c27645bd159efbae4e25a
+  m_configObjects: {}
