@@ -19,7 +19,7 @@ public class BotonQuiniela : MonoBehaviour
     public void OnClick()
     {
         ColorBlock aux = button.colors;
-        rm.ModifyValue(-valueMod);
+        //rm.ModifyValue(-valueMod);
         aux.normalColor = Color.yellow;
         aux.highlightedColor = Color.yellow;
         aux.selectedColor = Color.yellow;
