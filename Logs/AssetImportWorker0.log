@@ -15,11 +15,11 @@ D:/Pablo/4/1Cuatri/JS/ProyectoFinal_JS
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-64407
+56259
 Successfully changed project path to: D:/Pablo/4/1Cuatri/JS/ProyectoFinal_JS
 D:/Pablo/4/1Cuatri/JS/ProyectoFinal_JS
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 115.73 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 110.76 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.13f1 (71691879b7f5)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.13f1/Editor/Data/Resources/UnitySubsystems
@@ -35,83 +35,22 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.13f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.13f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.13f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56808
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56696
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.13f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.004161 seconds.
+Registered in 0.003740 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 104.29 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 91.76 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.723 seconds
+- Completed reload, in  1.593 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.018583 seconds.
+Registered in 0.016922 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.55 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Loading config data at: Assets/uAdventure/Resources/config_editor.xml
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-uAdventure.Editor.ConfigData:.ctor (string) (at D:/Pablo/4/1Cuatri/JS/ProyectoFinal_JS_ZIP/Assets/uAdventure/Editor/Engine logic/Controllers/Config/ConfigData.cs:426)
-uAdventure.Editor.ConfigData:LoadFromXML (string) (at D:/Pablo/4/1Cuatri/JS/ProyectoFinal_JS_ZIP/Assets/uAdventure/Editor/Engine logic/Controllers/Config/ConfigData.cs:363)
-uAdventure.Editor.Controller:.cctor () (at D:/Pablo/4/1Cuatri/JS/ProyectoFinal_JS_ZIP/Assets/uAdventure/Editor/Engine logic/Controllers/Controller.cs:473)
-System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-(Filename: D:/Pablo/4/1Cuatri/JS/ProyectoFinal_JS_ZIP/Assets/uAdventure/Editor/Engine logic/Controllers/Config/ConfigData.cs Line: 426)
-
-Mono: successfully reloaded assembly
-- Completed reload, in  2.042 seconds
-Platform modules already initialized, skipping
-========================================================================
-Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
-Refreshing native plugins compatible for Editor in 1.81 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3261 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 123.4 MB.
-System memory in use after: 123.6 MB.
-
-Unloading 88 unused Assets to reduce memory usage. Loaded Objects now: 3637.
-Total: 7.825800 ms (FindLiveObjects: 0.488000 ms CreateObjectMapping: 0.125000 ms MarkObjects: 7.080400 ms  DeleteObjects: 0.129800 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  path: Assets/uAdventure/__Scripts/Bet.cs
-  artifactKey: Guid(267e4f921337d9e4894446b70f859fa9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/uAdventure/__Scripts/Bet.cs using Guid(267e4f921337d9e4894446b70f859fa9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16d8dbaaa55f4df8306a037ca24739a7') in 0.052694 seconds 
-  Import took 0.059032 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000345 seconds.
-  path: Assets/uAdventure/__Scripts/BetManager.cs
-  artifactKey: Guid(ab5c86eef90879547ba8237ec91bb979) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/uAdventure/__Scripts/BetManager.cs using Guid(ab5c86eef90879547ba8237ec91bb979) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96b1c0b225c2ba32f1250ec8c83bf247') in 0.009647 seconds 
-  Import took 0.016730 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.016850 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.64 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 1.52 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Loading config data at: Assets/uAdventure/Resources/config_editor.xml
 UnityEngine.StackTraceUtility:ExtractStackTrace ()
@@ -127,16 +66,19 @@ UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
 (Filename: Assets/uAdventure/Editor/Engine logic/Controllers/Config/ConfigData.cs Line: 426)
 
 Mono: successfully reloaded assembly
-- Completed reload, in  1.603 seconds
+- Completed reload, in  1.717 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 2.89 ms, found 3 plugins.
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
+Refreshing native plugins compatible for Editor in 1.42 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3236 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 121.4 MB.
-System memory in use after: 121.7 MB.
+Unloading 3261 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 123.4 MB.
+System memory in use after: 123.6 MB.
 
-Unloading 79 unused Assets to reduce memory usage. Loaded Objects now: 3640.
-Total: 7.118100 ms (FindLiveObjects: 0.376800 ms CreateObjectMapping: 0.107900 ms MarkObjects: 6.583900 ms  DeleteObjects: 0.047700 ms)
+Unloading 88 unused Assets to reduce memory usage. Loaded Objects now: 3637.
+Total: 7.333300 ms (FindLiveObjects: 0.390100 ms CreateObjectMapping: 0.128200 ms MarkObjects: 6.690700 ms  DeleteObjects: 0.122600 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -149,9 +91,136 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
+Received Import Request.
+  path: Assets/uAdventure/__Scripts
+  artifactKey: Guid(4d3a2e96e57befb438c35bf8f0ae7b10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/uAdventure/__Scripts using Guid(4d3a2e96e57befb438c35bf8f0ae7b10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1bc4aa376b44d20000e864b8641552b') in 0.048452 seconds 
+  Import took 0.054399 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.684599 seconds.
+  path: Assets/uAdventure/__Scripts
+  artifactKey: Guid(4d3a2e96e57befb438c35bf8f0ae7b10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/uAdventure/__Scripts using Guid(4d3a2e96e57befb438c35bf8f0ae7b10) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1bc4aa376b44d20000e864b8641552b') in 0.004930 seconds 
+  Import took 0.014440 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.163451 seconds.
+  path: Assets/uAdventure/__Scripts/Bet.cs
+  artifactKey: Guid(267e4f921337d9e4894446b70f859fa9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/uAdventure/__Scripts/Bet.cs using Guid(267e4f921337d9e4894446b70f859fa9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb7a5c5ea3d4e4aaaac8cea918098766') in 0.045727 seconds 
+  Import took 0.052950 seconds .
+
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 27.27 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 77 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 58.9 MB.
+System memory in use after: 59.1 MB.
+
+Unloading 77 unused Assets to reduce memory usage. Loaded Objects now: 3637.
+Total: 7.281500 ms (FindLiveObjects: 0.518000 ms CreateObjectMapping: 0.114000 ms MarkObjects: 6.602300 ms  DeleteObjects: 0.045100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 18.401922 seconds.
+  path: Assets/uAdventure/__Scripts/PE_Scripts
+  artifactKey: Guid(869fe4e41c0e61d449499a7ed337cf7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/uAdventure/__Scripts/PE_Scripts using Guid(869fe4e41c0e61d449499a7ed337cf7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5594b47a5a30394e3033053fdf6608e4') in 0.008964 seconds 
+  Import took 0.014697 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.441057 seconds.
+  path: Assets/uAdventure/__Scripts/BetManager.cs
+  artifactKey: Guid(ab5c86eef90879547ba8237ec91bb979) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/uAdventure/__Scripts/BetManager.cs using Guid(ab5c86eef90879547ba8237ec91bb979) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4258e8f0e92dc81172c7969779f38787') in 0.010543 seconds 
+  Import took 0.016364 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.448087 seconds.
+  path: Assets/uAdventure/__Scripts/BotonQuiniela.cs
+  artifactKey: Guid(922e980c26043e24eb85dc61aa55853d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/uAdventure/__Scripts/BotonQuiniela.cs using Guid(922e980c26043e24eb85dc61aa55853d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9147b1a9bfdeab6b48121a9a17d01111') in 0.008302 seconds 
+  Import took 0.014236 seconds .
+
+========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.016744 seconds.
+Registered in 0.017709 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.53 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Loading config data at: Assets/uAdventure/Resources/config_editor.xml
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+uAdventure.Editor.ConfigData:.ctor (string) (at Assets/uAdventure/Editor/Engine logic/Controllers/Config/ConfigData.cs:426)
+uAdventure.Editor.ConfigData:LoadFromXML (string) (at Assets/uAdventure/Editor/Engine logic/Controllers/Config/ConfigData.cs:363)
+uAdventure.Editor.Controller:.cctor () (at Assets/uAdventure/Editor/Engine logic/Controllers/Controller.cs:473)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: Assets/uAdventure/Editor/Engine logic/Controllers/Config/ConfigData.cs Line: 426)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.815 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.38 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3236 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 121.4 MB.
+System memory in use after: 121.7 MB.
+
+Unloading 79 unused Assets to reduce memory usage. Loaded Objects now: 3640.
+Total: 8.305300 ms (FindLiveObjects: 0.605400 ms CreateObjectMapping: 0.172700 ms MarkObjects: 7.474300 ms  DeleteObjects: 0.050400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 601.048586 seconds.
+  path: Assets/uAdventure/__Scripts/PE_Scripts/FilaQuiniela.cs
+  artifactKey: Guid(9cb6048fff51edb4b9e8d3811f8a03bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/uAdventure/__Scripts/PE_Scripts/FilaQuiniela.cs using Guid(9cb6048fff51edb4b9e8d3811f8a03bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a4599881d428437cfaca885a72105d3') in 0.014275 seconds 
+  Import took 0.021158 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002640 seconds.
+  path: Assets/uAdventure/__Scripts/PE_Scripts/FilaQuiniela.cs
+  artifactKey: Guid(9cb6048fff51edb4b9e8d3811f8a03bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/uAdventure/__Scripts/PE_Scripts/FilaQuiniela.cs using Guid(9cb6048fff51edb4b9e8d3811f8a03bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a4599881d428437cfaca885a72105d3') in 0.004359 seconds 
+  Import took 0.010507 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.017967 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 1.50 ms, found 3 plugins.
@@ -170,16 +239,16 @@ UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
 (Filename: Assets/uAdventure/Editor/Engine logic/Controllers/Config/ConfigData.cs Line: 426)
 
 Mono: successfully reloaded assembly
-- Completed reload, in  1.584 seconds
+- Completed reload, in  1.618 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.52 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 1.54 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3236 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 3237 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 121.5 MB.
 System memory in use after: 121.7 MB.
 
-Unloading 79 unused Assets to reduce memory usage. Loaded Objects now: 3643.
-Total: 7.994200 ms (FindLiveObjects: 0.378400 ms CreateObjectMapping: 0.102400 ms MarkObjects: 7.465300 ms  DeleteObjects: 0.046700 ms)
+Unloading 79 unused Assets to reduce memory usage. Loaded Objects now: 3644.
+Total: 7.756300 ms (FindLiveObjects: 0.688000 ms CreateObjectMapping: 0.119400 ms MarkObjects: 6.897200 ms  DeleteObjects: 0.047900 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -194,10 +263,10 @@ AssetImportParameters requested are different than current active one (requested
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.016710 seconds.
+Registered in 0.020716 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.65 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 3.04 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Loading config data at: Assets/uAdventure/Resources/config_editor.xml
 UnityEngine.StackTraceUtility:ExtractStackTrace ()
@@ -213,16 +282,16 @@ UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
 (Filename: Assets/uAdventure/Editor/Engine logic/Controllers/Config/ConfigData.cs Line: 426)
 
 Mono: successfully reloaded assembly
-- Completed reload, in  2.353 seconds
+- Completed reload, in  1.904 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.54 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 2.38 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3236 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 3237 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 121.5 MB.
 System memory in use after: 121.8 MB.
 
-Unloading 79 unused Assets to reduce memory usage. Loaded Objects now: 3646.
-Total: 8.410700 ms (FindLiveObjects: 0.372700 ms CreateObjectMapping: 0.106600 ms MarkObjects: 7.887500 ms  DeleteObjects: 0.042000 ms)
+Unloading 79 unused Assets to reduce memory usage. Loaded Objects now: 3647.
+Total: 11.152100 ms (FindLiveObjects: 0.609200 ms CreateObjectMapping: 0.149200 ms MarkObjects: 10.335600 ms  DeleteObjects: 0.056200 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -235,56 +304,21 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
+Received Import Request.
+  Time since last request: 651.206850 seconds.
+  path: Assets/uAdventure/__Scripts/PE_Scripts/FilaQuiniela.cs
+  artifactKey: Guid(9cb6048fff51edb4b9e8d3811f8a03bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/uAdventure/__Scripts/PE_Scripts/FilaQuiniela.cs using Guid(9cb6048fff51edb4b9e8d3811f8a03bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '667f65fad9a1e745b938c506b6e27b03') in 0.018293 seconds 
+  Import took 0.025627 seconds .
+
+========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.016793 seconds.
+Registered in 0.020273 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.52 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Loading config data at: Assets/uAdventure/Resources/config_editor.xml
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-uAdventure.Editor.ConfigData:.ctor (string) (at Assets/uAdventure/Editor/Engine logic/Controllers/Config/ConfigData.cs:426)
-uAdventure.Editor.ConfigData:LoadFromXML (string) (at Assets/uAdventure/Editor/Engine logic/Controllers/Config/ConfigData.cs:363)
-uAdventure.Editor.Controller:.cctor () (at Assets/uAdventure/Editor/Engine logic/Controllers/Controller.cs:473)
-System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-(Filename: Assets/uAdventure/Editor/Engine logic/Controllers/Config/ConfigData.cs Line: 426)
-
-Mono: successfully reloaded assembly
-- Completed reload, in  1.614 seconds
-Platform modules already initialized, skipping
 Refreshing native plugins compatible for Editor in 1.76 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3236 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 121.5 MB.
-System memory in use after: 121.8 MB.
-
-Unloading 79 unused Assets to reduce memory usage. Loaded Objects now: 3649.
-Total: 7.570200 ms (FindLiveObjects: 0.535000 ms CreateObjectMapping: 0.224100 ms MarkObjects: 6.752800 ms  DeleteObjects: 0.055800 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.016871 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.52 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
 Loading config data at: Assets/uAdventure/Resources/config_editor.xml
 UnityEngine.StackTraceUtility:ExtractStackTrace ()
 UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
@@ -299,16 +333,16 @@ UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
 (Filename: Assets/uAdventure/Editor/Engine logic/Controllers/Config/ConfigData.cs Line: 426)
 
 Mono: successfully reloaded assembly
-- Completed reload, in  1.615 seconds
+- Completed reload, in  1.862 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.54 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 1.87 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3236 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 3237 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 121.6 MB.
 System memory in use after: 121.8 MB.
 
-Unloading 79 unused Assets to reduce memory usage. Loaded Objects now: 3652.
-Total: 6.910800 ms (FindLiveObjects: 0.393300 ms CreateObjectMapping: 0.099600 ms MarkObjects: 6.370400 ms  DeleteObjects: 0.045200 ms)
+Unloading 79 unused Assets to reduce memory usage. Loaded Objects now: 3650.
+Total: 11.033400 ms (FindLiveObjects: 0.361400 ms CreateObjectMapping: 0.100200 ms MarkObjects: 10.519300 ms  DeleteObjects: 0.050800 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -323,10 +357,10 @@ AssetImportParameters requested are different than current active one (requested
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.016889 seconds.
+Registered in 0.019360 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.55 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 1.95 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Loading config data at: Assets/uAdventure/Resources/config_editor.xml
 UnityEngine.StackTraceUtility:ExtractStackTrace ()
@@ -342,16 +376,16 @@ UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
 (Filename: Assets/uAdventure/Editor/Engine logic/Controllers/Config/ConfigData.cs Line: 426)
 
 Mono: successfully reloaded assembly
-- Completed reload, in  1.610 seconds
+- Completed reload, in  1.988 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.49 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 2.47 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3236 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 3237 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 121.6 MB.
 System memory in use after: 121.8 MB.
 
-Unloading 79 unused Assets to reduce memory usage. Loaded Objects now: 3655.
-Total: 7.060800 ms (FindLiveObjects: 0.373500 ms CreateObjectMapping: 0.103200 ms MarkObjects: 6.541200 ms  DeleteObjects: 0.041000 ms)
+Unloading 79 unused Assets to reduce memory usage. Loaded Objects now: 3653.
+Total: 11.657500 ms (FindLiveObjects: 0.461900 ms CreateObjectMapping: 0.107800 ms MarkObjects: 10.856500 ms  DeleteObjects: 0.226400 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -366,10 +400,10 @@ AssetImportParameters requested are different than current active one (requested
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.016568 seconds.
+Registered in 0.018539 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.51 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 4.72 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Loading config data at: Assets/uAdventure/Resources/config_editor.xml
 UnityEngine.StackTraceUtility:ExtractStackTrace ()
@@ -385,102 +419,16 @@ UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
 (Filename: Assets/uAdventure/Editor/Engine logic/Controllers/Config/ConfigData.cs Line: 426)
 
 Mono: successfully reloaded assembly
-- Completed reload, in  1.585 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.54 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3236 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 121.6 MB.
-System memory in use after: 121.8 MB.
-
-Unloading 79 unused Assets to reduce memory usage. Loaded Objects now: 3658.
-Total: 7.357800 ms (FindLiveObjects: 0.458000 ms CreateObjectMapping: 0.111500 ms MarkObjects: 6.739000 ms  DeleteObjects: 0.047400 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.016158 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.63 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Loading config data at: Assets/uAdventure/Resources/config_editor.xml
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-uAdventure.Editor.ConfigData:.ctor (string) (at Assets/uAdventure/Editor/Engine logic/Controllers/Config/ConfigData.cs:426)
-uAdventure.Editor.ConfigData:LoadFromXML (string) (at Assets/uAdventure/Editor/Engine logic/Controllers/Config/ConfigData.cs:363)
-uAdventure.Editor.Controller:.cctor () (at Assets/uAdventure/Editor/Engine logic/Controllers/Controller.cs:473)
-System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-(Filename: Assets/uAdventure/Editor/Engine logic/Controllers/Config/ConfigData.cs Line: 426)
-
-Mono: successfully reloaded assembly
-- Completed reload, in  1.608 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.59 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3236 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 121.6 MB.
-System memory in use after: 121.8 MB.
-
-Unloading 79 unused Assets to reduce memory usage. Loaded Objects now: 3661.
-Total: 7.078800 ms (FindLiveObjects: 0.366700 ms CreateObjectMapping: 0.105300 ms MarkObjects: 6.559500 ms  DeleteObjects: 0.045400 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.017519 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.49 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Loading config data at: Assets/uAdventure/Resources/config_editor.xml
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-uAdventure.Editor.ConfigData:.ctor (string) (at Assets/uAdventure/Editor/Engine logic/Controllers/Config/ConfigData.cs:426)
-uAdventure.Editor.ConfigData:LoadFromXML (string) (at Assets/uAdventure/Editor/Engine logic/Controllers/Config/ConfigData.cs:363)
-uAdventure.Editor.Controller:.cctor () (at Assets/uAdventure/Editor/Engine logic/Controllers/Controller.cs:473)
-System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-(Filename: Assets/uAdventure/Editor/Engine logic/Controllers/Config/ConfigData.cs Line: 426)
-
-Mono: successfully reloaded assembly
-- Completed reload, in  1.564 seconds
+- Completed reload, in  2.086 seconds
 Platform modules already initialized, skipping
 Refreshing native plugins compatible for Editor in 1.56 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3236 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 3237 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 121.6 MB.
 System memory in use after: 121.8 MB.
 
-Unloading 79 unused Assets to reduce memory usage. Loaded Objects now: 3664.
-Total: 7.709100 ms (FindLiveObjects: 0.406800 ms CreateObjectMapping: 0.102200 ms MarkObjects: 7.147400 ms  DeleteObjects: 0.050700 ms)
+Unloading 79 unused Assets to reduce memory usage. Loaded Objects now: 3656.
+Total: 7.249300 ms (FindLiveObjects: 0.411400 ms CreateObjectMapping: 0.106900 ms MarkObjects: 6.684600 ms  DeleteObjects: 0.044800 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -495,10 +443,10 @@ AssetImportParameters requested are different than current active one (requested
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.017039 seconds.
+Registered in 0.018516 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.57 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 4.33 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Loading config data at: Assets/uAdventure/Resources/config_editor.xml
 UnityEngine.StackTraceUtility:ExtractStackTrace ()
@@ -514,102 +462,16 @@ UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
 (Filename: Assets/uAdventure/Editor/Engine logic/Controllers/Config/ConfigData.cs Line: 426)
 
 Mono: successfully reloaded assembly
-- Completed reload, in  1.575 seconds
+- Completed reload, in  2.008 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.57 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3236 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 121.6 MB.
-System memory in use after: 121.8 MB.
-
-Unloading 79 unused Assets to reduce memory usage. Loaded Objects now: 3667.
-Total: 7.575000 ms (FindLiveObjects: 0.414000 ms CreateObjectMapping: 0.105100 ms MarkObjects: 7.002400 ms  DeleteObjects: 0.051700 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.016875 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.57 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Loading config data at: Assets/uAdventure/Resources/config_editor.xml
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-uAdventure.Editor.ConfigData:.ctor (string) (at Assets/uAdventure/Editor/Engine logic/Controllers/Config/ConfigData.cs:426)
-uAdventure.Editor.ConfigData:LoadFromXML (string) (at Assets/uAdventure/Editor/Engine logic/Controllers/Config/ConfigData.cs:363)
-uAdventure.Editor.Controller:.cctor () (at Assets/uAdventure/Editor/Engine logic/Controllers/Controller.cs:473)
-System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-(Filename: Assets/uAdventure/Editor/Engine logic/Controllers/Config/ConfigData.cs Line: 426)
-
-Mono: successfully reloaded assembly
-- Completed reload, in  1.596 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.52 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3236 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 121.6 MB.
-System memory in use after: 121.9 MB.
-
-Unloading 79 unused Assets to reduce memory usage. Loaded Objects now: 3670.
-Total: 7.766400 ms (FindLiveObjects: 0.388200 ms CreateObjectMapping: 0.109700 ms MarkObjects: 7.219300 ms  DeleteObjects: 0.047400 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.016535 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 1.54 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Loading config data at: Assets/uAdventure/Resources/config_editor.xml
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-uAdventure.Editor.ConfigData:.ctor (string) (at Assets/uAdventure/Editor/Engine logic/Controllers/Config/ConfigData.cs:426)
-uAdventure.Editor.ConfigData:LoadFromXML (string) (at Assets/uAdventure/Editor/Engine logic/Controllers/Config/ConfigData.cs:363)
-uAdventure.Editor.Controller:.cctor () (at Assets/uAdventure/Editor/Engine logic/Controllers/Controller.cs:473)
-System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-(Filename: Assets/uAdventure/Editor/Engine logic/Controllers/Config/ConfigData.cs Line: 426)
-
-Mono: successfully reloaded assembly
-- Completed reload, in  1.626 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.55 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3236 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 3237 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 121.6 MB.
-System memory in use after: 121.9 MB.
+System memory in use after: 121.8 MB.
 
-Unloading 79 unused Assets to reduce memory usage. Loaded Objects now: 3673.
-Total: 6.905300 ms (FindLiveObjects: 0.365200 ms CreateObjectMapping: 0.103400 ms MarkObjects: 6.395300 ms  DeleteObjects: 0.040000 ms)
+Unloading 79 unused Assets to reduce memory usage. Loaded Objects now: 3659.
+Total: 9.401800 ms (FindLiveObjects: 1.240400 ms CreateObjectMapping: 0.187200 ms MarkObjects: 7.852600 ms  DeleteObjects: 0.114400 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -624,7 +486,7 @@ AssetImportParameters requested are different than current active one (requested
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.016903 seconds.
+Registered in 0.019501 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 1.52 ms, found 3 plugins.
@@ -643,16 +505,16 @@ UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
 (Filename: Assets/uAdventure/Editor/Engine logic/Controllers/Config/ConfigData.cs Line: 426)
 
 Mono: successfully reloaded assembly
-- Completed reload, in  1.566 seconds
+- Completed reload, in  1.871 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.51 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 1.66 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3236 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 3237 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 121.6 MB.
-System memory in use after: 121.9 MB.
+System memory in use after: 121.8 MB.
 
-Unloading 79 unused Assets to reduce memory usage. Loaded Objects now: 3676.
-Total: 7.051100 ms (FindLiveObjects: 0.401500 ms CreateObjectMapping: 0.102500 ms MarkObjects: 6.502100 ms  DeleteObjects: 0.043800 ms)
+Unloading 79 unused Assets to reduce memory usage. Loaded Objects now: 3662.
+Total: 7.086800 ms (FindLiveObjects: 0.420800 ms CreateObjectMapping: 0.105700 ms MarkObjects: 6.508100 ms  DeleteObjects: 0.050400 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -665,12 +527,52 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
+Received Import Request.
+  Time since last request: 618.385100 seconds.
+  path: Assets
+  artifactKey: Guid(00000000000000001000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets using Guid(00000000000000001000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42d402b061de3733987d63b9cc3b64de') in 0.020121 seconds 
+  Import took 0.027001 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.004449 seconds.
+  path: Assets/Prefabs
+  artifactKey: Guid(d4ed1b2d4482bc4439d199c6506d2501) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs using Guid(d4ed1b2d4482bc4439d199c6506d2501) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd853fd80741613114ed1d868356641a5') in 0.010788 seconds 
+  Import took 0.018359 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.004298 seconds.
+  path: Assets/Prefabs
+  artifactKey: Guid(d4ed1b2d4482bc4439d199c6506d2501) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs using Guid(d4ed1b2d4482bc4439d199c6506d2501) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd853fd80741613114ed1d868356641a5') in 0.005467 seconds 
+  Import took 0.014006 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.750420 seconds.
+  path: Assets/Prefabs/RowQuiniela.prefab
+  artifactKey: Guid(c8d3fc7441ee0eb459471b99f63480d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/RowQuiniela.prefab using Guid(c8d3fc7441ee0eb459471b99f63480d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '586a4e25ae22a686d9be90bf1770ec2b') in 0.074144 seconds 
+  Import took 0.082855 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001051 seconds.
+  path: Assets/Prefabs/RowQuiniela.prefab
+  artifactKey: Guid(c8d3fc7441ee0eb459471b99f63480d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/RowQuiniela.prefab using Guid(c8d3fc7441ee0eb459471b99f63480d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '586a4e25ae22a686d9be90bf1770ec2b') in 0.009359 seconds 
+  Import took 0.018277 seconds .
+
+========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.017153 seconds.
+Registered in 0.019986 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.51 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 4.56 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Loading config data at: Assets/uAdventure/Resources/config_editor.xml
 UnityEngine.StackTraceUtility:ExtractStackTrace ()
@@ -686,59 +588,16 @@ UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
 (Filename: Assets/uAdventure/Editor/Engine logic/Controllers/Config/ConfigData.cs Line: 426)
 
 Mono: successfully reloaded assembly
-- Completed reload, in  1.550 seconds
+- Completed reload, in  2.099 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.52 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 1.86 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3236 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 121.6 MB.
-System memory in use after: 121.9 MB.
-
-Unloading 79 unused Assets to reduce memory usage. Loaded Objects now: 3679.
-Total: 7.166700 ms (FindLiveObjects: 0.356500 ms CreateObjectMapping: 0.101700 ms MarkObjects: 6.662000 ms  DeleteObjects: 0.045300 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.016844 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.74 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Loading config data at: Assets/uAdventure/Resources/config_editor.xml
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:Log (object)
-uAdventure.Editor.ConfigData:.ctor (string) (at Assets/uAdventure/Editor/Engine logic/Controllers/Config/ConfigData.cs:426)
-uAdventure.Editor.ConfigData:LoadFromXML (string) (at Assets/uAdventure/Editor/Engine logic/Controllers/Config/ConfigData.cs:363)
-uAdventure.Editor.Controller:.cctor () (at Assets/uAdventure/Editor/Engine logic/Controllers/Controller.cs:473)
-System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-(Filename: Assets/uAdventure/Editor/Engine logic/Controllers/Config/ConfigData.cs Line: 426)
-
-Mono: successfully reloaded assembly
-- Completed reload, in  1.735 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 3.49 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3236 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 3237 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 121.7 MB.
 System memory in use after: 121.9 MB.
 
-Unloading 79 unused Assets to reduce memory usage. Loaded Objects now: 3682.
-Total: 7.387600 ms (FindLiveObjects: 0.408000 ms CreateObjectMapping: 0.104300 ms MarkObjects: 6.813300 ms  DeleteObjects: 0.060000 ms)
+Unloading 80 unused Assets to reduce memory usage. Loaded Objects now: 3667.
+Total: 10.786200 ms (FindLiveObjects: 0.592900 ms CreateObjectMapping: 0.302600 ms MarkObjects: 9.662300 ms  DeleteObjects: 0.223500 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -750,4 +609,478 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-AssetImportWorkerClient::OnTransportError - code=2 error=End of file
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.016910 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.83 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Loading config data at: Assets/uAdventure/Resources/config_editor.xml
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+uAdventure.Editor.ConfigData:.ctor (string) (at Assets/uAdventure/Editor/Engine logic/Controllers/Config/ConfigData.cs:426)
+uAdventure.Editor.ConfigData:LoadFromXML (string) (at Assets/uAdventure/Editor/Engine logic/Controllers/Config/ConfigData.cs:363)
+uAdventure.Editor.Controller:.cctor () (at Assets/uAdventure/Editor/Engine logic/Controllers/Controller.cs:473)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: Assets/uAdventure/Editor/Engine logic/Controllers/Config/ConfigData.cs Line: 426)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.977 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.61 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3237 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 121.7 MB.
+System memory in use after: 121.9 MB.
+
+Unloading 79 unused Assets to reduce memory usage. Loaded Objects now: 3670.
+Total: 22.025300 ms (FindLiveObjects: 0.466300 ms CreateObjectMapping: 0.109200 ms MarkObjects: 21.285400 ms  DeleteObjects: 0.159800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.017148 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.80 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Loading config data at: Assets/uAdventure/Resources/config_editor.xml
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+uAdventure.Editor.ConfigData:.ctor (string) (at Assets/uAdventure/Editor/Engine logic/Controllers/Config/ConfigData.cs:426)
+uAdventure.Editor.ConfigData:LoadFromXML (string) (at Assets/uAdventure/Editor/Engine logic/Controllers/Config/ConfigData.cs:363)
+uAdventure.Editor.Controller:.cctor () (at Assets/uAdventure/Editor/Engine logic/Controllers/Controller.cs:473)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: Assets/uAdventure/Editor/Engine logic/Controllers/Config/ConfigData.cs Line: 426)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.947 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.80 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3237 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 121.7 MB.
+System memory in use after: 121.9 MB.
+
+Unloading 79 unused Assets to reduce memory usage. Loaded Objects now: 3673.
+Total: 7.610600 ms (FindLiveObjects: 0.443600 ms CreateObjectMapping: 0.107200 ms MarkObjects: 7.003100 ms  DeleteObjects: 0.054400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 219.924804 seconds.
+  path: Assets/Prefabs/RowQuiniela.prefab
+  artifactKey: Guid(c8d3fc7441ee0eb459471b99f63480d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/RowQuiniela.prefab using Guid(c8d3fc7441ee0eb459471b99f63480d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e31bd1bed1d028dedbfb9036fd1b542') in 0.068916 seconds 
+  Import took 0.076882 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.360399 seconds.
+  path: Assets/Prefabs/RowQuiniela.prefab
+  artifactKey: Guid(c8d3fc7441ee0eb459471b99f63480d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/RowQuiniela.prefab using Guid(c8d3fc7441ee0eb459471b99f63480d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b7aaf0d85531d882c2f27b682d26adb') in 0.020045 seconds 
+  Import took 0.031683 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.054530 seconds.
+  path: Assets/Prefabs/RowQuiniela.prefab
+  artifactKey: Guid(c8d3fc7441ee0eb459471b99f63480d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/RowQuiniela.prefab using Guid(c8d3fc7441ee0eb459471b99f63480d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd5e1e7f7b044ee48b22bcf3527d5a449') in 0.006047 seconds 
+  Import took 0.012632 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.017000 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.70 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Loading config data at: Assets/uAdventure/Resources/config_editor.xml
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+uAdventure.Editor.ConfigData:.ctor (string) (at Assets/uAdventure/Editor/Engine logic/Controllers/Config/ConfigData.cs:426)
+uAdventure.Editor.ConfigData:LoadFromXML (string) (at Assets/uAdventure/Editor/Engine logic/Controllers/Config/ConfigData.cs:363)
+uAdventure.Editor.Controller:.cctor () (at Assets/uAdventure/Editor/Engine logic/Controllers/Controller.cs:473)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: Assets/uAdventure/Editor/Engine logic/Controllers/Config/ConfigData.cs Line: 426)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.946 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.51 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3237 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 121.7 MB.
+System memory in use after: 122.0 MB.
+
+Unloading 80 unused Assets to reduce memory usage. Loaded Objects now: 3676.
+Total: 9.780800 ms (FindLiveObjects: 1.042100 ms CreateObjectMapping: 0.256300 ms MarkObjects: 8.418800 ms  DeleteObjects: 0.058200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.018061 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.46 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Loading config data at: Assets/uAdventure/Resources/config_editor.xml
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+uAdventure.Editor.ConfigData:.ctor (string) (at Assets/uAdventure/Editor/Engine logic/Controllers/Config/ConfigData.cs:426)
+uAdventure.Editor.ConfigData:LoadFromXML (string) (at Assets/uAdventure/Editor/Engine logic/Controllers/Config/ConfigData.cs:363)
+uAdventure.Editor.Controller:.cctor () (at Assets/uAdventure/Editor/Engine logic/Controllers/Controller.cs:473)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: Assets/uAdventure/Editor/Engine logic/Controllers/Config/ConfigData.cs Line: 426)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.886 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.57 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3237 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 121.7 MB.
+System memory in use after: 122.0 MB.
+
+Unloading 79 unused Assets to reduce memory usage. Loaded Objects now: 3679.
+Total: 9.419400 ms (FindLiveObjects: 0.703000 ms CreateObjectMapping: 0.145700 ms MarkObjects: 8.511900 ms  DeleteObjects: 0.052600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.021763 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.04 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Loading config data at: Assets/uAdventure/Resources/config_editor.xml
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+uAdventure.Editor.ConfigData:.ctor (string) (at Assets/uAdventure/Editor/Engine logic/Controllers/Config/ConfigData.cs:426)
+uAdventure.Editor.ConfigData:LoadFromXML (string) (at Assets/uAdventure/Editor/Engine logic/Controllers/Config/ConfigData.cs:363)
+uAdventure.Editor.Controller:.cctor () (at Assets/uAdventure/Editor/Engine logic/Controllers/Controller.cs:473)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: Assets/uAdventure/Editor/Engine logic/Controllers/Config/ConfigData.cs Line: 426)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.825 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.57 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3237 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 121.7 MB.
+System memory in use after: 122.0 MB.
+
+Unloading 79 unused Assets to reduce memory usage. Loaded Objects now: 3682.
+Total: 7.641400 ms (FindLiveObjects: 0.363500 ms CreateObjectMapping: 0.093000 ms MarkObjects: 7.102500 ms  DeleteObjects: 0.080700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.016907 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.99 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Loading config data at: Assets/uAdventure/Resources/config_editor.xml
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+uAdventure.Editor.ConfigData:.ctor (string) (at Assets/uAdventure/Editor/Engine logic/Controllers/Config/ConfigData.cs:426)
+uAdventure.Editor.ConfigData:LoadFromXML (string) (at Assets/uAdventure/Editor/Engine logic/Controllers/Config/ConfigData.cs:363)
+uAdventure.Editor.Controller:.cctor () (at Assets/uAdventure/Editor/Engine logic/Controllers/Controller.cs:473)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: Assets/uAdventure/Editor/Engine logic/Controllers/Config/ConfigData.cs Line: 426)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  2.100 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.63 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3237 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 121.7 MB.
+System memory in use after: 122.0 MB.
+
+Unloading 79 unused Assets to reduce memory usage. Loaded Objects now: 3685.
+Total: 7.693100 ms (FindLiveObjects: 0.464600 ms CreateObjectMapping: 0.107900 ms MarkObjects: 7.059800 ms  DeleteObjects: 0.059000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 219.332675 seconds.
+  path: Assets/Resources
+  artifactKey: Guid(a4ca51ad4510e8f4da575859575c0ab6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources using Guid(a4ca51ad4510e8f4da575859575c0ab6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '33f730a562cd581bb4fdfe4438540786') in 0.019239 seconds 
+  Import took 0.028425 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.047043 seconds.
+  path: Assets/uAdventure
+  artifactKey: Guid(ba0dbab258a9b604587e0e151191380c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/uAdventure using Guid(ba0dbab258a9b604587e0e151191380c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7963a94574aba1843c7abd395ce30752') in 0.013049 seconds 
+  Import took 0.022484 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.570256 seconds.
+  path: Assets/uAdventureAnalytics
+  artifactKey: Guid(6d74a6ef1a6e65049ab18c31b404bc0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/uAdventureAnalytics using Guid(6d74a6ef1a6e65049ab18c31b404bc0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fef7280e5ccfffae6ed96243b47cf6f1') in 0.025410 seconds 
+  Import took 0.039062 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.604414 seconds.
+  path: Assets/uAdventureGeo
+  artifactKey: Guid(3ecde52f7f2e3784e8dc8f12332b42ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/uAdventureGeo using Guid(3ecde52f7f2e3784e8dc8f12332b42ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d7bbb49edd7e7b8ce241dca416c4272') in 0.014293 seconds 
+  Import took 0.022066 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.230772 seconds.
+  path: Assets/uAdventureGeo/Scene
+  artifactKey: Guid(93b1ee252e499884cb1935ec2708186f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/uAdventureGeo/Scene using Guid(93b1ee252e499884cb1935ec2708186f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c4443975a5f3c8644e5017d945f33baf') in 0.013591 seconds 
+  Import took 0.020078 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.712534 seconds.
+  path: Assets/uAdventure/e-ucm.png
+  artifactKey: Guid(8fc044ddd671a5f49afa1a932d5d6f17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/uAdventure/e-ucm.png using Guid(8fc044ddd671a5f49afa1a932d5d6f17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '331b5dd8bf0e3e19c79f7d7d74373b53') in 0.160764 seconds 
+  Import took 0.166801 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 88.617344 seconds.
+  path: Assets/uAdventure/Scenes/Quiniela.unity
+  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/uAdventure/Scenes/Quiniela.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '44dd8e88c2d6d5cb6a05c635ea7069ad') in 0.011052 seconds 
+  Import took 0.020460 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.017206 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.72 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Loading config data at: Assets/uAdventure/Resources/config_editor.xml
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+uAdventure.Editor.ConfigData:.ctor (string) (at Assets/uAdventure/Editor/Engine logic/Controllers/Config/ConfigData.cs:426)
+uAdventure.Editor.ConfigData:LoadFromXML (string) (at Assets/uAdventure/Editor/Engine logic/Controllers/Config/ConfigData.cs:363)
+uAdventure.Editor.Controller:.cctor () (at Assets/uAdventure/Editor/Engine logic/Controllers/Controller.cs:473)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: Assets/uAdventure/Editor/Engine logic/Controllers/Config/ConfigData.cs Line: 426)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.932 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.84 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3237 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 124.7 MB.
+System memory in use after: 124.9 MB.
+
+Unloading 79 unused Assets to reduce memory usage. Loaded Objects now: 3694.
+Total: 8.337100 ms (FindLiveObjects: 0.642100 ms CreateObjectMapping: 0.127300 ms MarkObjects: 7.512500 ms  DeleteObjects: 0.052800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.017733 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 3.11 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Loading config data at: Assets/uAdventure/Resources/config_editor.xml
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+uAdventure.Editor.ConfigData:.ctor (string) (at Assets/uAdventure/Editor/Engine logic/Controllers/Config/ConfigData.cs:426)
+uAdventure.Editor.ConfigData:LoadFromXML (string) (at Assets/uAdventure/Editor/Engine logic/Controllers/Config/ConfigData.cs:363)
+uAdventure.Editor.Controller:.cctor () (at Assets/uAdventure/Editor/Engine logic/Controllers/Controller.cs:473)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: Assets/uAdventure/Editor/Engine logic/Controllers/Config/ConfigData.cs Line: 426)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.821 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.52 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3237 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 124.7 MB.
+System memory in use after: 124.9 MB.
+
+Unloading 79 unused Assets to reduce memory usage. Loaded Objects now: 3697.
+Total: 7.293100 ms (FindLiveObjects: 0.371000 ms CreateObjectMapping: 0.088200 ms MarkObjects: 6.780800 ms  DeleteObjects: 0.051000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 250.829727 seconds.
+  path: Assets/uAdventure/Scenes/Quiniela.unity
+  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/uAdventure/Scenes/Quiniela.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9035075e56805651bbe804b7477ac60e') in 0.018847 seconds 
+  Import took 0.029404 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.023398 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 3.01 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Loading config data at: Assets/uAdventure/Resources/config_editor.xml
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:Log (object)
+uAdventure.Editor.ConfigData:.ctor (string) (at Assets/uAdventure/Editor/Engine logic/Controllers/Config/ConfigData.cs:426)
+uAdventure.Editor.ConfigData:LoadFromXML (string) (at Assets/uAdventure/Editor/Engine logic/Controllers/Config/ConfigData.cs:363)
+uAdventure.Editor.Controller:.cctor () (at Assets/uAdventure/Editor/Engine logic/Controllers/Controller.cs:473)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: Assets/uAdventure/Editor/Engine logic/Controllers/Config/ConfigData.cs Line: 426)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.949 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.50 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3237 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 124.7 MB.
+System memory in use after: 125.0 MB.
+
+Unloading 79 unused Assets to reduce memory usage. Loaded Objects now: 3700.
+Total: 7.879800 ms (FindLiveObjects: 0.485500 ms CreateObjectMapping: 0.102500 ms MarkObjects: 7.234100 ms  DeleteObjects: 0.055100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 

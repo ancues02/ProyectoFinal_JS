@@ -6,9 +6,6 @@ using UnityEngine.UI;
 public class BotonQuiniela : MonoBehaviour
 {
     Button button;
-    public float valueMod;
-    public BetManager rm;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -25,8 +22,6 @@ public class BotonQuiniela : MonoBehaviour
         aux.selectedColor = Color.yellow;
         aux.pressedColor = Color.yellow;
         button.colors = aux;
-
-
     }
 
 }
