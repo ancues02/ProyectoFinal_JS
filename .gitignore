@@ -3,6 +3,7 @@
 [Oo]bj/
 [Bb]uild/
 [Bb]uilds/
+[Ll]ogs/
 Assets/AssetStoreTools*
 
 # Visual Studio cache directory
@@ -38,3 +39,9 @@ sysinfo.txt
 
 !Unity.PlasticSCM.Editor.dll
 
+*.log
+*.log
+*.log
+Logs/shadercompiler-UnityShaderCompiler.exe1.log
+Logs/AssetImportWorker0-prev.log
+Logs/shadercompiler-UnityShaderCompiler.exe2.log
