@@ -223,11 +223,11 @@
       </exit>
     </exits>
     <characters>
-      <character-ref idTarget="Jorge" x="628" y="395" scale="0.1483922" orientation="0" glow="no" layer="4" hasInfluenceArea="no" />
-      <character-ref idTarget="Sofia" x="450" y="374" scale="0.4445047" orientation="0" glow="no" layer="3" hasInfluenceArea="no" />
-      <character-ref idTarget="David" x="790" y="393" scale="0.2514269" orientation="0" glow="no" layer="2" hasInfluenceArea="no" />
-      <character-ref idTarget="Javier" x="266" y="381" scale="0.3791981" orientation="0" glow="no" layer="1" hasInfluenceArea="no" />
-      <character-ref idTarget="Antia" x="26" y="387" scale="0.2855195" orientation="0" glow="no" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="Jorge" x="728" y="411" scale="0.1483922" orientation="0" glow="no" layer="3" hasInfluenceArea="no" />
+      <character-ref idTarget="Sofia" x="271" y="398" scale="0.15" orientation="0" glow="no" layer="4" hasInfluenceArea="no" />
+      <character-ref idTarget="David" x="110" y="404" scale="0.142165" orientation="0" glow="no" layer="2" hasInfluenceArea="no" />
+      <character-ref idTarget="Javier" x="564" y="408" scale="0.1420898" orientation="0" glow="no" layer="1" hasInfluenceArea="no" />
+      <character-ref idTarget="Antia" x="421" y="405" scale="0.1405123" orientation="0" glow="no" layer="0" hasInfluenceArea="no" />
     </characters>
   </scene>
   <scene id="Apuestas" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
@@ -245,17 +245,19 @@
       </exit>
     </exits>
     <characters>
-      <character-ref idTarget="Jorge" x="379" y="293" scale="0.12714" orientation="0" glow="no" layer="4" hasInfluenceArea="no" />
-      <character-ref idTarget="Sofia" x="191" y="319" scale="0.3808445" orientation="0" glow="no" layer="3" hasInfluenceArea="no" />
-      <character-ref idTarget="David" x="489" y="324" scale="0.2217163" orientation="0" glow="no" layer="2" hasInfluenceArea="no" />
-      <character-ref idTarget="Javier" x="314" y="315" scale="0.3248909" orientation="0" glow="no" layer="1" hasInfluenceArea="no" />
-      <character-ref idTarget="Antia" x="16" y="331" scale="0.2446285" orientation="0" glow="no" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="Jorge" x="468" y="344" scale="0.1" orientation="0" glow="no" layer="4" hasInfluenceArea="no" />
+      <character-ref idTarget="Sofia" x="376" y="342" scale="0.1" orientation="0" glow="no" layer="3" hasInfluenceArea="no" />
+      <character-ref idTarget="David" x="289" y="344" scale="0.1" orientation="0" glow="no" layer="2" hasInfluenceArea="no" />
+      <character-ref idTarget="Javier" x="170" y="346" scale="0.1" orientation="0" glow="no" layer="1" hasInfluenceArea="no" />
+      <character-ref idTarget="Antia" x="66" y="342" scale="0.1" orientation="0" glow="no" layer="0" hasInfluenceArea="no" />
     </characters>
   </scene>
   <graph-conversation id="Intro">
-    <dialogue-node nodeindex="0" editor-x="109" editor-y="48">
+    <dialogue-node nodeindex="0" editor-x="73" editor-y="28">
       <speak-char idTarget="Sofia">
-        <resources name="No name" />
+        <resources name="No name">
+          <asset type="image" uri="" />
+        </resources>
         <text>...</text>
       </speak-char>
       <condition />
@@ -271,12 +273,12 @@
       <condition />
       <speak-char idTarget="Sofia">
         <resources name="No name" />
-        <text>#O ¡Alex!</text>
+        <text>¡Alex!</text>
       </speak-char>
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
-    <option-node nodeindex="1" preListening="yes" editor-x="396" editor-y="57" x="396" y="57">
+    <option-node nodeindex="1" preListening="yes" editor-x="561" editor-y="54" x="561" y="54">
       <speak-player>
         <text>¡¿QUÉ PASA, QUÉ PASA?!</text>
         <resources name="No name" />
@@ -296,7 +298,7 @@
       <condition />
       <child nodeindex="4" />
     </option-node>
-    <dialogue-node nodeindex="2" editor-x="812" editor-y="61">
+    <dialogue-node nodeindex="2" editor-x="794" editor-y="61">
       <speak-player>
         <resources name="No name" />
         <text>¡¿QUÉ PASA, QUÉ PASA?!</text>

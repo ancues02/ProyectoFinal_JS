@@ -2,7 +2,7 @@
 <animation id="Idle.eaa.xml" usetransitions="no" slides="no">
   <documentation />
   <transition type="0" time="0" />
-  <frame uri="assets/animation/adicto.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+  <frame uri="assets/animation/Jorge1.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
     <documentation>
     </documentation>
   </frame>

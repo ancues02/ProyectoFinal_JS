@@ -2,7 +2,7 @@
 <animation id="SofiaIdle.eaa.xml" usetransitions="no" slides="no">
   <documentation />
   <transition type="0" time="0" />
-  <frame uri="assets/animation/jovenes.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+  <frame uri="assets/animation/Sofía1.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
     <documentation>
     </documentation>
   </frame>

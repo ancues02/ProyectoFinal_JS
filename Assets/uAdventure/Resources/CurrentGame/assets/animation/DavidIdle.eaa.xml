@@ -2,7 +2,7 @@
 <animation id="DavidIdle.eaa.xml" usetransitions="no" slides="no">
   <documentation />
   <transition type="0" time="0" />
-  <frame uri="assets/animation/David.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
+  <frame uri="assets/animation/David1.png" type="image" time="40" waitforclick="no" soundUri="" maxSoundTime="1000">
     <documentation>
     </documentation>
   </frame>
