@@ -61,8 +61,14 @@
     <voice name="" synthesizeAlways="no" />
     <actions>
       <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <documentation>Apuestas1</documentation>
+        <condition>
+          <active flag="Apuestas1Ended" />
+        </condition>
         <effect>
-          <trigger-conversation idTarget="IrAApostar" guid="45d3b658-0127-43fb-ade2-6ec74c4d7028" />
+          <trigger-conversation idTarget="Apuestas1" guid="f8ff86c5-4329-4efe-8de0-cb97a3f8c2f4" />
+          <condition />
+          <deactivate flag="Apuestas1Ended" guid="0feec197-0573-46d6-b9d1-b28cc9c9ec1f" />
           <condition />
         </effect>
       </talk-to>
@@ -127,9 +133,14 @@
     <voice name="" synthesizeAlways="no" />
     <actions>
       <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
-        <documentation>Created with target conversation: Intro</documentation>
+        <documentation>Intro</documentation>
+        <condition>
+          <inactive flag="Intro" />
+        </condition>
         <effect>
           <trigger-conversation idTarget="Intro" guid="9cad09de-c14c-4ecc-8241-eced5cdcdafa" />
+          <condition />
+          <activate flag="Intro" guid="35c80f92-7bd6-49f3-9876-0fd09859d076" />
           <condition />
         </effect>
       </talk-to>
@@ -203,8 +214,12 @@
     </name>
     <default-initial-position x="400" y="450" />
     <exits>
-      <exit rectangular="yes" x="1" y="3" width="100" height="100" hasInfluenceArea="no" idTarget="Quiniela" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="-1" y="0" width="83" height="81" hasInfluenceArea="no" idTarget="Apuestas" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
+        <effect>
+          <activate flag="Apuestas1Ended" guid="876ecb5b-0619-4c95-aa33-68c19d5bcfba" />
+          <condition />
+        </effect>
       </exit>
     </exits>
     <characters>
@@ -215,7 +230,7 @@
       <character-ref idTarget="Antia" x="26" y="387" scale="0.2855195" orientation="0" glow="no" layer="0" hasInfluenceArea="no" />
     </characters>
   </scene>
-  <scene id="Apuestas1" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="Apuestas" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -224,57 +239,19 @@
     <name>
     </name>
     <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="0" y="2" width="59" height="85" hasInfluenceArea="no" idTarget="Quiniela" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+      </exit>
+    </exits>
+    <characters>
+      <character-ref idTarget="Jorge" x="379" y="293" scale="0.12714" orientation="0" glow="no" layer="4" hasInfluenceArea="no" />
+      <character-ref idTarget="Sofia" x="191" y="319" scale="0.3808445" orientation="0" glow="no" layer="3" hasInfluenceArea="no" />
+      <character-ref idTarget="David" x="489" y="324" scale="0.2217163" orientation="0" glow="no" layer="2" hasInfluenceArea="no" />
+      <character-ref idTarget="Javier" x="314" y="315" scale="0.3248909" orientation="0" glow="no" layer="1" hasInfluenceArea="no" />
+      <character-ref idTarget="Antia" x="16" y="331" scale="0.2446285" orientation="0" glow="no" layer="0" hasInfluenceArea="no" />
+    </characters>
   </scene>
-  <scene id="Apuestas2" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
-    <documentation>
-    </documentation>
-    <resources name="No name">
-      <asset type="background" uri="assets/background/SalaDeApuestas.jpg" />
-    </resources>
-    <name>
-    </name>
-    <default-initial-position x="400" y="450" />
-  </scene>
-  <graph-conversation id="IrAApostar">
-    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
-      <speak-player>
-        <resources name="No name" />
-        <text>¿Quereis venir a apostar?</text>
-      </speak-player>
-      <condition />
-      <child nodeindex="1" />
-    </dialogue-node>
-    <option-node nodeindex="1" preListening="yes" editor-x="361" editor-y="18" x="361" y="18">
-      <speak-player>
-        <text>Venga, vamos</text>
-        <resources name="No name" />
-      </speak-player>
-      <condition />
-      <child nodeindex="2" />
-      <speak-player>
-        <text>Mejor no</text>
-        <resources name="No name" />
-      </speak-player>
-      <condition />
-      <child nodeindex="3" />
-    </option-node>
-    <dialogue-node nodeindex="2" editor-x="650" editor-y="0">
-      <speak-player>
-        <resources name="No name" />
-        <text>Es una idea estuepnda!</text>
-      </speak-player>
-      <condition />
-      <end-conversation />
-    </dialogue-node>
-    <dialogue-node nodeindex="3" editor-x="654" editor-y="227">
-      <speak-player>
-        <resources name="No name" />
-        <text>Creo que mejor pasamos</text>
-      </speak-player>
-      <condition />
-      <end-conversation />
-    </dialogue-node>
-  </graph-conversation>
   <graph-conversation id="Intro">
     <dialogue-node nodeindex="0" editor-x="109" editor-y="48">
       <speak-char idTarget="Sofia">
@@ -367,7 +344,7 @@
       <condition />
       <child nodeindex="8" />
     </dialogue-node>
-    <dialogue-node nodeindex="8" editor-x="1431" editor-y="40">
+    <dialogue-node nodeindex="8" editor-x="1435" editor-y="125">
       <speak-char idTarget="Sofia">
         <resources name="No name" />
         <text>¿No sabes de qué estábamos hablando, verdad?</text>
@@ -398,25 +375,19 @@
         <text>Ya es que es eso, es el sentido del humor de las viñetas del periódico</text>
       </speak-char>
       <condition />
-      <speak-char idTarget="David">
+      <speak-char idTarget="Jorge">
         <resources name="No name" />
-        <text>Como os jodería ver cómo nos hacemos ricos en cuatro días de tirar cervecitas las tardes. </text>
+        <text>Como os jodería ver cómo nos hacemos ricos en cuatro días de tirar cervecitas las tardes.</text>
       </speak-char>
       <condition />
-      <speak-char idTarget="David">
+      <speak-char idTarget="Jorge">
         <resources name="No name" />
         <text>¿A que es una idea literalmente increíble, eh? ¿Si o qué?</text>
       </speak-char>
       <condition />
-      <speak-player>
-        <resources name="No name" />
-        <text>
-        </text>
-      </speak-player>
-      <condition />
       <child nodeindex="9" />
     </dialogue-node>
-    <option-node nodeindex="9" preListening="yes" editor-x="2078" editor-y="71" x="2078" y="71">
+    <option-node nodeindex="9" keepShowing="yes" preListening="yes" editor-x="2078" editor-y="71" x="2078" y="71">
       <speak-player>
         <text>Ya puedo ver el bar medio lleno con viejos y copitas de vino.</text>
         <resources name="No name" />
@@ -436,7 +407,7 @@
       <condition />
       <child nodeindex="12" />
     </option-node>
-    <dialogue-node nodeindex="10" editor-x="2480" editor-y="99">
+    <dialogue-node nodeindex="10" editor-x="2512" editor-y="87">
       <speak-player>
         <resources name="No name" />
         <text>Ya puedo ver el bar medio lleno con viejos y copitas de vino.</text>
@@ -474,7 +445,7 @@
         <text> ¡Bah! Te conozco desde hace mucho tiempo y sé que tienes mejor gusto que eso.</text>
       </speak-char>
       <condition />
-      <end-conversation />
+      <child nodeindex="16" />
     </dialogue-node>
     <dialogue-node nodeindex="15" editor-x="2812" editor-y="486">
       <speak-char idTarget="Antia">
@@ -482,9 +453,9 @@
         <text>...Voy a suponer, en nombre de la estima que te tengo a ti y a nuestra amistad, que es sarcasmo.</text>
       </speak-char>
       <condition />
-      <end-conversation />
+      <child nodeindex="16" />
     </dialogue-node>
-    <dialogue-node nodeindex="16" editor-x="3183" editor-y="98">
+    <dialogue-node nodeindex="16" editor-x="3194" editor-y="60">
       <speak-char idTarget="Antia">
         <resources name="No name" />
         <text>La cosa es que da igual, no seríais capaces de llevar un bar de todos modos, que nos conocemos. Os encanta empezar cosas y dejarlas a medias.</text>
@@ -523,5 +494,197 @@
       <end-conversation />
     </dialogue-node>
   </graph-conversation>
+  <graph-conversation id="Apuestas1">
+    <dialogue-node nodeindex="0" editor-x="109" editor-y="48">
+      <speak-char idTarget="Jorge">
+        <resources name="No name" />
+        <text>Míralo, qué bonito, qué preciosidad. Aquí me hice yo 50 eurazos en una tarde rellenando un papel. Y yo años rellenando exámenes.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="David">
+        <resources name="No name" />
+        <text>Ya ves, menudo atraco montamos. Dejamos un billete de 5 y recogemos uno de 50. </text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Sofia">
+        <resources name="No name" />
+        <text>¿Perdonad, habláis del partido de ayer?</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Jorge">
+        <resources name="No name" />
+        <text>#O Ese mismo, si señora. </text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Sofia">
+        <resources name="No name" />
+        <text>¿Apostasteis por el Rayo Vallecano?</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Sofia">
+        <resources name="No name" />
+        <text>Pff… HA HA HA</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Jorge">
+        <resources name="No name" />
+        <text>Sí tú ríete que pensaba invitarte pero por gilipollas te quedas sin nada.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Javier">
+        <resources name="No name" />
+        <text>Yo no lo veía claro, pero si me invitas me vale lo mismo un bar que un casino.</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>* Antía te agarra el brazo y te tira un poco para darle ligeramente la espalda al grupo *</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="Antia">
+        <resources name="No name" />
+        <text>#! Oye, Alex, no me gustan mucho las apuestas, ¿quieres irte y nos vamos a mi casa o algo?</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Antia">
+        <resources name="No name" />
+        <text>Sé que dentro de poco empezamos la universidad y nos vamos a ver menos y tal, pero no sé.</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" keepShowing="yes" preListening="yes" editor-x="396" editor-y="57" x="396" y="57">
+      <speak-player>
+        <text>Jo, yo quiero cosas gratis la verdad.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>
+        <text>Sí que es raro venir a un sitio así, pero no va a estar el grupo junto tan a menudo como antes, hay que aprovechar.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+      <speak-player>
+        <text>Entiendo que no te interese mucho, pero no tienes por qué apostar así que debería estar bien</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="4" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="818" editor-y="169">
+      <speak-player>
+        <resources name="No name" />
+        <text>Jo, yo quiero cosas gratis la verdad.</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="5" />
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="808" editor-y="467">
+      <speak-player>
+        <resources name="No name" />
+        <text>Sí que es raro venir a un sitio así, pero no va a estar el grupo junto tan a menudo como antes, hay que aprovechar.</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="6" />
+    </dialogue-node>
+    <dialogue-node nodeindex="4" editor-x="798" editor-y="693">
+      <speak-player>
+        <resources name="No name" />
+        <text>Entiendo que no te interese mucho, pero no tienes por qué apostar así que debería estar bien</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="7" />
+    </dialogue-node>
+    <dialogue-node nodeindex="5" editor-x="1141" editor-y="255">
+      <speak-char idTarget="Antia">
+        <resources name="No name" />
+        <text>Ya, la verdad es que es tentador no te voy a mentir.</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="8" />
+    </dialogue-node>
+    <dialogue-node nodeindex="6" editor-x="1149" editor-y="479">
+      <speak-char idTarget="Antia">
+        <resources name="No name" />
+        <text>Ya, supongo que tienes razón.</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="8" />
+    </dialogue-node>
+    <dialogue-node nodeindex="7" editor-x="1146" editor-y="697">
+      <speak-char idTarget="Antia">
+        <resources name="No name" />
+        <text>Es cierto, pero no sé, no me parece un ambiente agradable.</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="8" />
+    </dialogue-node>
+    <dialogue-node nodeindex="8" editor-x="1431" editor-y="40">
+      <speak-char idTarget="Antia">
+        <resources name="No name" />
+        <text>Además, es eso, no tengo por qué participar en nada. Me pido una cervecita, que encima gratis está más rica y a casa.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Jorge">
+        <resources name="No name" />
+        <text>¡Eh, Alex! ¡Ven aquí un momento! </text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Jorge">
+        <resources name="No name" />
+        <text> Coge esto y esto y mira allí.</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>* Te entrega un papel, un boli y te senala una de las pantallas que hay en la sala. *</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="Jorge">
+        <resources name="No name" />
+        <text>Esta noche es el partido Villareal Betis. Venga, rellena mi quiniela. Si ganas te doy la mitad de lo que gane, me siento generoso.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="David">
+        <resources name="No name" />
+        <text>Hey, venga va yo también. ¡Javi, Sofía!, ¿quién creéis que gana? </text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Sofia">
+        <resources name="No name" />
+        <text>Hostia, pues yo digo…</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Javier">
+        <resources name="No name" />
+        <text>¡Betis! </text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>...¡Betis! Agh, ¡fue idea mía, se lo había dicho antes a Javi a no ser de que pierda, entonces yo no tuve nada que ver!</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="Javier">
+        <resources name="No name" />
+        <text>Vaya cara la madre que te parió, Sofía.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Sofia">
+        <resources name="No name" />
+        <text> Culo veo culo quiero, Javi, ya te vale tío. </text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Javier">
+        <resources name="No name" />
+        <text>...</text>
+      </speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
   <unity-scene id="Quiniela" scene="Assets/uAdventure/Scenes/Quiniela.unity" />
+  <unity-scene id="Base" scene="Assets/uAdventure/Scenes/_Scene1.unity" />
 </eAdventure>
