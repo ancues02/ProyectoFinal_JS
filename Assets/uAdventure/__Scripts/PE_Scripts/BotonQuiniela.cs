@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using uAdventure.Core;
+using uAdventure.Runner;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class BotonQuiniela : MonoBehaviour
 {
     Button button;
-    // Start is called before the first frame update
+
     void Start()
     {
         button = GetComponent<Button>();
@@ -22,6 +24,7 @@ public class BotonQuiniela : MonoBehaviour
         aux.selectedColor = Color.yellow;
         aux.pressedColor = Color.yellow;
         button.colors = aux;
+
     }
 
 }

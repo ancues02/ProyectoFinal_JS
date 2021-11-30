@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using uAdventure.Core;
+using uAdventure.Runner;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -22,5 +24,6 @@ public class FilaQuiniela : MonoBehaviour
         foreach(Button b in arrayBotones){
             b.interactable = false;
         }
+        
     }
 }

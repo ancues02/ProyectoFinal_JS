@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using uAdventure.Core;
+using uAdventure.Runner;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -18,10 +20,7 @@ public class BetManager : MonoBehaviour
     float dineroApostado;
     FilaQuiniela quinielaActual;
 
-    public void setQuinielaActual(FilaQuiniela fq)
-    {
-        quinielaActual = fq;
-    }
+
     private void Awake()
     {
         if (instance == null)
@@ -31,14 +30,23 @@ public class BetManager : MonoBehaviour
         }
         else
         {
+            instance.betPannel = betPannel;
+            instance.dineroActualText = dineroActualText;
             Destroy(this.gameObject);
         }
+
+
     }
 
 
     private void Start()
     {
         dineroActualText.text = dineroActual.ToString() + " C";
+    }
+
+    public void setQuinielaActual(FilaQuiniela fq)
+    {
+        quinielaActual = fq;
     }
 
     public void Apuesta(float apuesta)
@@ -53,5 +61,27 @@ public class BetManager : MonoBehaviour
     {
         betPannel.SetActive(mod);
     }
+
+
+    /**
+     * cosas para cambiar variables dentro de uadventure desde una escena nuestra
+     * // Setting the flag to Active
+        Game.Instance.GameState.SetFlag("Foo", FlagCondition.FLAG_ACTIVE);
+        // Checking the flag value
+        if(Game.Instance.GameState.CheckFlag("Foo") == FlagCondition.FLAG_ACTIVE){
+          Debug.Log("The flag is active!");
+        }
+     */
+    public void changeScene(string name)
+    {
+        //Esto es para cambiar de escenas dentro de uadventure
+        Game.Instance.Execute(new EffectHolder(new Effects{
+        new TriggerSceneEffect(name, 0, 0)//el nombre de la escena es la que hemos puesto en uadventure
+        }));
+    }
+
+    
+     
+     
 
 }
