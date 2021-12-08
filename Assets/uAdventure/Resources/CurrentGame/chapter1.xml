@@ -234,23 +234,42 @@
     <documentation>
     </documentation>
     <resources name="No name">
-      <asset type="background" uri="assets/background/SalaDeApuestas.jpg" />
+      <asset type="background" uri="assets/background/casaapuestas.jpg" />
     </resources>
     <name>
     </name>
     <default-initial-position x="400" y="450" />
     <exits>
-      <exit rectangular="yes" x="0" y="2" width="59" height="85" hasInfluenceArea="no" idTarget="Quiniela" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="1160" y="2" width="207" height="267" hasInfluenceArea="no" idTarget="Quiniela" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
+        <condition>
+          <inactive flag="Ir a casa" />
+        </condition>
+      </exit>
+      <exit rectangular="yes" x="-4" y="4" width="204" height="272" hasInfluenceArea="no" idTarget="Habitacion" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+        <condition>
+          <active flag="Ir a casa" />
+        </condition>
       </exit>
     </exits>
     <characters>
-      <character-ref idTarget="Jorge" x="468" y="344" scale="0.1" orientation="0" glow="no" layer="4" hasInfluenceArea="no" />
-      <character-ref idTarget="Sofia" x="376" y="342" scale="0.1" orientation="0" glow="no" layer="3" hasInfluenceArea="no" />
-      <character-ref idTarget="David" x="289" y="344" scale="0.1" orientation="0" glow="no" layer="2" hasInfluenceArea="no" />
-      <character-ref idTarget="Javier" x="170" y="346" scale="0.1" orientation="0" glow="no" layer="1" hasInfluenceArea="no" />
-      <character-ref idTarget="Antia" x="66" y="342" scale="0.1" orientation="0" glow="no" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="Jorge" x="1645" y="1084" scale="0.3152493" orientation="0" glow="no" layer="4" hasInfluenceArea="no" />
+      <character-ref idTarget="Sofia" x="1321" y="1078" scale="0.3152493" orientation="0" glow="no" layer="3" hasInfluenceArea="no" />
+      <character-ref idTarget="David" x="1016" y="1084" scale="0.3152493" orientation="0" glow="no" layer="2" hasInfluenceArea="no" />
+      <character-ref idTarget="Javier" x="597" y="1090" scale="0.3152493" orientation="0" glow="no" layer="1" hasInfluenceArea="no" />
+      <character-ref idTarget="Antia" x="232" y="1078" scale="0.3152493" orientation="0" glow="no" layer="0" hasInfluenceArea="no" />
     </characters>
+  </scene>
+  <scene id="Habitacion" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/habitacion.jpg" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
   </scene>
   <graph-conversation id="Intro">
     <dialogue-node nodeindex="0" editor-x="73" editor-y="28">
@@ -278,7 +297,7 @@
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
-    <option-node nodeindex="1" preListening="yes" editor-x="561" editor-y="54" x="561" y="54">
+    <option-node nodeindex="1" preListening="yes" editor-x="454" editor-y="68" x="454" y="68">
       <speak-player>
         <text>¡¿QUÉ PASA, QUÉ PASA?!</text>
         <resources name="No name" />
@@ -306,7 +325,7 @@
       <condition />
       <child nodeindex="5" />
     </dialogue-node>
-    <dialogue-node nodeindex="3" editor-x="807" editor-y="269">
+    <dialogue-node nodeindex="3" editor-x="800" editor-y="265">
       <speak-player>
         <resources name="No name" />
         <text>¡Sofía, no me grites que soy muy sensible!</text>
@@ -379,31 +398,31 @@
       <condition />
       <speak-char idTarget="Jorge">
         <resources name="No name" />
-        <text>Como os jodería ver cómo nos hacemos ricos en cuatro días de tirar cervecitas las tardes.</text>
+        <text>Teniendo un bar con ese nombre nos haríamos ricos en cuatro días solo de tirar cervecitas las tardes</text>
       </speak-char>
       <condition />
       <speak-char idTarget="Jorge">
         <resources name="No name" />
-        <text>¿A que es una idea literalmente increíble, eh? ¿Si o qué?</text>
+        <text>¿A qué es una idea literalmente increíble, eh? ¿Si o qué? </text>
       </speak-char>
       <condition />
       <child nodeindex="9" />
     </dialogue-node>
-    <option-node nodeindex="9" keepShowing="yes" preListening="yes" editor-x="2078" editor-y="71" x="2078" y="71">
+    <option-node nodeindex="9" keepShowing="yes" preListening="yes" editor-x="2010" editor-y="71" x="2010" y="71">
       <speak-player>
-        <text>Ya puedo ver el bar medio lleno con viejos y copitas de vino.</text>
+        <text>Ya puedo ver el bar medio lleno con viejos y copitas de vino</text>
         <resources name="No name" />
       </speak-player>
       <condition />
       <child nodeindex="10" />
       <speak-player>
-        <text>Bueno la verdad es que es un nombre que ni me va ni me viene.</text>
+        <text>Bueno la verdad es que es un nombre que ni me va ni me viene</text>
         <resources name="No name" />
       </speak-player>
       <condition />
       <child nodeindex="11" />
       <speak-player>
-        <text>¡Madre mía, es buenísimo! ¡Quiero la mitad de la propiedad del bar!</text>
+        <text> ¡Madre mía, es buenísimo! ¡Quiero la mitad de la propiedad del bar! </text>
         <resources name="No name" />
       </speak-player>
       <condition />
@@ -412,7 +431,7 @@
     <dialogue-node nodeindex="10" editor-x="2512" editor-y="87">
       <speak-player>
         <resources name="No name" />
-        <text>Ya puedo ver el bar medio lleno con viejos y copitas de vino.</text>
+        <text>Ya puedo ver el bar medio lleno con viejos y copitas de vino</text>
       </speak-player>
       <condition />
       <child nodeindex="13" />
@@ -420,7 +439,7 @@
     <dialogue-node nodeindex="11" editor-x="2507" editor-y="288">
       <speak-player>
         <resources name="No name" />
-        <text>Bueno la verdad es que es un nombre que ni me va ni me viene.</text>
+        <text>Bueno la verdad es que es un nombre que ni me va ni me viene</text>
       </speak-player>
       <condition />
       <child nodeindex="14" />
@@ -428,7 +447,7 @@
     <dialogue-node nodeindex="12" editor-x="2508" editor-y="481">
       <speak-player>
         <resources name="No name" />
-        <text>¡Madre mía, es buenísimo! ¡Quiero la mitad de la propiedad del bar!</text>
+        <text> ¡Madre mía, es buenísimo! ¡Quiero la mitad de la propiedad del bar! </text>
       </speak-player>
       <condition />
       <child nodeindex="15" />
@@ -500,12 +519,12 @@
     <dialogue-node nodeindex="0" editor-x="109" editor-y="48">
       <speak-char idTarget="Jorge">
         <resources name="No name" />
-        <text>Míralo, qué bonito, qué preciosidad. Aquí me hice yo 50 eurazos en una tarde rellenando un papel. Y yo años rellenando exámenes.</text>
+        <text>Míralo, qué bonito, qué preciosidad. Aquí me hice pila pasta en una tarde rellenando un papel. Y yo años rellenando exámenes.</text>
       </speak-char>
       <condition />
       <speak-char idTarget="David">
         <resources name="No name" />
-        <text>Ya ves, menudo atraco montamos. Dejamos un billete de 5 y recogemos uno de 50. </text>
+        <text>Ya ves, menudo atraco montamos.</text>
       </speak-char>
       <condition />
       <speak-char idTarget="Sofia">
@@ -545,12 +564,12 @@
       <condition />
       <speak-char idTarget="Antia">
         <resources name="No name" />
-        <text>#! Oye, Alex, no me gustan mucho las apuestas, ¿quieres irte y nos vamos a mi casa o algo?</text>
+        <text>#! Oye, Alex, no me gustan mucho las apuestas, ¿quieres irte y nos vamos a mi casa o algo? </text>
       </speak-char>
       <condition />
       <speak-char idTarget="Antia">
         <resources name="No name" />
-        <text>Sé que dentro de poco empezamos la universidad y nos vamos a ver menos y tal, pero no sé.</text>
+        <text>Sé que es legal, que somos mayores de edad, y que dentro de poco empezamos la universidad y nos vamos a ver menos y tal, pero no sé.</text>
       </speak-char>
       <condition />
       <child nodeindex="1" />
@@ -569,7 +588,7 @@
       <condition />
       <child nodeindex="3" />
       <speak-player>
-        <text>Entiendo que no te interese mucho, pero no tienes por qué apostar así que debería estar bien</text>
+        <text> Entiendo que no te interese mucho, pero no tienes por qué apostar así que debería estar bien.</text>
         <resources name="No name" />
       </speak-player>
       <condition />
@@ -594,7 +613,7 @@
     <dialogue-node nodeindex="4" editor-x="798" editor-y="693">
       <speak-player>
         <resources name="No name" />
-        <text>Entiendo que no te interese mucho, pero no tienes por qué apostar así que debería estar bien</text>
+        <text> Entiendo que no te interese mucho, pero no tienes por qué apostar así que debería estar bien.</text>
       </speak-player>
       <condition />
       <child nodeindex="7" />
@@ -626,22 +645,22 @@
     <dialogue-node nodeindex="8" editor-x="1431" editor-y="40">
       <speak-char idTarget="Antia">
         <resources name="No name" />
-        <text>Además, es eso, no tengo por qué participar en nada. Me pido una cervecita, que encima gratis está más rica y a casa.</text>
+        <text>Además, es eso, no tengo por qué participar en nada. Me pido algo, que encima gratis y está más rico, y a casa.</text>
       </speak-char>
       <condition />
       <speak-char idTarget="Jorge">
         <resources name="No name" />
-        <text>¡Eh, Alex! ¡Ven aquí un momento! </text>
+        <text>¡Eh, Alex! ¡Ven aquí un momento!</text>
       </speak-char>
       <condition />
       <speak-char idTarget="Jorge">
         <resources name="No name" />
-        <text> Coge esto y esto y mira allí.</text>
+        <text>Coge esto y esto y mira allí.</text>
       </speak-char>
       <condition />
       <speak-player>
         <resources name="No name" />
-        <text>* Te entrega un papel, un boli y te senala una de las pantallas que hay en la sala. *</text>
+        <text>*Te entrega un papel, un boli y te señala una de las pantallas que hay en la sala*</text>
       </speak-player>
       <condition />
       <speak-char idTarget="Jorge">
@@ -651,7 +670,7 @@
       <condition />
       <speak-char idTarget="David">
         <resources name="No name" />
-        <text>Hey, venga va yo también. ¡Javi, Sofía!, ¿quién creéis que gana? </text>
+        <text>Hey, venga va yo también. ¡Javi, Sofía!, ¿quién creéis que gana?</text>
       </speak-char>
       <condition />
       <speak-char idTarget="Sofia">
@@ -683,6 +702,75 @@
         <resources name="No name" />
         <text>...</text>
       </speak-char>
+      <condition />
+      <speak-char idTarget="Jorge">
+        <resources name="No name" />
+        <text>¿Qué, le das? Lo peor que te puedes llevar es una colleja de mi parte si pierdes.</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="9" />
+    </dialogue-node>
+    <option-node nodeindex="9" keepShowing="yes" preListening="yes" editor-x="1779" editor-y="48" x="1779" y="48">
+      <speak-player>
+        <text>Venga va, me siento con suerte hoy.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="10" />
+      <speak-player>
+        <text>Voy a pasar, que luego es culpa mía que pierdas dinero.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="11" />
+      <effect>
+        <deactivate flag="Ir a casa" guid="20e05e6a-ef4c-4f97-95c2-92f20c264809" />
+        <condition />
+      </effect>
+    </option-node>
+    <dialogue-node nodeindex="10" editor-x="2370" editor-y="64">
+      <speak-player>
+        <resources name="No name" />
+        <text>Venga va, me siento con suerte hoy.</text>
+      </speak-player>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+    <dialogue-node nodeindex="11" editor-x="2361" editor-y="336">
+      <speak-player>
+        <resources name="No name" />
+        <text>Voy a pasar, que luego es culpa mía que pierdas dinero.</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="Jorge">
+        <resources name="No name" />
+        <text>¡Bah! No sabes divertirte. Allá tú, te quedas con lo puesto.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Jorge">
+        <resources name="No name" />
+        <text>Pues nada, vete con Antía, está sentada en la mesa de allí.</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>*Antía te está saludando desde la esquina del local, sentada sola en la mesa*</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="Antia">
+        <resources name="No name" />
+        <text>Gracias por hacerme compañía, se que estabas en tu derecho de participar pero la verdad es que me alivia saber que te laves las manos de todo el asunto.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Antia">
+        <resources name="No name" />
+        <text>Cambiando de tema, ¿te he contado alguna vez cómo una vez casi completé el rosco de Pasapalabra?</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>*Tras oír la misma historia de siempre una vez más, y pasar la tarde con los amigos, decidís volver a casa*</text>
+      </speak-player>
       <condition />
       <end-conversation />
     </dialogue-node>

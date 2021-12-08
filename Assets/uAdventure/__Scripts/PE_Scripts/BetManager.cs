@@ -32,21 +32,21 @@ public class BetManager : MonoBehaviour
         {
             instance.betPannel = betPannel;
             instance.dineroActualText = dineroActualText;
+            instance.quinielaActual = quinielaActual;
+            dineroActualText.text = instance.dineroActual.ToString() + " C";
             Destroy(this.gameObject);
         }
-
-
     }
 
-
-    private void Start()
-    {
-        dineroActualText.text = dineroActual.ToString() + " C";
-    }
 
     public void setQuinielaActual(FilaQuiniela fq)
     {
         quinielaActual = fq;
+    }
+
+    public FilaQuiniela getQuinielaActual( )
+    {
+        return quinielaActual;
     }
 
     public void Apuesta(float apuesta)
@@ -79,9 +79,5 @@ public class BetManager : MonoBehaviour
         new TriggerSceneEffect(name, 0, 0)//el nombre de la escena es la que hemos puesto en uadventure
         }));
     }
-
-    
-     
-     
 
 }
