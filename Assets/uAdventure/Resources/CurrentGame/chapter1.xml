@@ -64,6 +64,7 @@
         <documentation>Apuestas1</documentation>
         <condition>
           <inactive flag="Apuestas1Ended" />
+          <active flag="EnEscena2_1" />
         </condition>
         <effect>
           <trigger-conversation idTarget="Apuestas1_1" guid="9274dbb5-0bc6-41af-94fb-f4a5eeb91ad2" />
@@ -75,6 +76,7 @@
         <condition>
           <inactive flag="Ir a casa" />
           <active flag="Apuestas1Ended" />
+          <active flag="EnEscena2_1" />
         </condition>
         <effect>
           <trigger-conversation idTarget="Apuestas2_1" guid="49555917-486a-4098-b848-b8ab613bf69a" />
@@ -144,7 +146,7 @@
       <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
         <documentation>Intro</documentation>
         <condition>
-          <inactive flag="Intro" />
+          <inactive flag="IntroEcha" />
         </condition>
         <effect>
           <trigger-conversation idTarget="Intro_1" guid="5d0bf7c5-3813-45d2-800e-044d7fba41a8" />
@@ -210,8 +212,19 @@
       </detailed>
     </description>
     <voice name="" synthesizeAlways="no" />
+    <actions>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="Cap2" />
+        </condition>
+        <effect>
+          <trigger-conversation idTarget="Intro_2" guid="115e6ee9-b114-456d-8aec-2a3a148b2bd1" />
+          <condition />
+        </effect>
+      </talk-to>
+    </actions>
   </character>
-  <scene id="Introduccion" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="Introduccion_1" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -221,13 +234,13 @@
     </name>
     <default-initial-position x="400" y="450" />
     <exits>
-      <exit rectangular="yes" x="-1" y="0" width="83" height="81" hasInfluenceArea="no" idTarget="Apuestas" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="-1" y="2" width="83" height="81" hasInfluenceArea="no" idTarget="Apuestas_1" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
         <condition>
           <active flag="IntroEcha" />
         </condition>
         <effect>
-          <activate flag="Apuestas1Ended" guid="876ecb5b-0619-4c95-aa33-68c19d5bcfba" />
+          <activate flag="EnEscena2_1" guid="1aebf3ed-27da-48a8-9743-bd8522ad8ac9" />
           <condition />
         </effect>
       </exit>
@@ -240,7 +253,7 @@
       <character-ref idTarget="Antia" x="421" y="405" scale="0.1405123" orientation="0" glow="no" layer="0" hasInfluenceArea="no" />
     </characters>
   </scene>
-  <scene id="Apuestas" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="Apuestas_1" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -256,14 +269,14 @@
           <active flag="Apostar" />
         </condition>
       </exit>
-      <exit rectangular="yes" x="-4" y="-2" width="576" height="278" hasInfluenceArea="no" idTarget="HabitacionSinApostar" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="-4" y="-2" width="576" height="278" hasInfluenceArea="no" idTarget="HabitacionSinApostar_1" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
         <condition>
           <active flag="Ir a casa" />
           <equals var="numApuestas" value="0" />
         </condition>
       </exit>
-      <exit rectangular="yes" x="-6" y="6" width="574" height="256" hasInfluenceArea="no" idTarget="HabitacionConApostar" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="-6" y="6" width="574" height="256" hasInfluenceArea="no" idTarget="HabitacionConApostar_1" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
         <condition>
           <active flag="Ir a casa" />
@@ -279,7 +292,7 @@
       <character-ref idTarget="Antia" x="232" y="1078" scale="0.3152493" orientation="0" glow="no" layer="0" hasInfluenceArea="no" />
     </characters>
   </scene>
-  <scene id="HabitacionSinApostar" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="HabitacionSinApostar_1" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -289,7 +302,7 @@
     </name>
     <default-initial-position x="400" y="450" />
   </scene>
-  <scene id="HabitacionConApostar" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="HabitacionConApostar_1" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -298,6 +311,33 @@
     <name>
     </name>
     <default-initial-position x="400" y="450" />
+  </scene>
+  <scene id="Habitacion_2" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/habitacion.jpg" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+  </scene>
+  <scene id="PuntoEncuentro_2" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/puntodeencuentro1.jpg" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <characters>
+      <character-ref idTarget="Jorge" x="73" y="714" scale="0.15" orientation="0" glow="no" layer="4" hasInfluenceArea="no" />
+      <character-ref idTarget="David" x="227" y="717" scale="0.15" orientation="0" glow="no" layer="3" hasInfluenceArea="no" />
+      <character-ref idTarget="Sofia" x="375" y="716" scale="0.15" orientation="0" glow="no" layer="2" hasInfluenceArea="no" />
+      <character-ref idTarget="Javier" x="978" y="711" scale="0.15" orientation="0" glow="no" layer="1" hasInfluenceArea="no" />
+      <character-ref idTarget="Antia" x="784" y="713" scale="0.15" orientation="0" glow="no" layer="0" hasInfluenceArea="no" />
+    </characters>
   </scene>
   <graph-conversation id="Intro_1">
     <dialogue-node nodeindex="0" editor-x="73" editor-y="28">
@@ -863,6 +903,170 @@
       <child nodeindex="1" />
     </dialogue-node>
     <dialogue-node nodeindex="1" editor-x="475" editor-y="47">
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="Intro_2">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>
+        <resources name="No name" />
+        <text>#! # Algo más tarde, en el sitio de siempre # </text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="Antia">
+        <resources name="No name" />
+        <text>¡Hola, Alex! Te eché de menos desayunando, ¿no te dio tiempo a venir? </text>
+      </speak-char>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" keepShowing="yes" preListening="yes" editor-x="561" editor-y="24" x="561" y="24">
+      <speak-player>
+        <text>Nooo, leí el mensaje de Javi por la mañana y ya eran las 9 de la mañana.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>
+        <text>No, la verdad es que estaba haciendo otras cosas. </text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="927" editor-y="32">
+      <speak-player>
+        <resources name="No name" />
+        <text>Nooo, leí el mensaje de Javi por la mañana y ya eran las 9 de la mañana.</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="Javier">
+        <resources name="No name" />
+        <text>Ya, perdona. Es que quedamos en que te avisaba yo y se me hizo tarde la verdad. Lo siento. </text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Sofia">
+        <resources name="No name" />
+        <text>Bueno, Javi, que tampoco has insultado a su madre, no pasa nada. </text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Antia">
+        <resources name="No name" />
+        <text> Sí, ya me imaginaba que habría pasado algo así. Qué se le va a hacer, la cosa es que estás aquí ahora.</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>#! # Vibración, vibración # </text>
+      </speak-player>
+      <condition />
+      <child nodeindex="4" />
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="930" editor-y="327">
+      <speak-player>
+        <resources name="No name" />
+        <text>No, la verdad es que estaba haciendo otras cosas. </text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="Antia">
+        <resources name="No name" />
+        <text>Bueno, si tenías cosas que hacer no hay otra.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Antia">
+        <resources name="No name" />
+        <text> No te lo tomes a mal, pero espero que no estuvieras apostando. No me da nada de buena espina…</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="David">
+        <resources name="No name" />
+        <text>Venga, Antía, si quiere apostar tampoco es como si se estuviera drogando o algo.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Antia">
+        <resources name="No name" />
+        <text>Ya lo sé, pero eso, no me gusta mucho la idea, da igual, no he dicho nada.</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>#! # Vibración, vibración # </text>
+      </speak-player>
+      <condition />
+      <child nodeindex="4" />
+    </dialogue-node>
+    <option-node nodeindex="4" preListening="yes" editor-x="1520" editor-y="96" x="1520" y="96">
+      <speak-player>
+        <text>Mirar el móvil.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="5" />
+      <speak-player>
+        <text>Ya lo mirarás luego.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="6" />
+      <effect>
+        <activate flag="Intro2Echa" guid="07b4a4bb-4477-4238-b623-e5eecabacc31" />
+        <condition />
+      </effect>
+    </option-node>
+    <dialogue-node nodeindex="5" editor-x="1874" editor-y="86">
+      <speak-player>
+        <resources name="No name" />
+        <text>Mirar el móvil.</text>
+      </speak-player>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+    <dialogue-node nodeindex="6" editor-x="1874" editor-y="301">
+      <speak-char idTarget="Sofia">
+        <resources name="No name" />
+        <text>¡Eh, han actualizado la info del partido de hoy!</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Jorge">
+        <resources name="No name" />
+        <text>Sí, sí, buah lo tengo clarísimo ya quién va a ganar.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Antia">
+        <resources name="No name" />
+        <text>Agh, qué dolor de cabeza me dais con lo de las apuestas, ¿no veis que vais a acabar perdiendo el dinero?</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Javier">
+        <resources name="No name" />
+        <text>Yo pienso lo mismo que tú, Antía. Malas vibras me da el tema.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Jorge">
+        <resources name="No name" />
+        <text>Eso es porque la gente no sabe lo que hace, pero yo lo tengo clarísimo.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Jorge">
+        <resources name="No name" />
+        <text>De hecho a penas he perdido en todo lo que llevo jugado</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Jorge">
+        <resources name="No name" />
+        <text>Mira, os lo demuestro, vamos a la casa de apuestas, os tomáis algo nosotros hacemos lo nuestro y para cuando acabemos ya veréis lo que pasa.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Sofia">
+        <resources name="No name" />
+        <text>Por mi bien, que me he informado, creo que sé quién va a ganar y quiero ver si tengo razón.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Antia">
+        <resources name="No name" />
+        <text> Si os hace dejar de intentar venderme la moto, adelante, pero yo no voy a participar.</text>
+      </speak-char>
+      <condition />
       <end-conversation />
     </dialogue-node>
   </graph-conversation>
