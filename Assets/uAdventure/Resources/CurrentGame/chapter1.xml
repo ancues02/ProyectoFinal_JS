@@ -74,6 +74,9 @@
       </talk-to>
       <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
         <documentation>Created with target conversation: Apuestas2</documentation>
+        <condition>
+          <inactive flag="Ir a casa" />
+        </condition>
         <effect>
           <trigger-conversation idTarget="Apuestas2" guid="1427da96-cb02-4dca-a696-a4a21049aa8e" />
           <condition />
@@ -250,13 +253,13 @@
     </name>
     <default-initial-position x="400" y="450" />
     <exits>
-      <exit rectangular="yes" x="1160" y="2" width="207" height="267" hasInfluenceArea="no" idTarget="Quiniela" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="1160" y="-4" width="642" height="273" hasInfluenceArea="no" idTarget="Quiniela" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
         <condition>
           <active flag="Apostar" />
         </condition>
       </exit>
-      <exit rectangular="yes" x="-4" y="4" width="204" height="272" hasInfluenceArea="no" idTarget="Habitacion" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="-4" y="-2" width="576" height="278" hasInfluenceArea="no" idTarget="Habitacion" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
         <condition>
           <active flag="Ir a casa" />
