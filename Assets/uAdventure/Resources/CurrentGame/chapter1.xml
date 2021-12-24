@@ -63,22 +63,21 @@
       <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
         <documentation>Apuestas1</documentation>
         <condition>
-          <active flag="Apuestas1Ended" />
+          <inactive flag="Apuestas1Ended" />
         </condition>
         <effect>
-          <trigger-conversation idTarget="Apuestas1" guid="f8ff86c5-4329-4efe-8de0-cb97a3f8c2f4" />
-          <condition />
-          <deactivate flag="Apuestas1Ended" guid="0feec197-0573-46d6-b9d1-b28cc9c9ec1f" />
+          <trigger-conversation idTarget="Apuestas1_1" guid="9274dbb5-0bc6-41af-94fb-f4a5eeb91ad2" />
           <condition />
         </effect>
       </talk-to>
       <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
-        <documentation>Created with target conversation: Apuestas2</documentation>
+        <documentation>Apuestas2</documentation>
         <condition>
           <inactive flag="Ir a casa" />
+          <active flag="Apuestas1Ended" />
         </condition>
         <effect>
-          <trigger-conversation idTarget="Apuestas2" guid="1427da96-cb02-4dca-a696-a4a21049aa8e" />
+          <trigger-conversation idTarget="Apuestas2_1" guid="49555917-486a-4098-b848-b8ab613bf69a" />
           <condition />
         </effect>
       </talk-to>
@@ -148,9 +147,7 @@
           <inactive flag="Intro" />
         </condition>
         <effect>
-          <trigger-conversation idTarget="Intro" guid="9cad09de-c14c-4ecc-8241-eced5cdcdafa" />
-          <condition />
-          <activate flag="Intro" guid="35c80f92-7bd6-49f3-9876-0fd09859d076" />
+          <trigger-conversation idTarget="Intro_1" guid="5d0bf7c5-3813-45d2-800e-044d7fba41a8" />
           <condition />
         </effect>
       </talk-to>
@@ -214,7 +211,7 @@
     </description>
     <voice name="" synthesizeAlways="no" />
   </character>
-  <scene id="Introduccion" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="Introduccion" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -243,7 +240,7 @@
       <character-ref idTarget="Antia" x="421" y="405" scale="0.1405123" orientation="0" glow="no" layer="0" hasInfluenceArea="no" />
     </characters>
   </scene>
-  <scene id="Apuestas" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="Apuestas" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -302,7 +299,7 @@
     </name>
     <default-initial-position x="400" y="450" />
   </scene>
-  <graph-conversation id="Intro">
+  <graph-conversation id="Intro_1">
     <dialogue-node nodeindex="0" editor-x="73" editor-y="28">
       <speak-char idTarget="Sofia">
         <resources name="No name">
@@ -551,7 +548,7 @@
       </end-conversation>
     </dialogue-node>
   </graph-conversation>
-  <graph-conversation id="Apuestas1">
+  <graph-conversation id="Apuestas1_1">
     <dialogue-node nodeindex="0" editor-x="109" editor-y="48">
       <speak-char idTarget="Jorge">
         <resources name="No name" />
@@ -678,7 +675,7 @@
       <condition />
       <child nodeindex="8" />
     </dialogue-node>
-    <dialogue-node nodeindex="8" editor-x="1431" editor-y="40">
+    <dialogue-node nodeindex="8" editor-x="1496" editor-y="130">
       <speak-char idTarget="Antia">
         <resources name="No name" />
         <text>Además, es eso, no tengo por qué participar en nada. Me pido algo, que encima gratis y está más rico, y a casa.</text>
@@ -745,6 +742,10 @@
       </speak-char>
       <condition />
       <child nodeindex="9" />
+      <effect>
+        <activate flag="Apuestas1Ended" guid="e450bbf2-7f04-40b0-810f-3d5f88300938" />
+        <condition />
+      </effect>
     </dialogue-node>
     <option-node nodeindex="9" keepShowing="yes" preListening="yes" editor-x="1779" editor-y="48" x="1779" y="48">
       <speak-player>
@@ -817,7 +818,7 @@
       </end-conversation>
     </dialogue-node>
   </graph-conversation>
-  <graph-conversation id="Apuestas2">
+  <graph-conversation id="Apuestas2_1">
     <dialogue-node nodeindex="0" editor-x="147" editor-y="48">
       <speak-char idTarget="Jorge">
         <resources name="No name" />
@@ -847,7 +848,7 @@
       </end-conversation>
     </dialogue-node>
   </graph-conversation>
-  <graph-conversation id="EnCasa">
+  <graph-conversation id="EnCasa_1">
     <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
       <speak-player>
         <resources name="No name" />
