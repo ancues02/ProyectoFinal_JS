@@ -20,6 +20,10 @@ public class BetManager : MonoBehaviour
     float dineroApostado;
     FilaQuiniela quinielaActual;
 
+    /// <summary>
+    /// Las veces que has apostado
+    /// </summary>
+    int numApuestas = 0;
 
     private void Awake()
     {
@@ -74,10 +78,16 @@ public class BetManager : MonoBehaviour
      */
     public void changeScene(string name)
     {
+        numApuestas++;
+        // Setting the flag to Active
+        Game.Instance.GameState.SetFlag("Apostar", FlagCondition.FLAG_INACTIVE);
+        Game.Instance.GameState.SetVariable("numApuestas", numApuestas);
+
         //Esto es para cambiar de escenas dentro de uadventure
         Game.Instance.Execute(new EffectHolder(new Effects{
         new TriggerSceneEffect(name, 0, 0)//el nombre de la escena es la que hemos puesto en uadventure
         }));
+
     }
 
 }

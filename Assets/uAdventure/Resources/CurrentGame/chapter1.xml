@@ -48,7 +48,7 @@
       <asset type="walkright" uri="assets/special/EmptyAnimation" />
       <asset type="walkleft" uri="assets/special/EmptyAnimation" />
     </resources>
-    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+    <textcolor showsSpeechBubble="yes" bubbleBkgColor="#FF0000" bubbleBorderColor="#000000">
       <frontcolor color="#FFFFFF" />
       <bordercolor color="#000000" />
     </textcolor>
@@ -72,6 +72,13 @@
           <condition />
         </effect>
       </talk-to>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <documentation>Created with target conversation: Apuestas2</documentation>
+        <effect>
+          <trigger-conversation idTarget="Apuestas2" guid="1427da96-cb02-4dca-a696-a4a21049aa8e" />
+          <condition />
+        </effect>
+      </talk-to>
     </actions>
   </character>
   <character id="David" behaviour="first-action">
@@ -91,7 +98,7 @@
       <asset type="walkright" uri="assets/special/EmptyAnimation" />
       <asset type="walkleft" uri="assets/special/EmptyAnimation" />
     </resources>
-    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFEC00" bubbleBorderColor="#000000">
       <frontcolor color="#FFFFFF" />
       <bordercolor color="#000000" />
     </textcolor>
@@ -120,7 +127,7 @@
       <asset type="walkright" uri="assets/special/EmptyAnimation" />
       <asset type="walkleft" uri="assets/special/EmptyAnimation" />
     </resources>
-    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FF00B1" bubbleBorderColor="#000000">
       <frontcolor color="#FFFFFF" />
       <bordercolor color="#000000" />
     </textcolor>
@@ -163,7 +170,7 @@
       <asset type="walkright" uri="assets/special/EmptyAnimation" />
       <asset type="walkleft" uri="assets/special/EmptyAnimation" />
     </resources>
-    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#1E00FF" bubbleBorderColor="#000000">
       <frontcolor color="#FFFFFF" />
       <bordercolor color="#000000" />
     </textcolor>
@@ -192,7 +199,7 @@
       <asset type="walkright" uri="assets/special/EmptyAnimation" />
       <asset type="walkleft" uri="assets/special/EmptyAnimation" />
     </resources>
-    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#00FF16" bubbleBorderColor="#000000">
       <frontcolor color="#FFFFFF" />
       <bordercolor color="#000000" />
     </textcolor>
@@ -745,7 +752,7 @@
         </effect>
       </end-conversation>
     </dialogue-node>
-    <dialogue-node nodeindex="11" editor-x="2361" editor-y="336">
+    <dialogue-node nodeindex="11" editor-x="2222" editor-y="293">
       <speak-player>
         <resources name="No name" />
         <text>Voy a pasar, que luego es culpa mía que pierdas dinero.</text>
@@ -787,6 +794,54 @@
           <condition />
         </effect>
       </end-conversation>
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="Apuestas2">
+    <dialogue-node nodeindex="0" editor-x="147" editor-y="48">
+      <speak-char idTarget="Jorge">
+        <resources name="No name" />
+        <text>Dale ahí Alex, de una.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Jorge">
+        <resources name="No name" />
+        <text>Hazme caso que sale bien, que tienes un instinto para estas cosas.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Jorge">
+        <resources name="No name" />
+        <text>Venga vamos a sentarnos con los demás y a echar la tarde, que la pobre Antía debe sentirse sola en la mesa. </text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text># Volvéis a la mesa y estáis el resto de la tarde pasando el rato, hasta que Antía dice que tiene que irse y decidís volver a casa #</text>
+      </speak-player>
+      <condition />
+      <end-conversation>
+        <effect>
+          <activate flag="Ir a casa" guid="eaaaf57c-e55c-40a1-bcf3-629bf1804762" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="EnCasa">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>
+        <resources name="No name" />
+        <text>* Por la noche * </text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>* En tu habitación *</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <dialogue-node nodeindex="1" editor-x="475" editor-y="47">
+      <end-conversation />
     </dialogue-node>
   </graph-conversation>
   <unity-scene id="Quiniela" scene="Assets/uAdventure/Scenes/Quiniela.unity" />
