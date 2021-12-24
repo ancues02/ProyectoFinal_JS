@@ -15,10 +15,8 @@
   </extension-objects>
   <contents>
     <chapter path="chapter1.xml">
-      <title>
-      </title>
-      <description>
-      </description>
+      <title>Capitulo 1</title>
+      <description>Introduccion a los personajes y distintas zonas en las que se va a jugar</description>
     </chapter>
   </contents>
 </game-descriptor>

@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties>
 <comment> Project Configuration </comment>
-<entry key="Chapter0.Introduccion.X">-210</entry>
-<entry key="Chapter0.Introduccion.Y">130</entry>
+<entry key="Chapter0.Introduccion.X">679</entry>
+<entry key="Chapter0.Introduccion.Y">0</entry>
 <entry key="Chapter0.Apuestas1.X">148</entry>
 <entry key="Chapter0.Apuestas1.Y">-9</entry>
 <entry key="Chapter0.Apuestas2.X">352</entry>
 <entry key="Chapter0.Apuestas2.Y">130</entry>
-<entry key="Chapter0.Apuestas.X">355</entry>
-<entry key="Chapter0.Apuestas.Y">35</entry>
+<entry key="Chapter0.Apuestas.X">400</entry>
+<entry key="Chapter0.Apuestas.Y">125</entry>
 <entry key="Chapter0.Habitacion.X">229</entry>
 <entry key="Chapter0.Habitacion.Y">336</entry>
+<entry key="Chapter0.HabitacionSinApostar.X">-197</entry>
+<entry key="Chapter0.HabitacionSinApostar.Y">277</entry>
+<entry key="Chapter0.HabitacionConApostar.X">6</entry>
+<entry key="Chapter0.HabitacionConApostar.Y">484</entry>
 </properties>
 

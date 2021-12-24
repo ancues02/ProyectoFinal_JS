@@ -259,10 +259,18 @@
           <active flag="Apostar" />
         </condition>
       </exit>
-      <exit rectangular="yes" x="-4" y="-2" width="576" height="278" hasInfluenceArea="no" idTarget="Habitacion" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="-4" y="-2" width="576" height="278" hasInfluenceArea="no" idTarget="HabitacionSinApostar" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
         <condition>
           <active flag="Ir a casa" />
+          <equals var="numApuestas" value="0" />
+        </condition>
+      </exit>
+      <exit rectangular="yes" x="-6" y="6" width="574" height="256" hasInfluenceArea="no" idTarget="HabitacionConApostar" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+        <condition>
+          <active flag="Ir a casa" />
+          <equals var="numApuestas" value="1" />
         </condition>
       </exit>
     </exits>
@@ -274,7 +282,17 @@
       <character-ref idTarget="Antia" x="232" y="1078" scale="0.3152493" orientation="0" glow="no" layer="0" hasInfluenceArea="no" />
     </characters>
   </scene>
-  <scene id="Habitacion" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="HabitacionSinApostar" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/habitacion.jpg" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+  </scene>
+  <scene id="HabitacionConApostar" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -849,4 +867,18 @@
   </graph-conversation>
   <unity-scene id="Quiniela" scene="Assets/uAdventure/Scenes/Quiniela.unity" />
   <unity-scene id="Base" scene="Assets/uAdventure/Scenes/_Scene1.unity" />
+  <object id="Movil" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/movil.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </object>
 </eAdventure>
