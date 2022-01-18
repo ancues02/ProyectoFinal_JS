@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour
           Debug.Log("The flag is active!");
         }
      */
-    public void ChangeUadventureScene(string sceneName)
+    public void UAdvChangeScene(string sceneName)
     {
         //Esto es para cambiar de escenas dentro de uadventure
         Game.Instance.Execute(new EffectHolder(new Effects{
@@ -51,23 +51,37 @@ public class GameManager : MonoBehaviour
         }));
     }
 
-    public void SetUadventurFlag(string name, int state)
+    public void UAdvSetFlag(string name, int state)
     {
         Game.Instance.GameState.SetFlag(name, state);
     }
 
-    public bool CheckUadventureFlag(string name, int state)
+    public bool UAdvCheckFlag(string name, int state)
     {
         return Game.Instance.GameState.CheckFlag(name) == state;
     }
 
-    public void SetUadventureVariable(string name, int state)
+    public void UAdvSetVariable(string name, int state)
     {
         Game.Instance.GameState.SetVariable(name, state);
     }
 
-    public int GetUadventureVariable(string name)
+    public int UAdvGetVariable(string name)
     {
         return Game.Instance.GameState.GetVariable(name);
+    }
+
+    public void UAdvAddInventoryItem(string elementID)
+    {
+        Game.Instance.GameState.AddInventoryItem(elementID);
+    }
+    public List<string> UAdvGetInventoryItems()
+    {
+        return Game.Instance.GameState.GetInventoryItems();
+    }
+
+    public void UAdvRemoveInventoryItem(string elementID)
+    {
+        Game.Instance.GameState.RemoveInventoryItem(elementID);
     }
 }
