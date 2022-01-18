@@ -16,9 +16,11 @@ public class BetManager : MonoBehaviour
     public Toggle draw2toggle;
 
     public Button confirmButton;
-    private void Start()
+    public void Init(BetData betData)
     {
-        Init(GameManager.Instance.NumApuestas);
+        e1Image.sprite = betData.e1Image;
+        e2Image.sprite = betData.e2Image;
+        //configurar los equipos y multiplicadores segun numApuestas
         confirmButton.onClick.AddListener(() =>
         {
             if (ApuestaHecha())
@@ -28,10 +30,6 @@ public class BetManager : MonoBehaviour
                 //              o a ala que toque podemos hacer varias segun los dialogos supongo();
             }
         });
-    }
-    private void Init(int NumApuestas)
-    {
-        //configurar los equipos y multiplicadores segun el n� de apuestas o la escena no se
     }
 
     private bool ApuestaHecha()

@@ -8,20 +8,30 @@ using uAdventure.Runner;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
-
-
-    public float DineroActual { get; set; }
-    public float DineroApostado { get; set; }
-
+    public int Recurso { get; set; }
     public int NumApuestas { get; set; }    // == APUESTAS en el guion
     public int ApuestaMinima { get; set; }
 
+    public ResourceBar resourceBar;
+    public int MaxRecurso;
+    public int MinRecurso;
+    public int RecursoApostado;
 
-    BetManager betManager;
+    public BetManager betManager;
 
+    /// <summary>
+    /// El indice del array el numero de apuestas
+    /// </summary>
+    public BetData[] betDatas;
+    
     void Awake()
     {
         if (!Instance) {
+            if (!resourceBar)
+                Debug.LogError("Falta la barra de recurso");
+            else
+                resourceBar.Init(MaxRecurso, MinRecurso);
+            Recurso = MaxRecurso;
             Instance = this;
             DontDestroyOnLoad(Instance);
         }
@@ -29,10 +39,15 @@ public class GameManager : MonoBehaviour
             Instance.betManager = betManager;
             Destroy(this);
         }
-        /*if (Instance.betManager)
+        if (!Instance.resourceBar)
+            Debug.LogError("Falta la barra de recurso");
+        else
+            Instance.resourceBar.SetValue(Instance.Recurso);
+        if (Instance.betManager)
         {
-            Instance.betManager.Init(NumApuestas);
-        }*/
+            Instance.betManager.Init(betDatas[NumApuestas]);    // Es con otra variable de uAdv
+        }
+        
     }
 
 
@@ -105,17 +120,9 @@ public class GameManager : MonoBehaviour
 
     public void Apuesta()
     {
-        Debug.Log("Apostado");
-       //DineroActual -= apuesta;
-       //DineroApostado += apuesta;
+        Recurso = Mathf.Clamp(Recurso - RecursoApostado, MinRecurso, MaxRecurso);
+        resourceBar.SetValue(Recurso);
+        NumApuestas++;
+        Debug.Log("Apuestas: " + NumApuestas);
     }
-
-    /*
-        Tener aqui todos los equipos (diccionario con nombre, 3 ints [e1, x , e2]), 
-        la barra de recurso (el dinero de ahora)
-        lo que se ha apostado, el multiplicador y ya.
-
-        Como apostar o hacer una barra que cambie con slider o algo asi para la barra de 
-        recurso
-     */
 }
