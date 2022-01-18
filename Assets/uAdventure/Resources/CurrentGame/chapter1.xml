@@ -256,7 +256,7 @@
       </talk-to>
     </actions>
   </character>
-  <scene id="Introduccion_1" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="Introduccion_1" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -277,7 +277,7 @@
         </effect>
       </exit>
       <exit rectangular="yes" x="678" y="15" width="100" height="100" hasInfluenceArea="no" idTarget="Quiniela" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="" />
+        <exit-look text="" cursor-path="" sound-path="" />
       </exit>
     </exits>
     <characters>
@@ -347,7 +347,7 @@
     </name>
     <default-initial-position x="400" y="450" />
   </scene>
-  <scene id="Habitacion_2" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="Habitacion_2" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -408,7 +408,7 @@
         </condition>
       </exit>
       <exit rectangular="yes" x="-147" y="-77" width="283" height="1236" hasInfluenceArea="no" idTarget="Habitacion_3" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="" />
+        <exit-look text="" cursor-path="" sound-path="" />
         <condition>
           <active flag="ApuestasEnded_2" />
         </condition>
@@ -1454,7 +1454,7 @@
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
-    <option-node nodeindex="1" editor-x="734" editor-y="47" x="734" y="47">
+    <option-node nodeindex="1" preListening="yes" editor-x="734" editor-y="47" x="734" y="47">
       <speak-player>
         <text>Puedo con calma a hacer lo que tengo que hacer y luego puedo pasar por un par de tiendas, que se acerca el cumpleaños de Antía y estaría bien tener un detalle con ella</text>
         <resources name="No name" />
@@ -1517,7 +1517,7 @@
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
-    <option-node nodeindex="1" editor-x="449" editor-y="50" x="449" y="50">
+    <option-node nodeindex="1" preListening="yes" editor-x="449" editor-y="50" x="449" y="50">
       <speak-player>
         <text> Por otro lado, si pierdo lo que tengo me quedo con nada durante bastante tiempo.</text>
         <resources name="No name" />
@@ -1614,7 +1614,7 @@
       <condition />
       <child nodeindex="1" />
     </dialogue-node>
-    <option-node nodeindex="1" keepShowing="yes" editor-x="688" editor-y="57" x="688" y="57">
+    <option-node nodeindex="1" keepShowing="yes" preListening="yes" editor-x="688" editor-y="57" x="688" y="57">
       <speak-player>
         <text>Nada, salí a dar una vuelta y acabé aquí sin mucha razón.</text>
         <resources name="No name" />
@@ -1697,7 +1697,7 @@
       <condition />
       <child nodeindex="3" />
     </dialogue-node>
-    <option-node nodeindex="3" editor-x="1618" editor-y="53" x="1618" y="53">
+    <option-node nodeindex="3" preListening="yes" editor-x="1618" editor-y="53" x="1618" y="53">
       <speak-player>
         <text>Tranquila, mira, tengo aquí 25 euros, son tuyos. No pasa nada, ¿ves? Estás bien, hazme caso. Vamos a ir tú y yo a hacer lo que se pueda con esto y pensamos en qué le decimos a tus padres</text>
         <resources name="No name" />

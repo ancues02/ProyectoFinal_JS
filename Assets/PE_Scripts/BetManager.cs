@@ -6,7 +6,10 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class BetManager : MonoBehaviour
-{    
+{
+    public Image e1Image;
+    public Image e2Image;
+
     public Toggle e1toggle;
     public Toggle e2toggle;
     public Toggle draw1toggle;
