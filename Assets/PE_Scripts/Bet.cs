@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class Bet : MonoBehaviour
 {
-    public float value;
+    /*public float value;
     public Text apuestaText;
 
     private void Start()
@@ -27,5 +27,5 @@ public class Bet : MonoBehaviour
         BetManager.instance.Apuesta(value);
         value = BetManager.instance.apuestaMinima;
         apuestaText.text = value.ToString();
-    }
+    }*/
 }

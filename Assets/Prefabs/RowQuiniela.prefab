@@ -229,7 +229,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Equipo1\t\t1.35"
+  m_Text: "Equipo1\t1.35"
 --- !u!1 &8623875784862568923
 GameObject:
   m_ObjectHideFlags: 0
@@ -285,6 +285,10 @@ MonoBehaviour:
   - {fileID: 8623875785336918961}
   - {fileID: 8623875785104368796}
   - {fileID: 8623875785648312788}
+  teamTexts:
+  - {fileID: 8623875784733126609}
+  - {fileID: 8623875785318616302}
+  - {fileID: 8623875783945445641}
 --- !u!1 &8623875784908220867
 GameObject:
   m_ObjectHideFlags: 0

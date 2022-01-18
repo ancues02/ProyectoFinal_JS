@@ -244,6 +244,9 @@
           <condition />
         </effect>
       </exit>
+      <exit rectangular="yes" x="678" y="15" width="100" height="100" hasInfluenceArea="no" idTarget="Quiniela" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" />
+      </exit>
     </exits>
     <characters>
       <character-ref idTarget="Jorge" x="728" y="411" scale="0.1483922" orientation="0" glow="no" layer="3" hasInfluenceArea="no" />

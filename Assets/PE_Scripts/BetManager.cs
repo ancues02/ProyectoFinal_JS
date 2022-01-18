@@ -6,88 +6,33 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class BetManager : MonoBehaviour
-{
-    // Singleton
-    public static BetManager instance = null;
-    
-    public GameObject betPannel;
+{    
+    public Toggle e1toggle;
+    public Toggle e2toggle;
+    public Toggle draw1toggle;
+    public Toggle draw2toggle;
 
-    public float dineroActual;
-    public Text dineroActualText;
-
-    public int apuestaMinima;
-
-    float dineroApostado;
-    FilaQuiniela quinielaActual;
-
-    /// <summary>
-    /// Las veces que has apostado
-    /// </summary>
-    int numApuestas = 0;
-
-    private void Awake()
+    public Button confirmButton;
+    private void Start()
     {
-        if (instance == null)
+        Init(GameManager.Instance.NumApuestas);
+        confirmButton.onClick.AddListener(() =>
         {
-            instance = this;
-            DontDestroyOnLoad(this.gameObject);
-        }
-        else
-        {
-            instance.betPannel = betPannel;
-            instance.dineroActualText = dineroActualText;
-            instance.quinielaActual = quinielaActual;
-            dineroActualText.text = instance.dineroActual.ToString() + " C";
-            Destroy(this.gameObject);
-        }
+            if (ApuestaHecha())
+            {
+                GameManager.Instance.Apuesta();
+                // GameManager.VeALaEscenaDeUadvEnLaQueEstabas();
+                //              o a ala que toque podemos hacer varias segun los dialogos supongo();
+            }
+        });
     }
-
-
-    public void setQuinielaActual(FilaQuiniela fq)
+    private void Init(int NumApuestas)
     {
-        quinielaActual = fq;
+        //configurar los equipos y multiplicadores segun el nº de apuestas o la escena no se
     }
 
-    public FilaQuiniela getQuinielaActual( )
+    private bool ApuestaHecha()
     {
-        return quinielaActual;
+        return e1toggle.isOn || e2toggle.isOn || draw1toggle.isOn || draw2toggle.isOn;
     }
-
-    public void Apuesta(float apuesta)
-    {
-        dineroApostado += apuesta;
-        dineroActual -= apuesta;
-        dineroActualText.text = dineroActual.ToString() + " C";
-        quinielaActual.ConfirmaApuesta();
-    }
-
-    public void ModifyBetMenu(bool mod)
-    {
-        betPannel.SetActive(mod);
-    }
-
-
-    /**
-     * cosas para cambiar variables dentro de uadventure desde una escena nuestra
-     * // Setting the flag to Active
-        Game.Instance.GameState.SetFlag("Foo", FlagCondition.FLAG_ACTIVE);
-        // Checking the flag value
-        if(Game.Instance.GameState.CheckFlag("Foo") == FlagCondition.FLAG_ACTIVE){
-          Debug.Log("The flag is active!");
-        }
-     */
-    public void changeScene(string name)
-    {
-        numApuestas++;
-        // Setting the flag to Active
-        Game.Instance.GameState.SetFlag("Apostar", FlagCondition.FLAG_INACTIVE);
-        Game.Instance.GameState.SetVariable("numApuestas", numApuestas);
-
-        //Esto es para cambiar de escenas dentro de uadventure
-        Game.Instance.Execute(new EffectHolder(new Effects{
-        new TriggerSceneEffect(name, 0, 0)//el nombre de la escena es la que hemos puesto en uadventure
-        }));
-
-    }
-
 }

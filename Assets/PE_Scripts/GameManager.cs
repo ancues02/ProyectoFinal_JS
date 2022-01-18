@@ -9,6 +9,14 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
 
+
+    public float DineroActual { get; set; }
+    public float DineroApostado { get; set; }
+
+    public int NumApuestas { get; set; }    // == APUESTAS en el guion
+    public int ApuestaMinima { get; set; }
+
+
     BetManager betManager;
 
     void Awake()
@@ -21,10 +29,10 @@ public class GameManager : MonoBehaviour
             Instance.betManager = betManager;
             Destroy(this);
         }
-        if (Instance.betManager)
+        /*if (Instance.betManager)
         {
-            // iniciar betManager
-        }
+            Instance.betManager.Init(NumApuestas);
+        }*/
     }
 
 
@@ -33,7 +41,7 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(sceneName);
     }
 
-
+    // Metodos de uAdventure
     /**
      * cosas para cambiar variables dentro de uadventure desde una escena nuestra
      * // Setting the flag to Active
@@ -84,4 +92,22 @@ public class GameManager : MonoBehaviour
     {
         Game.Instance.GameState.RemoveInventoryItem(elementID);
     }
+
+    // Funciones del juego
+
+    public void Apuesta()
+    {
+        Debug.Log("Apostado");
+       //DineroActual -= apuesta;
+       //DineroApostado += apuesta;
+    }
+
+    /*
+        Tener aqui todos los equipos (diccionario con nombre, 3 ints [e1, x , e2]), 
+        la barra de recurso (el dinero de ahora)
+        lo que se ha apostado, el multiplicador y ya.
+
+        Como apostar o hacer una barra que cambie con slider o algo asi para la barra de 
+        recurso
+     */
 }

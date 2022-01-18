@@ -5,18 +5,33 @@ using uAdventure.Runner;
 using UnityEngine;
 using UnityEngine.UI;
 
-
 public class FilaQuiniela : MonoBehaviour
 {
-    public Button[] arrayBotones;
+    //public BetManager betManager;
+   /* public Button[] arrayBotones;
+    public Text[] teamTexts;
 
+    void Start()
+    {
+        foreach(Button b in arrayBotones)
+        {        
+            ColorBlock aux = b.colors;
+            aux.disabledColor = Color.yellow;
+            b.colors = aux;
+        }
+    }
+    public void SetBet(BetType team, string teamName, float betMul, UnityEngine.Events.UnityAction onClick)
+    {
+        arrayBotones[(int)team].onClick.AddListener(onClick);
+        teamTexts[(int)team].text = teamName + "\t" + betMul.ToString();
+    }
     public void OnClick(int indx)
     {
         ColorBlock aux = arrayBotones[indx].colors;
         aux.disabledColor = Color.yellow;
         arrayBotones[indx].colors = aux;
-        BetManager.instance.ModifyBetMenu(true);
-        BetManager.instance.setQuinielaActual(this);
+        //betManager.ModifyBetMenu(true);
+        //BetManager.instance.setQuinielaActual(this);
     }
 
     public void ConfirmaApuesta()
@@ -25,5 +40,5 @@ public class FilaQuiniela : MonoBehaviour
             b.interactable = false;
         }
         
-    }
+    }*/
 }

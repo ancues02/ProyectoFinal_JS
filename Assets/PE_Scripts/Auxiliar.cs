@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class Auxiliar : MonoBehaviour
 {
     //No Singleton
-    BetManager betManager;
+   /* BetManager betManager;
     
     private void Start()
     {
@@ -35,6 +35,6 @@ public class Auxiliar : MonoBehaviour
     public void changeScene(string name)
     {
         betManager.changeScene(name);
-    }
+    }*/
 
 }
