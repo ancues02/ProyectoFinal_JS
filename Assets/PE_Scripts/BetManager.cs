@@ -81,6 +81,7 @@ public class BetManager : MonoBehaviour
         numApuestas++;
         // Setting the flag to Active
         Game.Instance.GameState.SetFlag("Apostar", FlagCondition.FLAG_INACTIVE);
+        Game.Instance.GameState.SetFlag("Apostar_2", FlagCondition.FLAG_INACTIVE);
         Game.Instance.GameState.SetVariable("numApuestas", numApuestas);
 
         //Esto es para cambiar de escenas dentro de uadventure
