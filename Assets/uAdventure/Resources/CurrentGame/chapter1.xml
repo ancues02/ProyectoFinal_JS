@@ -61,6 +61,17 @@
     <voice name="" synthesizeAlways="no" />
     <actions>
       <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <documentation>Created with target conversation: Apuestas1_2</documentation>
+        <condition>
+          <inactive flag="EscenaApostarIntro_2" />
+          <active flag="Intro2Echa" />
+        </condition>
+        <effect>
+          <trigger-conversation idTarget="Apuestas1_2" guid="4fc4f1f4-409e-4732-8391-5370edb9054c" />
+          <condition />
+        </effect>
+      </talk-to>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
         <documentation>Apuestas1</documentation>
         <condition>
           <inactive flag="Apuestas1Ended" />
@@ -153,6 +164,25 @@
           <condition />
         </effect>
       </talk-to>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <documentation>Created with target conversation: Apuestas2_2</documentation>
+        <condition>
+          <active flag="EscenaApostarIntro_2" />
+          <inactive flag="Apostar_2" />
+          <inactive flag="ApuestasEnded_2" />
+        </condition>
+        <effect>
+          <trigger-conversation idTarget="Apuestas2_2" guid="5ee2a23b-6ceb-4bc9-b2de-d951bced65c0" />
+          <condition />
+        </effect>
+      </talk-to>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <documentation>Created with target conversation: Calle_3</documentation>
+        <effect>
+          <trigger-conversation idTarget="Calle_3" guid="21c0876a-ea1a-4e37-96cf-5857e4ddc68c" />
+          <condition />
+        </effect>
+      </talk-to>
     </actions>
   </character>
   <character id="Javier" behaviour="first-action">
@@ -214,8 +244,10 @@
     <voice name="" synthesizeAlways="no" />
     <actions>
       <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <documentation>Intro_2</documentation>
         <condition>
-          <active flag="Cap2" />
+          <active flag="EnEscena2_2" />
+          <inactive flag="Intro2Echa" />
         </condition>
         <effect>
           <trigger-conversation idTarget="Intro_2" guid="115e6ee9-b114-456d-8aec-2a3a148b2bd1" />
@@ -224,7 +256,7 @@
       </talk-to>
     </actions>
   </character>
-  <scene id="Introduccion_1" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="Introduccion_1" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -315,7 +347,7 @@
     </name>
     <default-initial-position x="400" y="450" />
   </scene>
-  <scene id="Habitacion_2" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="Habitacion_2" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -324,8 +356,17 @@
     <name>
     </name>
     <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="-288" y="-96" width="376" height="1090" hasInfluenceArea="no" idTarget="PuntoEncuentro_2" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+        <effect>
+          <activate flag="EnEscena2_2" guid="085c2eb4-5596-4b4b-9e32-dbe448206260" />
+          <condition />
+        </effect>
+      </exit>
+    </exits>
   </scene>
-  <scene id="PuntoEncuentro_2" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="PuntoEncuentro_2" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -334,13 +375,62 @@
     <name>
     </name>
     <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="-97" y="-18" width="166" height="746" hasInfluenceArea="no" idTarget="Apuestas_2" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+        <condition>
+          <active flag="Intro2Echa" />
+        </condition>
+      </exit>
+    </exits>
     <characters>
       <character-ref idTarget="Jorge" x="73" y="714" scale="0.15" orientation="0" glow="no" layer="4" hasInfluenceArea="no" />
-      <character-ref idTarget="David" x="227" y="717" scale="0.15" orientation="0" glow="no" layer="3" hasInfluenceArea="no" />
+      <character-ref idTarget="David" x="229" y="717" scale="0.15" orientation="0" glow="no" layer="3" hasInfluenceArea="no" />
       <character-ref idTarget="Sofia" x="375" y="716" scale="0.15" orientation="0" glow="no" layer="2" hasInfluenceArea="no" />
       <character-ref idTarget="Javier" x="978" y="711" scale="0.15" orientation="0" glow="no" layer="1" hasInfluenceArea="no" />
       <character-ref idTarget="Antia" x="784" y="713" scale="0.15" orientation="0" glow="no" layer="0" hasInfluenceArea="no" />
     </characters>
+  </scene>
+  <scene id="Apuestas_2" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/casaapuestas.jpg" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="902" y="5" width="361" height="268" hasInfluenceArea="no" idTarget="Quiniela" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+        <condition>
+          <active flag="Apostar_2" />
+        </condition>
+      </exit>
+      <exit rectangular="yes" x="-147" y="-77" width="283" height="1236" hasInfluenceArea="no" idTarget="Habitacion_3" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" />
+        <condition>
+          <active flag="ApuestasEnded_2" />
+        </condition>
+      </exit>
+    </exits>
+    <characters>
+      <character-ref idTarget="Jorge" x="654" y="1081" scale="0.233507" orientation="0" glow="no" layer="4" hasInfluenceArea="no" />
+      <character-ref idTarget="David" x="1383" y="1096" scale="0.2191638" orientation="0" glow="no" layer="3" hasInfluenceArea="no" />
+      <character-ref idTarget="Sofia" x="1632" y="1084" scale="0.2191224" orientation="0" glow="no" layer="2" hasInfluenceArea="no" />
+      <character-ref idTarget="Javier" x="363" y="1083" scale="0.2211169" orientation="0" glow="no" layer="1" hasInfluenceArea="no" />
+      <character-ref idTarget="Antia" x="128" y="1085" scale="0.203936" orientation="0" glow="no" layer="0" hasInfluenceArea="no" />
+    </characters>
+  </scene>
+  <scene id="Habitacion_3" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/habitacion.jpg" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
   </scene>
   <graph-conversation id="Intro_1">
     <dialogue-node nodeindex="0" editor-x="73" editor-y="28">
@@ -913,7 +1003,7 @@
     <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
       <speak-player>
         <resources name="No name" />
-        <text>#! # Algo más tarde, en el sitio de siempre # </text>
+        <text>#! *Algo más tarde, en el sitio de siempre* </text>
       </speak-player>
       <condition />
       <speak-char idTarget="Antia">
@@ -1071,6 +1161,669 @@
       </speak-char>
       <condition />
       <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="Apuestas1_2">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>
+        <resources name="No name" />
+        <text>*Llegáis y sigues al grupo por el local*</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>*Para cuando te das cuenta, Antía y Javi ya están sentados y tu te encuentras junto a Jorge, David y Sofía, que están al lado del mostrador *</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="Jorge">
+        <resources name="No name" />
+        <text>¡Esos son mi Sofía y mi Alex, sabía que veríais la emoción en las apuestas! </text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Jorge">
+        <resources name="No name" />
+        <text>¡Es como sentir más fuerte la emoción de los deportes!</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="David">
+        <resources name="No name" />
+        <text>“4 para el partido de esta tarde, por favor”</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Sofia">
+        <resources name="No name" />
+        <text>Yo en verdad solo venía a mirar, pero ya que lo tengo claro pues me saco un dinerillo de paso.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Sofia">
+        <resources name="No name" />
+        <text>¡Si pierdo es culpa vuestra por meterme en esto!</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="David">
+        <resources name="No name" />
+        <text>Toma y calla, que si la lías es culpa nuestra pero si ganas eres muy lista.</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>*Jorge y Sofía empiezan a rellenar las suyas sobre el mostrador con caras llenas de concentración*</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>*David te llama la atención y desvías tu mirada hacia él *</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="David">
+        <resources name="No name" />
+        <text>¿Te animas? </text>
+      </speak-char>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" keepShowing="yes" preListening="yes" editor-x="594" editor-y="50" x="594" y="50">
+      <speak-player>
+        <text>Sí</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>
+        <text>No</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+      <effect>
+        <activate flag="EscenaApostarIntro_2" guid="02ad855d-92ea-42dc-9733-12342c08113c" />
+        <condition />
+      </effect>
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="953" editor-y="0">
+      <end-conversation>
+        <effect>
+          <activate flag="Apostar_2" guid="47fac4e2-615c-4194-9059-4ec59cc30fe2" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="886" editor-y="528">
+      <speak-player>
+        <resources name="No name" />
+        <text>Voy a pasar, la verdad. </text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="David">
+        <resources name="No name" />
+        <text>Como veas, pero si gano no te invito, ¡que lo sepas! No soy tan bueno como Jorge.</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>#Te *Te giras para ir a sentarte en la mesa y ves a Javi y a Antía agitando y moviendo sus brazos por el aire, gritándose el uno al otro* </text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="Javier">
+        <resources name="No name" />
+        <text>¡Que sÍ!</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Antia">
+        <resources name="No name" />
+        <text>¡Que no! </text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Javier">
+        <resources name="No name" />
+        <text>¡Que es una mierda! </text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Antia">
+        <resources name="No name" />
+        <text>¡Te voy a...! ¡Ah, hola Alex!, tú pareces una persona cuerda, ¿a ti te gustaba Estopa, verdad?</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>*Antía establece contacto visual con un expresión en la mirada que denota intenciones maliciosas si eliges la respuesta incorrecta*</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="4" />
+    </dialogue-node>
+    <option-node nodeindex="4" keepShowing="yes" preListening="yes" editor-x="1462" editor-y="497" x="1462" y="497">
+      <speak-player>
+        <text>Asentir</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="5" />
+      <speak-player>
+        <text>Negar con la cabeza </text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="6" />
+    </option-node>
+    <dialogue-node nodeindex="5" editor-x="1795" editor-y="478">
+      <speak-player>
+        <resources name="No name" />
+        <text>*Mueves leeentamente la cabeza de arriba abajo, con miedo de las consecuencias… *</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="Antia">
+        <resources name="No name" />
+        <text>¡Como me alegra que tengas buen gusto y aprecies la música de cultura! </text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Antia">
+        <resources name="No name" />
+        <text>¡Ven aquí que te quiero dar un abrazo! </text>
+      </speak-char>
+      <condition />
+      <end-conversation>
+        <effect>
+          <activate flag="ApuestasEnded_2" guid="97028032-b9a3-494c-8522-48e323eadd17" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+    <dialogue-node nodeindex="6" editor-x="1786" editor-y="754">
+      <speak-player>
+        <resources name="No name" />
+        <text>* Mueves leeentamente la cabeza de lado a lado, con miedo de las consecuencias… *</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="Antia">
+        <resources name="No name" />
+        <text> …</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>* La mano de Antía sale lentamente de debajo de la mesa y en silencio se dirige hacia ti con intenciones maliciosas *</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>* Cierras los ojos y empiezas a aceptar el concepto de la muerte… *</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>* Pero es interrumpida por los demás sentándose en la mesa ## Sofía os habla un rato largo de por qué ha apostado por el equipo por el que ha apostado *</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>* Sofía os habla un rato largo de por qué ha apostado por el equipo por el que ha apostado *</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>* No le das mucha importancia pero parece bastante emocionada. Seguís con vuestra tarde hasta que tenéis que iros a casa *</text>
+      </speak-player>
+      <condition />
+      <end-conversation>
+        <effect>
+          <activate flag="ApuestasEnded_2" guid="43fd7c04-60fe-4572-b49b-22763fe13a56" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="Apuestas2_2">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-char idTarget="Sofia">
+        <resources name="No name" />
+        <text> Que, ¿quién apostaste que ganaría? </text>
+      </speak-char>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" keepShowing="yes" preListening="yes" editor-x="427" editor-y="40" x="427" y="40">
+      <speak-player>
+        <text>El Atleti, claro </text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>
+        <text>El Granada de cabeza. </text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="797" editor-y="16">
+      <child nodeindex="4" />
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="799" editor-y="252">
+      <child nodeindex="4" />
+    </dialogue-node>
+    <dialogue-node nodeindex="4" editor-x="1209" editor-y="38">
+      <speak-char idTarget="Sofia">
+        <resources name="No name" />
+        <text> Espero que no apostaras mucho porque pierdes fijo. He mirado los números y lo tienes jodido la verdad</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Jorge">
+        <resources name="No name" />
+        <text> La verdad es sí, macho, todos hemos dicho el otro.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="David">
+        <resources name="No name" />
+        <text>Confirmo. No ha sido un momento de lucidez tuyo, Alex</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Sofia">
+        <resources name="No name" />
+        <text>En fin, venga, vamos con los otros que se deben de estar aburriendo.</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>* Os sentáis con los demás y pasáis la tarde tomando algo. Javi estaba como siempre, pero Antía estaba más ausente de lo normal, mirando la mayoría del tiempo a la mesa *</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>* Pasáis el rato y volvéis a casa. *</text>
+      </speak-player>
+      <condition />
+      <end-conversation>
+        <effect>
+          <activate flag="ApuestasEnded_2" guid="aa693779-600f-4aa0-9978-0266f5fdbb12" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="IntroBuena_3">
+    <dialogue-node nodeindex="0" editor-x="180" editor-y="75">
+      <speak-player>
+        <resources name="No name" />
+        <text>No parece que hoy vayamos a hacer nada</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Ahora que lo pienso, tengo que hacer algunos recados por el centro</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" editor-x="734" editor-y="47" x="734" y="47">
+      <speak-player>
+        <text>Puedo con calma a hacer lo que tengo que hacer y luego puedo pasar por un par de tiendas, que se acerca el cumpleaños de Antía y estaría bien tener un detalle con ella</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>
+        <text>Podría intentar quitarme esto de encima rápido e igual Antía está libre para hacer algo, que no ha respondido a los mensajes.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="1006" editor-y="31">
+      <speak-player>
+        <resources name="No name" />
+        <text>Aún queda tiempo, pero cuanto antes empiece a mirar más tiempo tendré para que me llegue la inspiración. </text>
+      </speak-player>
+      <condition />
+      <child nodeindex="4" />
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="983" editor-y="249">
+      <speak-player>
+        <resources name="No name" />
+        <text>Además, quiero peguntarle qué le pasó el otro día, que parecía algo alterada y no llegué a saber por qué</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="4" />
+    </dialogue-node>
+    <dialogue-node nodeindex="4" editor-x="1423" editor-y="78">
+      <speak-player>
+        <resources name="No name" />
+        <text>Ya que salgo voy a por lo menos intentar hacer algo más y no solo recados</text>
+      </speak-player>
+      <condition />
+      <end-conversation>
+        <effect>
+          <activate flag="Intro3Hecha" guid="a248dc74-b23d-4c58-8107-102ae8c9f5db" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="IntroMala_3">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>
+        <resources name="No name" />
+        <text>Tengo la tarde libre y nada que hacer. Todavía me quedan 25 euros en la cartera y hoy hay un partido importante por la tarde</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>De hecho hay otro antes, pero parece aburridisimo, los dos peores equipos enfrentándose en un duelo épico para ver quién es el menos malo.</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>En fin, podría ir a la casa de apuestas y sacarme algo de dinero, que no voy a tener más en todo el mes</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" editor-x="449" editor-y="50" x="449" y="50">
+      <speak-player>
+        <text> Por otro lado, si pierdo lo que tengo me quedo con nada durante bastante tiempo.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>
+        <text>Si saco tajada puedo devolverle a Antía el dinero que le debo del tirón.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+      <speak-player>
+        <text>De hecho si gano esta, con un par de apuestas más me puedo pillar un móvil nuevo.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="4" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="1083" editor-y="45">
+      <speak-player>
+        <resources name="No name" />
+        <text>El que no arriesga, no gana, o eso dicen. Además, tampoco pienso gastar dinero en nada este mes, así que. </text>
+      </speak-player>
+      <condition />
+      <child nodeindex="5" />
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="1088" editor-y="247">
+      <speak-player>
+        <resources name="No name" />
+        <text>A ver si así se le pasa el enfado y recuperamos el contacto, que la echo de menos. Llevamos ya unas semanas que casi no nos vemos. </text>
+      </speak-player>
+      <condition />
+      <child nodeindex="5" />
+    </dialogue-node>
+    <dialogue-node nodeindex="4" editor-x="1072" editor-y="479">
+      <speak-player>
+        <resources name="No name" />
+        <text>Se me queda pillada la pantalla cada dos por tres, es horrible. Además, están ahora de ofertas, puedo sacar uno nuevo a buen precio</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="5" />
+    </dialogue-node>
+    <dialogue-node nodeindex="5" editor-x="1518" editor-y="81">
+      <speak-player>
+        <resources name="No name" />
+        <text>Decidido entonces, me doy una vuelta, voy a la casa de apuestas, me veo el partido e igual alguien está libre para cuando acabe y podemos hacer algo</text>
+      </speak-player>
+      <condition />
+      <end-conversation>
+        <effect>
+          <activate flag="Intro3Hecha" guid="c9777b2a-c4cc-4ecf-b65e-a6cfec91340b" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="Calle_3">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>
+        <resources name="No name" />
+        <text>*Caminando por la calle donde se encuentra la casa de apuestas ves a Sofía sola al lado de la entrada, de cara a la pared y mirando al suelo*</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="Sofia">
+        <resources name="No name" />
+        <text> Mierda, mierda, mierda, joder…</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>¿Sofía?</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Oye, ¿estás bien? </text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>*Alza leve y súbitamente la cabeza, y antes de girarse para verte se frota rápidamente la cara con una mano*</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>*Para cuando puedes verla, tiene el rostro rojo, especialmente los ojos, y parece evitar el contacto visual*</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="Sofia">
+        <resources name="No name" />
+        <text> Hey, ¿qué haces aquí? Pensaba que estarías haciendo algo con Antía o algo por el estilo.</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" keepShowing="yes" editor-x="688" editor-y="57" x="688" y="57">
+      <speak-player>
+        <text>Nada, salí a dar una vuelta y acabé aquí sin mucha razón.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>
+        <text>Nada, estaba dando una vuelta y ya que estaba por la zona se me ocurrió venir a echar una quiniela para el partido de más tarde</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>
+        <text>Había venido a hacer una apuesta, me viene bien algo de dinero.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="1206" editor-y="53">
+      <speak-char idTarget="Sofia">
+        <resources name="No name" />
+        <text> ...Ya…</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Sofia">
+        <resources name="No name" />
+        <text>...</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Oye, Sofía, ¿estás bien? No te veo tan energética como de costumbre.</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>¿Tú que hacías aquí? ¿No tenías un recado que hacer o algo?</text>
+      </speak-player>
+      <condition />
+      <speak-char idTarget="Sofia">
+        <resources name="No name" />
+        <text> Ya, bueno…</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Sofia">
+        <resources name="No name" />
+        <text> La verdad es que hoy tenía que hacer unas cosas porque mis padres no podían y me lo habían pedido.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Sofia">
+        <resources name="No name" />
+        <text>Me dieron 50 pavos para pagar lo que tengo que pagar.. Y yo que me quedé sin blanca hace ya un tiempo… </text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Sofia">
+        <resources name="No name" />
+        <text>Bueno, pues pensé que si hacía una apuesta segura, aunque no me dieran mucho porque el ganador estaba claro, un poco de 50 sigue siendo algo</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Sofia">
+        <resources name="No name" />
+        <text> Y fueron los gilipollas, los tontos del barrio y ganaron el partido.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Sofia">
+        <resources name="No name" />
+        <text> Y ya no solo he perdido todo mi dinero, he perdido el de mis padres y créeme que no les sobra, no puedo aguantar la humillación de volver a casa.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Sofia">
+        <resources name="No name" />
+        <text>De que piensen que soy una maldita ADICTA</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Sofia">
+        <resources name="No name" />
+        <text>No sé qué hacer, Alex, estoy perdida, no sé qué hacer…</text>
+      </speak-char>
+      <condition />
+      <child nodeindex="3" />
+    </dialogue-node>
+    <option-node nodeindex="3" editor-x="1618" editor-y="53" x="1618" y="53">
+      <speak-player>
+        <text>Tranquila, mira, tengo aquí 25 euros, son tuyos. No pasa nada, ¿ves? Estás bien, hazme caso. Vamos a ir tú y yo a hacer lo que se pueda con esto y pensamos en qué le decimos a tus padres</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="4" />
+      <speak-player>
+        <text>Vamos a hacer esto: Tengo 25 euros y ahora hay un partido. Hago la apuesta, gano, y usamos el dinero para sacarte del aprieto</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition>
+        <greater-equals-than var="numApuestas" value="1" />
+      </condition>
+      <child nodeindex="5" />
+      <speak-player>
+        <text> Para salir de esta puedes decir que te han robado o algo así, que te pillaron en un callejón aislado y no pudiste hacer nada. 50 euros tampoco es tanto igualmente.</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition>
+        <greater-equals-than var="numApuestas" value="2" />
+      </condition>
+      <child nodeindex="6" />
+    </option-node>
+    <dialogue-node nodeindex="4" editor-x="2137" editor-y="0">
+      <speak-char idTarget="Sofia">
+        <resources name="No name" />
+        <text>Vale, sí. Vale… No sé cómo darte las gracias, Alex, de verdad.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Sofia">
+        <resources name="No name" />
+        <text>No pienso volver a hacer nada ni remotamente parecido, que le jodan.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Sofia">
+        <resources name="No name" />
+        <text>Y que me jodan a mí, vaya forma de hacer el ridículo, me siento fatal.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Sofia">
+        <resources name="No name" />
+        <text>Gracias, en serio, menos mal que tengo gente como tú con la que contar.</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>*Aunque todavía alterada, Sofía parece más tranquila y decidida a solventar la situación de la manera más adecuada que puede*</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>*La acompañas por la ciudad haciendo sus recados toda la tarde, la dejas su casa y acabas el día*</text>
+      </speak-player>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+    <dialogue-node nodeindex="5" editor-x="2102" editor-y="292">
+      <speak-char idTarget="Sofia">
+        <resources name="No name" />
+        <text>No sé, Alex, estoy hasta las rodillas de mierda precisamente por pensar así. No lo hagas, no va a salir bien… ¿Tienes si quiera más dinero o eso es todo?</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Sofia">
+        <resources name="No name" />
+        <text>Da igual, viniste a apostar así que eso es lo que vas a hacer supongo, si ganas y me prestas el dinero te lo agradeceré muchísimo eso sí.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Sofia">
+        <resources name="No name" />
+        <text>Ojalá tengas razón y ganes, Alex. Cuento contigo</text>
+      </speak-char>
+      <condition />
+      <end-conversation>
+        <effect>
+          <trigger-scene idTarget="Quiniela" x="400" y="298" transitionTime="0" transitionType="0" guid="b3210055-ad08-4255-b4d0-01a255ab5096" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+    <dialogue-node nodeindex="6" editor-x="2124" editor-y="561">
+      <speak-char idTarget="Sofia">
+        <resources name="No name" />
+        <text>…</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Sofia">
+        <resources name="No name" />
+        <text>Eso es, sinceramente, una cosa verdaderamente despreciable que hacer.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Sofia">
+        <resources name="No name" />
+        <text> No pienso cagarla de esta manera y evitar la responsabilidad de una forma tan rastrera.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Sofia">
+        <resources name="No name" />
+        <text>Has cambiado, Alex.</text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Sofia">
+        <resources name="No name" />
+        <text> Igual estás tú peor que yo… Pero no pienso seguir así. </text>
+      </speak-char>
+      <condition />
+      <speak-char idTarget="Sofia">
+        <resources name="No name" />
+        <text>Por lo menos me has ayudado a tomar una decisión.</text>
+      </speak-char>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>* Sofía se va sin despedirse *</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>*Vas al mostrador y pides una quiniela*</text>
+      </speak-player>
+      <condition />
+      <end-conversation>
+        <effect>
+          <trigger-scene idTarget="Quiniela" x="400" y="298" transitionTime="0" transitionType="0" guid="0e901254-0eab-4951-932b-8066b816c845" />
+          <condition />
+        </effect>
+      </end-conversation>
     </dialogue-node>
   </graph-conversation>
   <unity-scene id="Quiniela" scene="Assets/uAdventure/Scenes/Quiniela.unity" />

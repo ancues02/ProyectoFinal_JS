@@ -28,7 +28,7 @@ public class BetManager : MonoBehaviour
     }
     private void Init(int NumApuestas)
     {
-        //configurar los equipos y multiplicadores segun el nº de apuestas o la escena no se
+        //configurar los equipos y multiplicadores segun el nï¿½ de apuestas o la escena no se
     }
 
     private bool ApuestaHecha()
