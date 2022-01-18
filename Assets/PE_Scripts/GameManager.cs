@@ -59,6 +59,14 @@ public class GameManager : MonoBehaviour
         }));
     }
 
+    public void UAdvPreviousScene()
+    {
+        //Esto es para cambiar de escenas dentro de uadventure
+        Game.Instance.Execute(new EffectHolder(new Effects{
+        new TriggerLastSceneEffect()//el nombre de la escena es la que hemos puesto en uadventure
+        }));
+    }
+
     public void UAdvSetFlag(string name, int state)
     {
         Game.Instance.GameState.SetFlag(name, state);
