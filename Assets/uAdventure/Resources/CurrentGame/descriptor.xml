@@ -6,7 +6,7 @@
   <application-identifier>
   </application-identifier>
   <configuration keepShowing="no" keyboard-navigation="disabled" defaultClickAction="showDetails" perspective="regular" dragBehaviour="considerNonTargets" show-save-load="yes" show-reset="yes" autosave="no" save-on-suspend="no" restore-after-open="no">
-    <gui type="contextual" inventoryPosition="none" />
+    <gui type="contextual" inventoryPosition="bottom" />
     <mode playerTransparent="yes" />
     <graphics mode="windowed" />
   </configuration>

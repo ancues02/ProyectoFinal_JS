@@ -129,8 +129,8 @@ public class GameManager : MonoBehaviour
         Recurso = Mathf.Clamp(Recurso - RecursoApostado, MinRecurso, MaxRecurso);
         resourceBar.SetValue(Recurso);
         NumApuestas++;
-        UAdvSetVariable("Apostar_2", FlagCondition.FLAG_INACTIVE);
-        UAdvSetVariable("Apostar", FlagCondition.FLAG_INACTIVE);
+        UAdvSetFlag("Apostar_2", FlagCondition.FLAG_INACTIVE);
+        UAdvSetFlag("Apostar", FlagCondition.FLAG_INACTIVE);
         UAdvSetVariable("numApuestas", NumApuestas);
         
         Debug.Log("Apuestas: " + NumApuestas);
