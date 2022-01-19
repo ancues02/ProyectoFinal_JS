@@ -31,6 +31,12 @@ public class Phone : MonoBehaviour
         });
         leaveButton.onClick.AddListener(() =>
         {
+            if (GameManager.Instance.UAdvCheckFlag("MirarMovilDespertar_2", 0))
+            {
+                GameManager.Instance.UAdvSetFlag("MirarMovilDespertar_2", 1);
+                GameManager.Instance.UAdvSetFlag("Despertar_2", 0);
+            }
+            GameManager.Instance.UAdvSetFlag("MirarMovil", 1);//desactivar
             GameManager.Instance.UAdvPreviousScene();
         });
     }

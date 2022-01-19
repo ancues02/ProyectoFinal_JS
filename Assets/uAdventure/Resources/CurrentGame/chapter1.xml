@@ -272,7 +272,7 @@
       </talk-to>
     </actions>
   </character>
-  <scene id="Introduccion_1" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="Introduccion_1" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -343,7 +343,7 @@
       <character-ref idTarget="Antia" x="232" y="1078" scale="0.3152493" orientation="0" glow="no" layer="0" hasInfluenceArea="no" />
     </characters>
   </scene>
-  <scene id="HabitacionSinApostar_1" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="HabitacionSinApostar_1" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -352,8 +352,11 @@
     <name>
     </name>
     <default-initial-position x="400" y="450" />
+    <objects>
+      <object-ref idTarget="Movil" x="792" y="782" scale="0.121213" glow="no" layer="0" hasInfluenceArea="no" />
+    </objects>
     <active-areas>
-      <active-area id="Talk" rectangular="yes" x="3" y="6" width="1268" height="848" hasInfluenceArea="no" behaviour="normal">
+      <active-area id="Talk" rectangular="yes" x="3" y="9" width="316" height="845" hasInfluenceArea="no" behaviour="normal">
         <description>
           <name>
           </name>
@@ -365,7 +368,7 @@
         <actions>
           <examine needsGoTo="no" keepDistance="0" not-effects="no">
             <condition>
-              <active flag="EnCasaIntro_1" />
+              <inactive flag="EnCasaIntro_1" />
             </condition>
             <effect>
               <trigger-conversation idTarget="EnCasa_1" guid="720dd12e-df72-46c8-b9ab-54ebe81168f6" />
@@ -394,8 +397,11 @@
     <name>
     </name>
     <default-initial-position x="400" y="450" />
+    <objects>
+      <object-ref idTarget="Movil" x="799" y="780" scale="0.1395726" glow="no" layer="0" hasInfluenceArea="no" />
+    </objects>
     <active-areas>
-      <active-area id="ActiveAreaId" rectangular="yes" x="-3" y="-6" width="1280" height="865" hasInfluenceArea="no" behaviour="normal">
+      <active-area id="ActiveAreaId" rectangular="yes" x="-51" y="-2" width="338" height="852" hasInfluenceArea="no" behaviour="normal">
         <description>
           <name>
           </name>
@@ -449,7 +455,7 @@
       </exit>
     </exits>
     <active-areas>
-      <active-area id="ConversacionMovil" rectangular="yes" x="-11" y="-33" width="1340" height="876" hasInfluenceArea="no" behaviour="normal">
+      <active-area id="ConversacionMovil" rectangular="yes" x="233" y="0" width="1094" height="843" hasInfluenceArea="no" behaviour="normal">
         <description>
           <name>
           </name>
@@ -459,7 +465,21 @@
           </detailed>
         </description>
         <actions>
-          <examine needsGoTo="no" keepDistance="0" not-effects="no" />
+          <examine needsGoTo="no" keepDistance="0" not-effects="no">
+            <condition>
+              <inactive flag="Despertar_2" />
+              <inactive flag="MirarMovil" />
+            </condition>
+            <effect>
+              <trigger-conversation idTarget="Despertar_2" guid="bf477d7f-c0c1-4bc4-8cc5-209ced0711b4" />
+              <condition />
+            </effect>
+          </examine>
+          <examine needsGoTo="no" keepDistance="0" not-effects="no">
+            <condition>
+              <active flag="MirarMovil" />
+            </condition>
+          </examine>
         </actions>
       </active-area>
     </active-areas>
@@ -1107,7 +1127,16 @@
         <resources name="No name" />
         <text>* Usar el movil en el inventario *</text>
       </speak-player>
-      <condition />
+      <condition>
+        <active flag="Grabbed" />
+      </condition>
+      <speak-player>
+        <resources name="No name" />
+        <text>* Coger el movil encima de la mesa *</text>
+      </speak-player>
+      <condition>
+        <inactive flag="Grabbed" />
+      </condition>
       <end-conversation />
     </dialogue-node>
   </graph-conversation>
@@ -1212,7 +1241,7 @@
       <condition />
       <end-conversation>
         <effect>
-          <trigger-scene idTarget="Habitacion_2" x="640" y="639" transitionTime="5" transitionType="5" guid="3745666b-b99c-45de-a7b3-8b20f141a500" />
+          <trigger-scene idTarget="Habitacion_2" x="640" y="639" transitionTime="2000" transitionType="5" guid="3745666b-b99c-45de-a7b3-8b20f141a500" />
           <condition />
         </effect>
       </end-conversation>
@@ -1319,7 +1348,7 @@
       <condition />
       <end-conversation>
         <effect>
-          <trigger-scene idTarget="Habitacion_2" x="640" y="639" transitionTime="5" transitionType="5" guid="aea1ce02-cf3e-4171-b475-65a32f6e929b" />
+          <trigger-scene idTarget="Habitacion_2" x="640" y="639" transitionTime="2000" transitionType="5" guid="aea1ce02-cf3e-4171-b475-65a32f6e929b" />
           <condition />
         </effect>
       </end-conversation>
@@ -1354,7 +1383,14 @@
       <child nodeindex="3" />
     </option-node>
     <dialogue-node nodeindex="2" editor-x="941" editor-y="43">
-      <end-conversation />
+      <end-conversation>
+        <effect>
+          <activate flag="MirarMovil" guid="99bb4fa7-6924-4dbf-904d-588cdff7859c" />
+          <condition />
+          <activate flag="MirarMovilDespertar_2" guid="080b8bb6-d006-44a7-9c2f-12afaae4bd58" />
+          <condition />
+        </effect>
+      </end-conversation>
     </dialogue-node>
     <dialogue-node nodeindex="3" editor-x="945" editor-y="252">
       <end-conversation>
@@ -1363,6 +1399,16 @@
           <condition />
         </effect>
       </end-conversation>
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="MirarMovil">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>
+        <resources name="No name" />
+        <text>* Mirar Movil *</text>
+      </speak-player>
+      <condition />
+      <end-conversation />
     </dialogue-node>
   </graph-conversation>
   <graph-conversation id="Intro_2">
@@ -2260,7 +2306,7 @@
   <unity-scene id="Movil1" scene="Assets/uAdventure/Scenes/Movil.unity" />
   <object id="Movil" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
-      <asset type="image" uri="assets/image/movil.png" />
+      <asset type="image" uri="assets/image/NoConver.png" />
       <asset type="icon" uri="assets/special/EmptyIcon.png" />
     </resources>
     <description>
@@ -2271,5 +2317,31 @@
       <detailed>
       </detailed>
     </description>
+    <actions>
+      <grab needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <inactive flag="Grabbed" />
+        </condition>
+        <effect>
+          <remove-element idTarget="Movil" guid="b8600407-3abc-4c95-b557-0d61f92c719e" />
+          <condition />
+          <generate-object idTarget="Movil" guid="43f612b1-e0b6-433c-894c-d3b030b292ad" />
+          <condition />
+          <activate flag="Grabbed" guid="9dcab3dd-2711-436e-b043-0a1b384fe684" />
+          <condition />
+        </effect>
+      </grab>
+      <use needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="Grabbed" />
+        </condition>
+        <effect>
+          <trigger-scene idTarget="Movil1" x="400" y="298" transitionTime="5" transitionType="5" guid="2142613c-9dbc-435c-8460-2a667db320a6" />
+          <condition />
+          <activate flag="EnCasaIntro_1" guid="e3cad1c6-6ce7-4168-8cf3-efab2e05e325" />
+          <condition />
+        </effect>
+      </use>
+    </actions>
   </object>
 </eAdventure>
