@@ -27,7 +27,9 @@ public class GameManager : MonoBehaviour
     /// El indice del array el numero de apuestas
     /// </summary>
     public BetData[] betDatas;
-    
+
+    bool showApp = false;
+
     void Awake()
     {
         Debug.Log("AWAKE DEL GAMEMANAGER");
@@ -42,9 +44,11 @@ public class GameManager : MonoBehaviour
             DontDestroyOnLoad(Instance);
         }
         else {
+            //Instance.showApp = showApp;
             Instance.betManager = betManager;
             Instance.resourceBar = resourceBar;
             Instance.phone = phone;
+            //Instance.NumApuestas = NumApuestas;
             Destroy(this);
         }
         if (!Instance.resourceBar)
@@ -62,21 +66,42 @@ public class GameManager : MonoBehaviour
         }
         if (Instance.phone)
         {
-            if(UAdvCheckFlag("LastText", FlagCondition.FLAG_ACTIVE))
-                Instance.phone.Init(Instance.sprites["Antia2"], Instance.sprites["app"], true);
-            else if (UAdvCheckFlag("LastText", FlagCondition.FLAG_ACTIVE))
-                Instance.phone.Init(Instance.sprites["Antia2"], Instance.sprites["app"], true);
-            else if(UAdvCheckFlag("LastText", FlagCondition.FLAG_ACTIVE))
-                Instance.phone.Init(Instance.sprites["Antia2"], Instance.sprites["app"], true);
-            else if(UAdvCheckFlag("LastText", FlagCondition.FLAG_ACTIVE))
-                Instance.phone.Init(Instance.sprites["Antia2"], Instance.sprites["app"], true);
-            else if(UAdvCheckFlag("LastText", FlagCondition.FLAG_ACTIVE))
-                Instance.phone.Init(Instance.sprites["Antia2"], Instance.sprites["app"], true);
-            //Checkeo flags de uAdventure
-            Instance.phone.Init(Instance.sprites["Antia1"], Instance.sprites["app"], true);
+            if (UAdvCheckFlag("LastText", FlagCondition.FLAG_ACTIVE))
+            {//
+                if(Instance.NumApuestas == 0)
+                    Instance.phone.Init(Instance.sprites["Antia4"], Instance.sprites["app1"], true);
+                else
+                    Instance.phone.Init(Instance.sprites["Antia2"], Instance.sprites["app1"], true);//Aqui deberiamos bloquear el movil
+            }
+            else if (UAdvCheckFlag("Intro3Hecha", FlagCondition.FLAG_ACTIVE))//
+                Instance.phone.Init(Instance.sprites["Grupo"], Instance.sprites["app2"], true);
+            else if (UAdvCheckFlag("Despertar_3", FlagCondition.FLAG_ACTIVE))//en casa, escena 3 al despertar.
+                Instance.phone.Init(Instance.sprites["Grupo"], Instance.sprites["app3"], true);
 
-            if(UAdvGetVariable("numApuestas") > 0)
-                phone.SetAppActive(true);
+            else if (UAdvCheckFlag("MirarMovilIntro_2", FlagCondition.FLAG_ACTIVE))//tercera vez que lo usas, en la plaza, escena 2
+            {
+                if (Instance.NumApuestas == 0)
+                    Instance.phone.Init(Instance.sprites["Antia3"], Instance.sprites["app"], true);
+                else
+                {
+                    Instance.phone.Init(Instance.sprites["Javi"], Instance.sprites["app3"], true);
+                }
+            }
+
+            else if (UAdvCheckFlag("MirarMovilDespertar_2", FlagCondition.FLAG_ACTIVE) || UAdvCheckFlag("Despertar_2", FlagCondition.FLAG_ACTIVE))//segunda vez que lo usas, intro de la escena 2
+                Instance.phone.Init(Instance.sprites["Javi"], Instance.sprites["app3"], true);
+
+            else if (!UAdvCheckFlag("Intro1_2Hecha", FlagCondition.FLAG_ACTIVE))//primera vez que usas el movil
+            {
+                if (Instance.NumApuestas == 0)
+                    Instance.phone.Init(Instance.sprites["Jorge2"], Instance.sprites["app"], true);
+                else
+                    Instance.phone.Init(Instance.sprites["Jorge1"], Instance.sprites["app"], true);
+            }
+            if(Instance.NumApuestas > 0)
+                Instance.showApp = true;
+
+            phone.SetAppActive(Instance.showApp);
         }
 
     }

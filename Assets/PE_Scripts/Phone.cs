@@ -36,7 +36,7 @@ public class Phone : MonoBehaviour
                 GameManager.Instance.UAdvSetFlag("MirarMovilDespertar_2", 1);
                 GameManager.Instance.UAdvSetFlag("Despertar_2", 0);
             }
-            else if(GameManager.Instance.UAdvCheckFlag("Despertar_3", 0))
+            else if(GameManager.Instance.UAdvCheckFlag("Despertar_3", 0))//si está activado
             {
                 GameManager.Instance.UAdvSetFlag("MovilMirado_3", 0);//activar
             }
