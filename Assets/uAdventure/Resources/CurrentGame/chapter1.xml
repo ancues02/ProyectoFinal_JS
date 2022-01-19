@@ -292,7 +292,7 @@
           <condition />
         </effect>
       </exit>
-      <exit rectangular="yes" x="678" y="15" width="100" height="100" hasInfluenceArea="no" idTarget="Quiniela" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="678" y="15" width="100" height="100" hasInfluenceArea="no" idTarget="Movil1" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
       </exit>
     </exits>
@@ -2257,6 +2257,7 @@
   </graph-conversation>
   <unity-scene id="Quiniela" scene="Assets/uAdventure/Scenes/Quiniela.unity" />
   <unity-scene id="Base" scene="Assets/uAdventure/Scenes/_Scene1.unity" />
+  <unity-scene id="Movil1" scene="Assets/uAdventure/Scenes/Movil.unity" />
   <object id="Movil" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
     <resources name="No name">
       <asset type="image" uri="assets/image/movil.png" />

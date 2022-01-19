@@ -19,6 +19,10 @@ public class GameManager : MonoBehaviour
 
     public BetManager betManager;
 
+    public Phone phone;
+    public Sprite[] phoneConversations;
+    public Sprite[] appSprites;
+    Dictionary<string, Sprite> sprites;
     /// <summary>
     /// El indice del array el numero de apuestas
     /// </summary>
@@ -26,18 +30,21 @@ public class GameManager : MonoBehaviour
     
     void Awake()
     {
+        Debug.Log("AWAKE DEL GAMEMANAGER");
         if (!Instance) {
             if (!resourceBar)
                 Debug.LogError("Falta la barra de recurso");
             else
                 resourceBar.Init(MaxRecurso, MinRecurso);
             Recurso = MaxRecurso;
+            InitializeSpritesDict();
             Instance = this;
             DontDestroyOnLoad(Instance);
         }
         else {
             Instance.betManager = betManager;
             Instance.resourceBar = resourceBar;
+            Instance.phone = phone;
             Destroy(this);
         }
         if (!Instance.resourceBar)
@@ -53,7 +60,14 @@ public class GameManager : MonoBehaviour
             else //if (UAdvCheckFlag("Apostar_3", FlagCondition.FLAG_ACTIVE))
                 Instance.betManager.Init(betDatas[2]);    
         }
-        
+        if (Instance.phone)
+        {
+            Instance.phone.SetAppActive(false);
+            //Checkeo flags de uAdventure
+            Instance.phone.Init(Instance.sprites["NoConver"], Instance.sprites["app"], true);
+            //phone.ActivateApp();
+        }
+
     }
 
 
@@ -135,5 +149,14 @@ public class GameManager : MonoBehaviour
         
         Debug.Log("Apuestas: " + NumApuestas);
         UAdvPreviousScene();
+    }
+
+    void InitializeSpritesDict()
+    {
+        sprites = new Dictionary<string, Sprite>();
+        foreach(Sprite s in appSprites)
+            sprites.Add(s.name, s);
+        foreach (Sprite s in phoneConversations)
+            sprites.Add(s.name, s);
     }
 }
