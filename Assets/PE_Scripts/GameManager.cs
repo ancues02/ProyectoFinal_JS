@@ -64,7 +64,7 @@ public class GameManager : MonoBehaviour
         {
             Instance.phone.SetAppActive(true);
             //Checkeo flags de uAdventure
-            Instance.phone.Init(Instance.sprites["NoConver"], Instance.sprites["app"], true);
+            Instance.phone.Init(Instance.sprites["Antia1"], Instance.sprites["app"], true);
             //phone.ActivateApp();
         }
 

@@ -455,7 +455,7 @@
       </exit>
     </exits>
     <active-areas>
-      <active-area id="ConversacionMovil" rectangular="yes" x="233" y="0" width="1094" height="843" hasInfluenceArea="no" behaviour="normal">
+      <active-area id="ConversacionMovil" rectangular="yes" x="233" y="2" width="1094" height="843" hasInfluenceArea="no" behaviour="normal">
         <description>
           <name>
           </name>
@@ -479,6 +479,10 @@
             <condition>
               <active flag="MirarMovil" />
             </condition>
+            <effect>
+              <trigger-conversation idTarget="MirarMovil" guid="6043eaf3-715d-4e13-9617-0a1be2d26ad3" />
+              <condition />
+            </effect>
           </examine>
         </actions>
       </active-area>
