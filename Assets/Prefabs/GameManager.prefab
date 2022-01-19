@@ -43,3 +43,46 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34e474dc0c0c7a241b84044a9d6da647, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  resourceBar: {fileID: 0}
+  MaxRecurso: 100
+  MinRecurso: 0
+  RecursoApostado: 20
+  betManager: {fileID: 0}
+  phone: {fileID: 0}
+  phoneConversations:
+  - {fileID: 21300000, guid: 0161c8e63f5f0af47b0c8e15580ef255, type: 3}
+  - {fileID: 21300000, guid: e8148cfd16c56ab48abbfcc94c68252e, type: 3}
+  - {fileID: 21300000, guid: 07486d4e4f6424f47ab28afaa9c0f4f7, type: 3}
+  - {fileID: 21300000, guid: a79358e930d79fe4ca262a6a43496c29, type: 3}
+  - {fileID: 21300000, guid: 3fc437532a7835243b540cc6f2896576, type: 3}
+  - {fileID: 21300000, guid: 2124852348eaf7f4b8ac543412f5eb50, type: 3}
+  - {fileID: 21300000, guid: bd6ba8c0a6eedea418387e494c93b260, type: 3}
+  - {fileID: 21300000, guid: 7c3e980ebae45144aad0c0b7f4f10206, type: 3}
+  - {fileID: 21300000, guid: 694371fbb04a24b4fafd63860c5edaf2, type: 3}
+  appSprites:
+  - {fileID: 21300000, guid: 1982d3f194ac78445a1292580ada37a0, type: 3}
+  - {fileID: 21300000, guid: a84bf0ebc2e1bb049a79e30156bd0384, type: 3}
+  - {fileID: 21300000, guid: 4efd527f1ef476a43b92586523927652, type: 3}
+  - {fileID: 21300000, guid: b04e86c8619e5f441b513596b225012f, type: 3}
+  betDatas:
+  - e1Image: {fileID: 21300000, guid: 07035d53fcabc5a49acbefcaebead22f, type: 3}
+    e1Name: Villareal
+    e1Multiplier: 3.26
+    drawMultiplier: 3.56
+    e2Image: {fileID: 21300000, guid: 586da46371e574947aaa477a6fc0e33d, type: 3}
+    e2Name: Betis
+    e2Multiplier: 2.14
+  - e1Image: {fileID: 21300000, guid: 1d74396d887b6f1459b1f20a97b47dda, type: 3}
+    e1Name: Rayo Vallecano
+    e1Multiplier: 4.4
+    drawMultiplier: 3.75
+    e2Image: {fileID: 21300000, guid: 019510551a0e5e14da167eac5864ba2a, type: 3}
+    e2Name: Barcelona
+    e2Multiplier: 1.8
+  - e1Image: {fileID: 21300000, guid: 6ff668704c936ee44ae3fbbeac859f9b, type: 3}
+    e1Name: Atletico Madrid
+    e1Multiplier: 1.55
+    drawMultiplier: 3.99
+    e2Image: {fileID: 21300000, guid: fb8106faa7c979340b6ae2ec5e959eae, type: 3}
+    e2Name: Granada
+    e2Multiplier: 6.25
