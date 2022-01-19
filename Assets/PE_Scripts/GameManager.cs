@@ -174,10 +174,15 @@ public class GameManager : MonoBehaviour
 
     // Funciones del juego
 
-    public void Apuesta()
+    public void BajaRecurso()
     {
         Recurso = Mathf.Clamp(Recurso - RecursoApostado, MinRecurso, MaxRecurso);
         resourceBar.SetValue(Recurso);
+    }
+
+    public void Apuesta()
+    {
+     
         NumApuestas++;
         UAdvSetFlag("Apostar_2", FlagCondition.FLAG_INACTIVE);
         UAdvSetFlag("Apostar", FlagCondition.FLAG_INACTIVE);
