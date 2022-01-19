@@ -455,7 +455,10 @@
       </exit>
     </exits>
     <active-areas>
-      <active-area id="ConversacionMovil" rectangular="yes" x="233" y="2" width="1094" height="843" hasInfluenceArea="no" behaviour="normal">
+      <active-area id="ConversacionMovil" rectangular="yes" x="233" y="4" width="1094" height="843" hasInfluenceArea="no" behaviour="normal">
+        <condition>
+          <inactive flag="Despertar_2" />
+        </condition>
         <description>
           <name>
           </name>
@@ -553,6 +556,40 @@
     <name>
     </name>
     <default-initial-position x="400" y="450" />
+    <active-areas>
+      <active-area id="Texto" rectangular="yes" x="110" y="-16" width="1187" height="896" hasInfluenceArea="no" behaviour="normal">
+        <description>
+          <name>
+          </name>
+          <brief>
+          </brief>
+          <detailed>
+          </detailed>
+        </description>
+        <actions>
+          <examine needsGoTo="no" keepDistance="0" not-effects="no">
+            <condition>
+              <less-than var="numApuestas" value="2" />
+              <active flag="Intro3Hecha" />
+            </condition>
+            <effect>
+              <trigger-conversation idTarget="IntroBuena_3" guid="e9ce6381-3974-4d4f-b4e4-cab4a4f43def" />
+              <condition />
+            </effect>
+          </examine>
+          <examine needsGoTo="no" keepDistance="0" not-effects="no">
+            <condition>
+              <greater-equals-than var="numApuestas" value="2" />
+              <active flag="Intro3Hecha" />
+            </condition>
+            <effect>
+              <trigger-conversation idTarget="IntroMala_3" guid="a5cec437-a484-4e95-b9ad-e34880e86df8" />
+              <condition />
+            </effect>
+          </examine>
+        </actions>
+      </active-area>
+    </active-areas>
   </scene>
   <scene id="EscenaCalle_3" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
@@ -1245,7 +1282,7 @@
       <condition />
       <end-conversation>
         <effect>
-          <trigger-scene idTarget="Habitacion_2" x="640" y="639" transitionTime="2000" transitionType="5" guid="3745666b-b99c-45de-a7b3-8b20f141a500" />
+          <trigger-scene idTarget="Habitacion_2" x="640" y="639" transitionTime="2000" transitionType="1" guid="3745666b-b99c-45de-a7b3-8b20f141a500" />
           <condition />
         </effect>
       </end-conversation>
@@ -1352,7 +1389,7 @@
       <condition />
       <end-conversation>
         <effect>
-          <trigger-scene idTarget="Habitacion_2" x="640" y="639" transitionTime="2000" transitionType="5" guid="aea1ce02-cf3e-4171-b475-65a32f6e929b" />
+          <trigger-scene idTarget="Habitacion_2" x="640" y="639" transitionTime="2000" transitionType="1" guid="aea1ce02-cf3e-4171-b475-65a32f6e929b" />
           <condition />
         </effect>
       </end-conversation>
