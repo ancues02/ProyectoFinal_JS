@@ -21,7 +21,7 @@
 <entry key="Chapter0.Introduccion_1.Y">73</entry>
 <entry key="Chapter0.HabitacionSinApostar_1.X">-184</entry>
 <entry key="Chapter0.HabitacionSinApostar_1.Y">3</entry>
-<entry key="Chapter0.HabitacionConApostar_1.X">169</entry>
+<entry key="Chapter0.HabitacionConApostar_1.X">167</entry>
 <entry key="Chapter0.HabitacionConApostar_1.Y">-28</entry>
 <entry key="Chapter0.Habitacion_2.X">872</entry>
 <entry key="Chapter0.Habitacion_2.Y">146</entry>
@@ -29,9 +29,11 @@
 <entry key="Chapter0.PuntoEncuentro_2.Y">-5</entry>
 <entry key="Chapter0.Apuestas_2.X">491</entry>
 <entry key="Chapter0.Apuestas_2.Y">393</entry>
-<entry key="Chapter0.Habitacion_3.X">158</entry>
-<entry key="Chapter0.Habitacion_3.Y">230</entry>
-<entry key="Chapter0.EscenaCalle_3.X">11</entry>
-<entry key="Chapter0.EscenaCalle_3.Y">475</entry>
+<entry key="Chapter0.Habitacion_3.X">294</entry>
+<entry key="Chapter0.Habitacion_3.Y">144</entry>
+<entry key="Chapter0.EscenaCalle_3.X">40</entry>
+<entry key="Chapter0.EscenaCalle_3.Y">324</entry>
+<entry key="Chapter0.Habitacion_4.X">-276</entry>
+<entry key="Chapter0.Habitacion_4.Y">447</entry>
 </properties>
 

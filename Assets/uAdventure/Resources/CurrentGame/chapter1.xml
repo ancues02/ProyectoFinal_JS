@@ -89,6 +89,7 @@
         <condition>
           <inactive flag="EscenaApostarIntro_2" />
           <active flag="Intro2Echa" />
+          <active flag="EnEscena2_2" />
         </condition>
         <effect>
           <trigger-conversation idTarget="Apuestas1_2" guid="4fc4f1f4-409e-4732-8391-5370edb9054c" />
@@ -264,6 +265,7 @@
         <condition>
           <active flag="EnEscena2_2" />
           <inactive flag="Intro2Echa" />
+          <inactive flag="Intro1_2Hecha" />
         </condition>
         <effect>
           <trigger-conversation idTarget="Intro_2" guid="115e6ee9-b114-456d-8aec-2a3a148b2bd1" />
@@ -557,7 +559,7 @@
     </name>
     <default-initial-position x="400" y="450" />
     <active-areas>
-      <active-area id="Texto" rectangular="yes" x="110" y="-16" width="1187" height="896" hasInfluenceArea="no" behaviour="normal">
+      <active-area id="Texto" rectangular="yes" x="106" y="-14" width="1187" height="896" hasInfluenceArea="no" behaviour="normal">
         <description>
           <name>
           </name>
@@ -568,9 +570,10 @@
         </description>
         <actions>
           <examine needsGoTo="no" keepDistance="0" not-effects="no">
+            <documentation>Bueno</documentation>
             <condition>
               <less-than var="numApuestas" value="2" />
-              <active flag="Intro3Hecha" />
+              <active flag="MovilMirado_3" />
             </condition>
             <effect>
               <trigger-conversation idTarget="IntroBuena_3" guid="e9ce6381-3974-4d4f-b4e4-cab4a4f43def" />
@@ -578,12 +581,22 @@
             </effect>
           </examine>
           <examine needsGoTo="no" keepDistance="0" not-effects="no">
+            <documentation>Malo</documentation>
             <condition>
               <greater-equals-than var="numApuestas" value="2" />
-              <active flag="Intro3Hecha" />
+              <active flag="MovilMirado_3" />
             </condition>
             <effect>
               <trigger-conversation idTarget="IntroMala_3" guid="a5cec437-a484-4e95-b9ad-e34880e86df8" />
+              <condition />
+            </effect>
+          </examine>
+          <examine needsGoTo="no" keepDistance="0" not-effects="no">
+            <condition>
+              <inactive flag="MovilMirado_3" />
+            </condition>
+            <effect>
+              <trigger-conversation idTarget="DosSemanasMasTarde_3" guid="74b44933-d31f-4792-8362-94516276562b" />
               <condition />
             </effect>
           </examine>
@@ -603,6 +616,36 @@
     <characters>
       <character-ref idTarget="Sofia" x="1757" y="1396" scale="0.3890987" orientation="0" glow="no" layer="0" hasInfluenceArea="no" />
     </characters>
+  </scene>
+  <scene id="Habitacion_4" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/habitacion.jpg" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <active-areas>
+      <active-area id="LastTest" rectangular="yes" x="-67" y="-37" width="1371" height="914" hasInfluenceArea="no" behaviour="normal">
+        <description>
+          <name>
+          </name>
+          <brief>
+          </brief>
+          <detailed>
+          </detailed>
+        </description>
+        <actions>
+          <examine needsGoTo="no" keepDistance="0" not-effects="no">
+            <effect>
+              <trigger-conversation idTarget="DosSemanasMasTarde" guid="c79962cc-02c1-4066-9fe0-e58b499021e7" />
+              <condition />
+            </effect>
+          </examine>
+        </actions>
+      </active-area>
+    </active-areas>
   </scene>
   <graph-conversation id="Intro_1">
     <dialogue-node nodeindex="0" editor-x="73" editor-y="28">
@@ -1565,6 +1608,8 @@
         <effect>
           <activate flag="MirarMovilIntro_2" guid="fb0322ff-4517-4851-8982-df7ccaedcd00" />
           <condition />
+          <activate flag="Intro1_2Hecha" guid="264b2d37-e3d9-4368-924d-98f0371fdb29" />
+          <condition />
         </effect>
       </end-conversation>
     </dialogue-node>
@@ -1672,6 +1717,8 @@
       <end-conversation>
         <effect>
           <activate flag="Intro2Echa" guid="01b3af29-5bc7-4dff-828c-29d385b2efe4" />
+          <condition />
+          <trigger-scene idTarget="Apuestas_2" x="900" y="806" transitionTime="1000" transitionType="3" guid="6d92d959-0726-47e1-b843-d7c3197b5fe9" />
           <condition />
         </effect>
       </end-conversation>
@@ -1956,6 +2003,30 @@
       </end-conversation>
     </dialogue-node>
   </graph-conversation>
+  <graph-conversation id="DosSemanasMasTarde_3">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>
+        <resources name="No name" />
+        <text>* Dos semanas mas tarde *</text>
+      </speak-player>
+      <condition>
+        <inactive flag="MirarMovil" />
+      </condition>
+      <speak-player>
+        <resources name="No name" />
+        <text>* Vibración, vibración *</text>
+      </speak-player>
+      <condition />
+      <end-conversation>
+        <effect>
+          <activate flag="MirarMovil" guid="af12adb0-2841-443a-92db-50a097688a81" />
+          <condition />
+          <activate flag="Despertar_3" guid="4d1cd1e6-72ca-4a3b-8d56-bad9fd41a8d2" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+  </graph-conversation>
   <graph-conversation id="IntroBuena_3">
     <dialogue-node nodeindex="0" editor-x="180" editor-y="75">
       <speak-player>
@@ -2009,6 +2080,8 @@
       <end-conversation>
         <effect>
           <activate flag="Intro3Hecha" guid="a248dc74-b23d-4c58-8107-102ae8c9f5db" />
+          <condition />
+          <trigger-scene idTarget="EscenaCalle_3" x="1024" y="1028" transitionTime="1000" transitionType="3" guid="5a7cea68-6ce9-47bf-a3a8-3901881bd608" />
           <condition />
         </effect>
       </end-conversation>
@@ -2086,6 +2159,8 @@
       <end-conversation>
         <effect>
           <activate flag="Intro3Hecha" guid="c9777b2a-c4cc-4ecf-b65e-a6cfec91340b" />
+          <condition />
+          <trigger-scene idTarget="EscenaCalle_3" x="1024" y="1028" transitionTime="1000" transitionType="3" guid="d27aac62-8bb0-4b5a-827f-c9c37cf32e0f" />
           <condition />
         </effect>
       </end-conversation>
@@ -2268,9 +2343,14 @@
         <text>*La acompañas por la ciudad haciendo sus recados toda la tarde, la dejas su casa y acabas el día*</text>
       </speak-player>
       <condition />
-      <end-conversation />
+      <end-conversation>
+        <effect>
+          <trigger-scene idTarget="Habitacion_4" x="640" y="639" transitionTime="1000" transitionType="5" guid="2c172980-37b2-4a66-b97c-ffa4b928866c" />
+          <condition />
+        </effect>
+      </end-conversation>
     </dialogue-node>
-    <dialogue-node nodeindex="5" editor-x="2102" editor-y="292">
+    <dialogue-node nodeindex="5" editor-x="2131" editor-y="293">
       <speak-char idTarget="Sofia">
         <resources name="No name" />
         <text>No sé, Alex, estoy hasta las rodillas de mierda precisamente por pensar así. No lo hagas, no va a salir bien… ¿Tienes si quiera más dinero o eso es todo?</text>
@@ -2337,6 +2417,28 @@
       <end-conversation>
         <effect>
           <trigger-scene idTarget="Quiniela" x="400" y="298" transitionTime="0" transitionType="0" guid="0e901254-0eab-4951-932b-8066b816c845" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="DosSemanasMasTarde_4">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>
+        <resources name="No name" />
+        <text>* Dos semanas más tarde *</text>
+      </speak-player>
+      <condition>
+        <active flag="LastText" />
+      </condition>
+      <speak-player>
+        <resources name="No name" />
+        <text>* Mirar el móvil *</text>
+      </speak-player>
+      <condition />
+      <end-conversation>
+        <effect>
+          <activate flag="LastText" guid="82f6611e-6473-4d0b-a9ce-8ecdd2d14a59" />
           <condition />
         </effect>
       </end-conversation>

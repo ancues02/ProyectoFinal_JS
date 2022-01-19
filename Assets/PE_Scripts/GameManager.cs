@@ -56,16 +56,27 @@ public class GameManager : MonoBehaviour
             if(UAdvCheckFlag("Apostar", FlagCondition.FLAG_ACTIVE))
                 Instance.betManager.Init(betDatas[0]);    
             else if(UAdvCheckFlag("Apostar_2", FlagCondition.FLAG_ACTIVE))
-                Instance.betManager.Init(betDatas[1]);    
-            else //if (UAdvCheckFlag("Apostar_3", FlagCondition.FLAG_ACTIVE))
                 Instance.betManager.Init(betDatas[2]);    
+            else //if (UAdvCheckFlag("Apostar_3", FlagCondition.FLAG_ACTIVE))
+                Instance.betManager.Init(betDatas[1]);    
         }
         if (Instance.phone)
         {
-            Instance.phone.SetAppActive(true);
+            if(UAdvCheckFlag("LastText", FlagCondition.FLAG_ACTIVE))
+                Instance.phone.Init(Instance.sprites["Antia2"], Instance.sprites["app"], true);
+            else if (UAdvCheckFlag("LastText", FlagCondition.FLAG_ACTIVE))
+                Instance.phone.Init(Instance.sprites["Antia2"], Instance.sprites["app"], true);
+            else if(UAdvCheckFlag("LastText", FlagCondition.FLAG_ACTIVE))
+                Instance.phone.Init(Instance.sprites["Antia2"], Instance.sprites["app"], true);
+            else if(UAdvCheckFlag("LastText", FlagCondition.FLAG_ACTIVE))
+                Instance.phone.Init(Instance.sprites["Antia2"], Instance.sprites["app"], true);
+            else if(UAdvCheckFlag("LastText", FlagCondition.FLAG_ACTIVE))
+                Instance.phone.Init(Instance.sprites["Antia2"], Instance.sprites["app"], true);
             //Checkeo flags de uAdventure
             Instance.phone.Init(Instance.sprites["Antia1"], Instance.sprites["app"], true);
-            //phone.ActivateApp();
+
+            if(UAdvGetVariable("numApuestas") > 0)
+                phone.SetAppActive(true);
         }
 
     }
