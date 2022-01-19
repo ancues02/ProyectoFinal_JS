@@ -284,7 +284,7 @@
     </name>
     <default-initial-position x="400" y="450" />
     <exits>
-      <exit rectangular="yes" x="-1" y="2" width="83" height="81" hasInfluenceArea="no" idTarget="Apuestas_1" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="-1" y="-5" width="100" height="409" hasInfluenceArea="no" idTarget="Apuestas_1" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
         <condition>
           <active flag="IntroEcha" />
@@ -293,9 +293,6 @@
           <activate flag="EnEscena2_1" guid="1aebf3ed-27da-48a8-9743-bd8522ad8ac9" />
           <condition />
         </effect>
-      </exit>
-      <exit rectangular="yes" x="678" y="15" width="100" height="100" hasInfluenceArea="no" idTarget="Quiniela" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="" cursor-path="" sound-path="" />
       </exit>
     </exits>
     <characters>
@@ -345,7 +342,7 @@
       <character-ref idTarget="Antia" x="232" y="1078" scale="0.3152493" orientation="0" glow="no" layer="0" hasInfluenceArea="no" />
     </characters>
   </scene>
-  <scene id="HabitacionSinApostar_1" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="HabitacionSinApostar_1" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -640,6 +637,84 @@
           <examine needsGoTo="no" keepDistance="0" not-effects="no">
             <effect>
               <trigger-conversation idTarget="DosSemanasMasTarde" guid="c79962cc-02c1-4066-9fe0-e58b499021e7" />
+              <condition />
+            </effect>
+          </examine>
+        </actions>
+      </active-area>
+    </active-areas>
+  </scene>
+  <scene id="MenuPrincipal" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/fondo1.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="616" y="458" width="519" height="195" hasInfluenceArea="no" idTarget="Introduccion_1" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+      </exit>
+      <exit rectangular="yes" x="621" y="684" width="522" height="201" hasInfluenceArea="no" idTarget="Creditos" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+      </exit>
+    </exits>
+  </scene>
+  <scene id="Creditos" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/creditos.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="9" y="15" width="199" height="190" hasInfluenceArea="no" idTarget="MenuPrincipal" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+      </exit>
+    </exits>
+  </scene>
+  <scene id="HabitacionCap_3" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/habitacion.jpg" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <active-areas>
+      <active-area id="ActiveAreaId1" rectangular="yes" x="-27" y="-31" width="1345" height="909" hasInfluenceArea="no" behaviour="normal">
+        <description>
+          <name>
+          </name>
+          <brief>
+          </brief>
+          <detailed>
+          </detailed>
+        </description>
+        <actions>
+          <examine needsGoTo="no" keepDistance="0" not-effects="no">
+            <documentation>Mal</documentation>
+            <condition>
+              <less-than var="numApuestas" value="1000" />
+              <greater-than var="numApuestas" value="5" />
+            </condition>
+            <effect>
+              <trigger-conversation idTarget="HabitacionMal_3" guid="9d13789c-2b62-4832-b478-02b4f2b507a7" />
+              <condition />
+            </effect>
+          </examine>
+          <examine needsGoTo="no" keepDistance="0" not-effects="no">
+            <documentation>MuyMal</documentation>
+            <condition>
+              <greater-equals-than var="numApuestas" value="1000" />
+            </condition>
+            <effect>
+              <trigger-conversation idTarget="HabitacionMuyMal_3" guid="9d13789c-2b62-4832-b478-02b4f2b507a7" />
               <condition />
             </effect>
           </examine>
@@ -2370,10 +2445,12 @@
         <effect>
           <trigger-scene idTarget="Quiniela" x="400" y="298" transitionTime="0" transitionType="0" guid="b3210055-ad08-4255-b4d0-01a255ab5096" />
           <condition />
+          <increment var="numApuestas" value="10" guid="74b69010-dacf-4f44-911b-070aaef83029" />
+          <condition />
         </effect>
       </end-conversation>
     </dialogue-node>
-    <dialogue-node nodeindex="6" editor-x="2124" editor-y="561">
+    <dialogue-node nodeindex="6" editor-x="2136" editor-y="576">
       <speak-char idTarget="Sofia">
         <resources name="No name" />
         <text>…</text>
@@ -2418,6 +2495,8 @@
         <effect>
           <trigger-scene idTarget="Quiniela" x="400" y="298" transitionTime="0" transitionType="0" guid="0e901254-0eab-4951-932b-8066b816c845" />
           <condition />
+          <increment var="numApuestas" value="1000" guid="1aaa97b8-d434-47d0-b50a-2019c2647ad6" />
+          <condition />
         </effect>
       </end-conversation>
     </dialogue-node>
@@ -2439,6 +2518,76 @@
       <end-conversation>
         <effect>
           <activate flag="LastText" guid="82f6611e-6473-4d0b-a9ce-8ecdd2d14a59" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="HabitacionMuyMal_3">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>
+        <resources name="No name" />
+        <text>*Viste el partido en soledad en la mesa de siempre*</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>*Tu equipó perdió*</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>*Estuviste el resto del día en casa sin hacer nada*</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>*Nadie te ha escrito un mensaje en todo el día *</text>
+      </speak-player>
+      <condition />
+      <end-conversation>
+        <effect>
+          <trigger-scene idTarget="Habitacion_4" x="640" y="639" transitionTime="2000" transitionType="1" guid="2bade86a-1c1f-43d6-9320-0077b1061e62" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="HabitacionMal_3">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>
+        <resources name="No name" />
+        <text>*Visteis el partido juntos*</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>*Sofía no paró de mover arriba y abajo la piernas, ni dejó de poner la cara más seria que le habías visto en mucho tiempo*</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>*Lentamente, su cara pasó de seria a triste, hasta transicionar complemente*</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>*Tu equipó perdió*</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>*Sofía se despidió diciendo que tenía que irse y salió con urgencia por la puerta*</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>*Vuelves a casa y pasas el resto del día sin hacer nada, perdiendo el tiempo*</text>
+      </speak-player>
+      <condition />
+      <end-conversation>
+        <effect>
+          <trigger-scene idTarget="Habitacion_4" x="640" y="639" transitionTime="2000" transitionType="1" guid="2bade86a-1c1f-43d6-9320-0077b1061e62" />
           <condition />
         </effect>
       </end-conversation>

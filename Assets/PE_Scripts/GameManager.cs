@@ -76,12 +76,12 @@ public class GameManager : MonoBehaviour
             else if (UAdvCheckFlag("Intro3Hecha", FlagCondition.FLAG_ACTIVE))//
                 Instance.phone.Init(Instance.sprites["Grupo"], Instance.sprites["app2"], true);
             else if (UAdvCheckFlag("Despertar_3", FlagCondition.FLAG_ACTIVE))//en casa, escena 3 al despertar.
-                Instance.phone.Init(Instance.sprites["Grupo"], Instance.sprites["app3"], true);
+                Instance.phone.Init(Instance.sprites["Grupo"], Instance.sprites["app2"], true);
 
             else if (UAdvCheckFlag("MirarMovilIntro_2", FlagCondition.FLAG_ACTIVE))//tercera vez que lo usas, en la plaza, escena 2
             {
                 if (Instance.NumApuestas == 0)
-                    Instance.phone.Init(Instance.sprites["Antia3"], Instance.sprites["app"], true);
+                    Instance.phone.Init(Instance.sprites["Antia3"], Instance.sprites["app3"], true);
                 else
                 {
                     Instance.phone.Init(Instance.sprites["Javi"], Instance.sprites["app3"], true);
