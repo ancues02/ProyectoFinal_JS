@@ -15,8 +15,8 @@
 <entry key="Chapter0.HabitacionSinApostar.Y">277</entry>
 <entry key="Chapter0.HabitacionConApostar.X">6</entry>
 <entry key="Chapter0.HabitacionConApostar.Y">484</entry>
-<entry key="Chapter0.Apuestas_1.X">-240</entry>
-<entry key="Chapter0.Apuestas_1.Y">106</entry>
+<entry key="Chapter0.Apuestas_1.X">-357</entry>
+<entry key="Chapter0.Apuestas_1.Y">206</entry>
 <entry key="Chapter0.Introduccion_1.X">-383</entry>
 <entry key="Chapter0.Introduccion_1.Y">73</entry>
 <entry key="Chapter0.HabitacionSinApostar_1.X">-184</entry>
@@ -27,7 +27,6 @@
 <entry key="Chapter0.Habitacion_2.Y">146</entry>
 <entry key="Chapter0.PuntoEncuentro_2.X">567</entry>
 <entry key="Chapter0.PuntoEncuentro_2.Y">-5</entry>
-<<<<<<< Updated upstream
 <entry key="Chapter0.Apuestas_2.X">491</entry>
 <entry key="Chapter0.Apuestas_2.Y">393</entry>
 <entry key="Chapter0.Habitacion_3.X">294</entry>
@@ -36,17 +35,5 @@
 <entry key="Chapter0.EscenaCalle_3.Y">324</entry>
 <entry key="Chapter0.Habitacion_4.X">-276</entry>
 <entry key="Chapter0.Habitacion_4.Y">447</entry>
-=======
-<entry key="Chapter0.Apuestas_2.X">641</entry>
-<entry key="Chapter0.Apuestas_2.Y">362</entry>
-<entry key="Chapter0.Habitacion_3.X">378</entry>
-<entry key="Chapter0.Habitacion_3.Y">177</entry>
-<entry key="Chapter0.EscenaCalle_3.X">161</entry>
-<entry key="Chapter0.EscenaCalle_3.Y">269</entry>
-<entry key="Chapter0.MenuPrincipal.X">-200</entry>
-<entry key="Chapter0.MenuPrincipal.Y">486</entry>
-<entry key="Chapter0.Creditos.X">-39</entry>
-<entry key="Chapter0.Creditos.Y">353</entry>
->>>>>>> Stashed changes
 </properties>
 

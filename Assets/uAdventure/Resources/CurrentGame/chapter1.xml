@@ -345,7 +345,7 @@
       <character-ref idTarget="Antia" x="232" y="1078" scale="0.3152493" orientation="0" glow="no" layer="0" hasInfluenceArea="no" />
     </characters>
   </scene>
-  <scene id="HabitacionSinApostar_1" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="HabitacionSinApostar_1" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -617,24 +617,15 @@
       <character-ref idTarget="Sofia" x="1757" y="1396" scale="0.3890987" orientation="0" glow="no" layer="0" hasInfluenceArea="no" />
     </characters>
   </scene>
-<<<<<<< Updated upstream
   <scene id="Habitacion_4" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
       <asset type="background" uri="assets/background/habitacion.jpg" />
-=======
-  <scene id="MenuPrincipal" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
-    <documentation>
-    </documentation>
-    <resources name="No name">
-      <asset type="background" uri="assets/background/fondo1.png" />
->>>>>>> Stashed changes
     </resources>
     <name>
     </name>
     <default-initial-position x="400" y="450" />
-<<<<<<< Updated upstream
     <active-areas>
       <active-area id="LastTest" rectangular="yes" x="-67" y="-37" width="1371" height="914" hasInfluenceArea="no" behaviour="normal">
         <description>
@@ -655,31 +646,6 @@
         </actions>
       </active-area>
     </active-areas>
-=======
-    <exits>
-      <exit rectangular="yes" x="627" y="703" width="507" height="171" hasInfluenceArea="no" idTarget="Creditos" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="" />
-      </exit>
-      <exit rectangular="yes" x="621" y="468" width="507" height="176" hasInfluenceArea="no" idTarget="Introduccion_1" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="" />
-      </exit>
-    </exits>
-  </scene>
-  <scene id="Creditos" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
-    <documentation>
-    </documentation>
-    <resources name="No name">
-      <asset type="background" uri="assets/background/creditos.png" />
-    </resources>
-    <name>
-    </name>
-    <default-initial-position x="400" y="450" />
-    <exits>
-      <exit rectangular="yes" x="22" y="26" width="180" height="169" hasInfluenceArea="no" idTarget="MenuPrincipal" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="" />
-      </exit>
-    </exits>
->>>>>>> Stashed changes
   </scene>
   <graph-conversation id="Intro_1">
     <dialogue-node nodeindex="0" editor-x="73" editor-y="28">
