@@ -37,6 +37,7 @@ public class GameManager : MonoBehaviour
         }
         else {
             Instance.betManager = betManager;
+            Instance.resourceBar = resourceBar;
             Destroy(this);
         }
         if (!Instance.resourceBar)
@@ -45,7 +46,12 @@ public class GameManager : MonoBehaviour
             Instance.resourceBar.SetValue(Instance.Recurso);
         if (Instance.betManager)
         {
-            Instance.betManager.Init(betDatas[NumApuestas]);    // Es con otra variable de uAdv
+            if(UAdvCheckFlag("Apostar", FlagCondition.FLAG_ACTIVE))
+                Instance.betManager.Init(betDatas[0]);    
+            else if(UAdvCheckFlag("Apostar_2", FlagCondition.FLAG_ACTIVE))
+                Instance.betManager.Init(betDatas[1]);    
+            else //if (UAdvCheckFlag("Apostar_3", FlagCondition.FLAG_ACTIVE))
+                Instance.betManager.Init(betDatas[2]);    
         }
         
     }
@@ -123,6 +129,11 @@ public class GameManager : MonoBehaviour
         Recurso = Mathf.Clamp(Recurso - RecursoApostado, MinRecurso, MaxRecurso);
         resourceBar.SetValue(Recurso);
         NumApuestas++;
+        UAdvSetVariable("Apostar_2", FlagCondition.FLAG_INACTIVE);
+        UAdvSetVariable("Apostar", FlagCondition.FLAG_INACTIVE);
+        UAdvSetVariable("numApuestas", NumApuestas);
+        
         Debug.Log("Apuestas: " + NumApuestas);
+        UAdvPreviousScene();
     }
 }
