@@ -9,6 +9,7 @@ public class Phone : MonoBehaviour
     public Button converButton;
     public Button appButton;
     public Button leaveButton;
+    public Button endButton;
 
     Sprite appSprite;
     Sprite converSprite;
@@ -19,9 +20,9 @@ public class Phone : MonoBehaviour
         SetConverSprite(converSprite);
         SetAppSprite(appSprite);
         if (showConver) ShowConver();
-        else if(appButton.gameObject.activeSelf) ShowApp();
+        else if (appButton.gameObject.activeSelf) ShowApp();
 
-        converButton.onClick.AddListener(()=>
+        converButton.onClick.AddListener(() =>
         {
             ShowConver();
         });
@@ -29,20 +30,34 @@ public class Phone : MonoBehaviour
         {
             ShowApp();
         });
-        leaveButton.onClick.AddListener(() =>
+
+        if (GameManager.Instance.UAdvCheckFlag("LastText", 0))
         {
-            if (GameManager.Instance.UAdvCheckFlag("MirarMovilDespertar_2", 0))
+            leaveButton.gameObject.SetActive(false);
+            endButton.interactable = true;
+            endButton.onClick.AddListener(() =>
             {
-                GameManager.Instance.UAdvSetFlag("MirarMovilDespertar_2", 1);
-                GameManager.Instance.UAdvSetFlag("Despertar_2", 0);
-            }
-            else if(GameManager.Instance.UAdvCheckFlag("Despertar_3", 0))//si está activado
+                Debug.Log("ME PULSAN");
+                GameManager.Instance.UAdvChangeScene("Creditos");
+            });
+        }
+        else
+        {
+            leaveButton.onClick.AddListener(() =>
             {
-                GameManager.Instance.UAdvSetFlag("MovilMirado_3", 0);//activar
-            }
-            GameManager.Instance.UAdvSetFlag("MirarMovil", 1);//desactivar
-            GameManager.Instance.UAdvPreviousScene();
-        });
+                if (GameManager.Instance.UAdvCheckFlag("MirarMovilDespertar_2", 0))
+                {
+                    GameManager.Instance.UAdvSetFlag("MirarMovilDespertar_2", 1);
+                    GameManager.Instance.UAdvSetFlag("Despertar_2", 0);
+                }
+                else if (GameManager.Instance.UAdvCheckFlag("Despertar_3", 0))//si está activado
+                {
+                    GameManager.Instance.UAdvSetFlag("MovilMirado_3", 0);//activar
+                }
+                GameManager.Instance.UAdvSetFlag("MirarMovil", 1);//desactivar
+                GameManager.Instance.UAdvPreviousScene();
+            });
+        }
     }
 
     public void SetAppActive(bool active)

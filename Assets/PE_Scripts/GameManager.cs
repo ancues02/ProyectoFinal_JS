@@ -60,9 +60,9 @@ public class GameManager : MonoBehaviour
             if(UAdvCheckFlag("Apostar", FlagCondition.FLAG_ACTIVE))
                 Instance.betManager.Init(betDatas[0]);    
             else if(UAdvCheckFlag("Apostar_2", FlagCondition.FLAG_ACTIVE))
-                Instance.betManager.Init(betDatas[2]);    
-            else //if (UAdvCheckFlag("Apostar_3", FlagCondition.FLAG_ACTIVE))
                 Instance.betManager.Init(betDatas[1]);    
+            else //if (UAdvCheckFlag("Apostar_3", FlagCondition.FLAG_ACTIVE))
+                Instance.betManager.Init(betDatas[2]);    
         }
         if (Instance.phone)
         {
@@ -186,10 +186,19 @@ public class GameManager : MonoBehaviour
         NumApuestas++;
         UAdvSetFlag("Apostar_2", FlagCondition.FLAG_INACTIVE);
         UAdvSetFlag("Apostar", FlagCondition.FLAG_INACTIVE);
-        UAdvSetVariable("numApuestas", NumApuestas);
-        
+        if (UAdvGetVariable("numApuestas") < 10)
+        {
+            UAdvSetVariable("numApuestas", NumApuestas);
+            UAdvPreviousScene();
+        }
+        else
+        {
+            NumApuestas = UAdvGetVariable("numApuestas");
+            UAdvChangeScene("Habitacion_4");
+        }
+
         Debug.Log("Apuestas: " + NumApuestas);
-        UAdvPreviousScene();
+
     }
 
     void InitializeSpritesDict()

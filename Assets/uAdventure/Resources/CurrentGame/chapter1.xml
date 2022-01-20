@@ -274,7 +274,7 @@
       </talk-to>
     </actions>
   </character>
-  <scene id="Introduccion_1" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="Introduccion_1" hideInventory="yes" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
@@ -624,7 +624,7 @@
     </name>
     <default-initial-position x="400" y="450" />
     <active-areas>
-      <active-area id="LastTest" rectangular="yes" x="-67" y="-37" width="1371" height="914" hasInfluenceArea="no" behaviour="normal">
+      <active-area id="LastTest" rectangular="yes" x="-67" y="-30" width="1371" height="914" hasInfluenceArea="no" behaviour="normal">
         <description>
           <name>
           </name>
@@ -636,7 +636,7 @@
         <actions>
           <examine needsGoTo="no" keepDistance="0" not-effects="no">
             <effect>
-              <trigger-conversation idTarget="DosSemanasMasTarde" guid="c79962cc-02c1-4066-9fe0-e58b499021e7" />
+              <trigger-conversation idTarget="DosSemanasMasTarde_4" guid="80ae6b51-c314-40fa-923e-88bd819155e8" />
               <condition />
             </effect>
           </examine>
@@ -658,6 +658,9 @@
         <exit-look text="" cursor-path="" sound-path="" />
       </exit>
       <exit rectangular="yes" x="621" y="684" width="522" height="201" hasInfluenceArea="no" idTarget="Creditos" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+      </exit>
+      <exit rectangular="yes" x="240" y="77" width="1317" height="263" hasInfluenceArea="no" idTarget="Quiniela" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
       </exit>
     </exits>
