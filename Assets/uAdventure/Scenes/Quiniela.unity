@@ -597,7 +597,7 @@ MonoBehaviour:
   m_StartCorner: 0
   m_StartAxis: 0
   m_CellSize: {x: 40, y: 40}
-  m_Spacing: {x: 139.1, y: 37}
+  m_Spacing: {x: 139.1, y: 27}
   m_Constraint: 1
   m_ConstraintCount: 2
 --- !u!1 &226498304
@@ -1221,7 +1221,7 @@ PrefabInstance:
     - target: {fileID: 7413994712012404131, guid: f143bc294e7399e47b002b7bd8e09656,
         type: 3}
       propertyPath: m_IsOn
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7413994712012404131, guid: f143bc294e7399e47b002b7bd8e09656,
         type: 3}
