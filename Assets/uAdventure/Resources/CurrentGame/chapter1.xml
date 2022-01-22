@@ -716,6 +716,11 @@
     <name>
     </name>
     <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="0" y="0" width="1760" height="1000" hasInfluenceArea="no" idTarget="MenuPrincipal" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" />
+      </exit>
+    </exits>
   </scene>
   <scene id="Creditos" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
@@ -743,7 +748,7 @@
     <default-initial-position x="400" y="450" />
     <exits>
       <exit rectangular="yes" x="0" y="0" width="1760" height="1000" hasInfluenceArea="no" idTarget="MenuPrincipal" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="" />
+        <exit-look text="" cursor-path="" sound-path="" />
       </exit>
     </exits>
   </scene>
