@@ -644,35 +644,20 @@
       </active-area>
     </active-areas>
   </scene>
-  <scene id="MenuPrincipal" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
+  <scene id="MenuPrincipal" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
     <documentation>
     </documentation>
     <resources name="No name">
-      <asset type="background" uri="assets/background/fondo1.png" />
+      <asset type="background" uri="assets/background/fondo.png" />
     </resources>
     <name>
     </name>
     <default-initial-position x="400" y="450" />
     <exits>
-      <exit rectangular="yes" x="616" y="458" width="519" height="195" hasInfluenceArea="no" idTarget="Introduccion_1" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="1459" y="633" width="173" height="84" hasInfluenceArea="no" idTarget="Introduccion_1" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
       </exit>
-      <exit rectangular="yes" x="621" y="684" width="522" height="201" hasInfluenceArea="no" idTarget="Creditos" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="" cursor-path="" sound-path="" />
-      </exit>
-    </exits>
-  </scene>
-  <scene id="Creditos" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
-    <documentation>
-    </documentation>
-    <resources name="No name">
-      <asset type="background" uri="assets/background/creditos.png" />
-    </resources>
-    <name>
-    </name>
-    <default-initial-position x="400" y="450" />
-    <exits>
-      <exit rectangular="yes" x="9" y="15" width="199" height="190" hasInfluenceArea="no" idTarget="MenuPrincipal" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="1392" y="753" width="237" height="81" hasInfluenceArea="no" idTarget="Creditos" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
       </exit>
     </exits>
@@ -721,6 +706,46 @@
         </actions>
       </active-area>
     </active-areas>
+  </scene>
+  <scene id="Final" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/final.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+  </scene>
+  <scene id="Creditos" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/creditos.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="9" y="15" width="199" height="190" hasInfluenceArea="no" idTarget="MenuPrincipal" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+      </exit>
+    </exits>
+  </scene>
+  <scene id="Aviso" hideInventory="no" allowsZoom="no" allowsSavingGame="yes" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/aviso.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="0" y="0" width="1760" height="1000" hasInfluenceArea="no" idTarget="MenuPrincipal" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" />
+      </exit>
+    </exits>
   </scene>
   <graph-conversation id="Intro_1">
     <dialogue-node nodeindex="0" editor-x="73" editor-y="28">
