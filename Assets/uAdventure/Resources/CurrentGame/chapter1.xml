@@ -1776,6 +1776,8 @@
         <effect>
           <activate flag="Intro2Echa" guid="6c02a485-e331-40b8-89f3-c278e15a0aa0" />
           <condition />
+          <trigger-scene idTarget="Apuestas_2" x="900" y="806" transitionTime="0" transitionType="0" guid="0746c738-51fd-4456-9bba-206b74e3705e" />
+          <condition />
         </effect>
       </end-conversation>
     </dialogue-node>
