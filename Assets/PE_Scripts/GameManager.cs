@@ -66,13 +66,15 @@ public class GameManager : MonoBehaviour
         }
         if (Instance.phone)
         {
-            if (UAdvCheckFlag("LastText", FlagCondition.FLAG_ACTIVE))
+            if (UAdvCheckFlag("LastText", FlagCondition.FLAG_ACTIVE) )
             {//
                 if(Instance.NumApuestas == 0)
                     Instance.phone.Init(Instance.sprites["Antia4"], Instance.sprites["app1"], true);
                 else
                     Instance.phone.Init(Instance.sprites["Antia2"], Instance.sprites["app1"], true);//Aqui deberiamos bloquear el movil
             }
+            else if(UAdvCheckFlag("EscenaAcabada_3", FlagCondition.FLAG_ACTIVE))
+                Instance.phone.Init(Instance.sprites["Grupo"], Instance.sprites["app1"], true);
             else if (UAdvCheckFlag("Intro3Hecha", FlagCondition.FLAG_ACTIVE))//
                 Instance.phone.Init(Instance.sprites["Grupo"], Instance.sprites["app2"], true);
             else if (UAdvCheckFlag("Despertar_3", FlagCondition.FLAG_ACTIVE))//en casa, escena 3 al despertar.
@@ -94,9 +96,9 @@ public class GameManager : MonoBehaviour
             else if (!UAdvCheckFlag("Intro1_2Hecha", FlagCondition.FLAG_ACTIVE))//primera vez que usas el movil
             {
                 if (Instance.NumApuestas == 0)
-                    Instance.phone.Init(Instance.sprites["Jorge2"], Instance.sprites["app"], true);
+                    Instance.phone.Init(Instance.sprites["Jorge2"], Instance.sprites["app3"], true);
                 else
-                    Instance.phone.Init(Instance.sprites["Jorge1"], Instance.sprites["app"], true);
+                    Instance.phone.Init(Instance.sprites["Jorge1"], Instance.sprites["app3"], true);
             }
             if(Instance.NumApuestas > 0)
                 Instance.showApp = true;
@@ -194,7 +196,7 @@ public class GameManager : MonoBehaviour
         else
         {
             NumApuestas = UAdvGetVariable("numApuestas");
-            UAdvChangeScene("Habitacion_4");
+            UAdvChangeScene("HabitacionCap_3");
         }
 
         Debug.Log("Apuestas: " + NumApuestas);

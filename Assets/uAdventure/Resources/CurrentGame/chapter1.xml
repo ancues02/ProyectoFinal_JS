@@ -355,7 +355,7 @@
       <object-ref idTarget="Movil" x="792" y="782" scale="0.121213" glow="no" layer="0" hasInfluenceArea="no" />
     </objects>
     <active-areas>
-      <active-area id="Talk" rectangular="yes" x="3" y="9" width="316" height="845" hasInfluenceArea="no" behaviour="normal">
+      <active-area id="Talk" rectangular="yes" x="6" y="-21" width="1271" height="670" hasInfluenceArea="no" behaviour="first-action">
         <description>
           <name>
           </name>
@@ -397,10 +397,10 @@
     </name>
     <default-initial-position x="400" y="450" />
     <objects>
-      <object-ref idTarget="Movil" x="799" y="780" scale="0.1395726" glow="no" layer="0" hasInfluenceArea="no" />
+      <object-ref idTarget="Movil" x="748" y="776" scale="0.1395726" glow="no" layer="0" hasInfluenceArea="no" />
     </objects>
     <active-areas>
-      <active-area id="ActiveAreaId" rectangular="yes" x="-51" y="-2" width="338" height="852" hasInfluenceArea="no" behaviour="normal">
+      <active-area id="ActiveAreaId" rectangular="yes" x="-51" y="-11" width="1334" height="640" hasInfluenceArea="no" behaviour="first-action">
         <description>
           <name>
           </name>
@@ -442,7 +442,7 @@
     </name>
     <default-initial-position x="400" y="450" />
     <exits>
-      <exit rectangular="yes" x="-288" y="-102" width="485" height="1096" hasInfluenceArea="no" idTarget="PuntoEncuentro_2" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="-144" y="-290" width="1447" height="1292" hasInfluenceArea="no" idTarget="PuntoEncuentro_2" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
         <condition>
           <active flag="Despertar_2" />
@@ -454,7 +454,7 @@
       </exit>
     </exits>
     <active-areas>
-      <active-area id="ConversacionMovil" rectangular="yes" x="233" y="4" width="1094" height="843" hasInfluenceArea="no" behaviour="normal">
+      <active-area id="ConversacionMovil" rectangular="yes" x="233" y="4" width="1094" height="843" hasInfluenceArea="no" behaviour="first-action">
         <condition>
           <inactive flag="Despertar_2" />
         </condition>
@@ -500,7 +500,7 @@
     </name>
     <default-initial-position x="400" y="450" />
     <exits>
-      <exit rectangular="yes" x="-97" y="-18" width="166" height="746" hasInfluenceArea="no" idTarget="Apuestas_2" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="-97" y="-20" width="1191" height="748" hasInfluenceArea="no" idTarget="Apuestas_2" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
         <condition>
           <active flag="Intro2Echa" />
@@ -531,7 +531,7 @@
           <active flag="Apostar_2" />
         </condition>
       </exit>
-      <exit rectangular="yes" x="-147" y="-77" width="283" height="1236" hasInfluenceArea="no" idTarget="Habitacion_3" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+      <exit rectangular="yes" x="-147" y="-75" width="1996" height="1234" hasInfluenceArea="no" idTarget="Habitacion_3" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
         <exit-look text="" cursor-path="" sound-path="" />
         <condition>
           <active flag="ApuestasEnded_2" />
@@ -539,7 +539,7 @@
       </exit>
     </exits>
     <characters>
-      <character-ref idTarget="Jorge" x="654" y="1081" scale="0.233507" orientation="0" glow="no" layer="4" hasInfluenceArea="no" />
+      <character-ref idTarget="Jorge" x="1151" y="1093" scale="0.233507" orientation="0" glow="no" layer="4" hasInfluenceArea="no" />
       <character-ref idTarget="David" x="1383" y="1096" scale="0.2191638" orientation="0" glow="no" layer="3" hasInfluenceArea="no" />
       <character-ref idTarget="Sofia" x="1632" y="1084" scale="0.2191224" orientation="0" glow="no" layer="2" hasInfluenceArea="no" />
       <character-ref idTarget="Javier" x="363" y="1083" scale="0.2211169" orientation="0" glow="no" layer="1" hasInfluenceArea="no" />
@@ -556,7 +556,7 @@
     </name>
     <default-initial-position x="400" y="450" />
     <active-areas>
-      <active-area id="Texto" rectangular="yes" x="106" y="-14" width="1187" height="896" hasInfluenceArea="no" behaviour="normal">
+      <active-area id="Texto" rectangular="yes" x="-22" y="-41" width="1315" height="923" hasInfluenceArea="no" behaviour="first-action">
         <description>
           <name>
           </name>
@@ -624,7 +624,7 @@
     </name>
     <default-initial-position x="400" y="450" />
     <active-areas>
-      <active-area id="LastTest" rectangular="yes" x="-67" y="-30" width="1371" height="914" hasInfluenceArea="no" behaviour="normal">
+      <active-area id="LastTest" rectangular="yes" x="-67" y="-30" width="1371" height="914" hasInfluenceArea="no" behaviour="first-action">
         <description>
           <name>
           </name>
@@ -718,7 +718,7 @@
     <default-initial-position x="400" y="450" />
     <exits>
       <exit rectangular="yes" x="0" y="0" width="1760" height="1000" hasInfluenceArea="no" idTarget="MenuPrincipal" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
-        <exit-look text="" />
+        <exit-look text="" cursor-path="" sound-path="" />
       </exit>
     </exits>
   </scene>
@@ -997,6 +997,10 @@
         <effect>
           <activate flag="IntroEcha" guid="590cc279-f4ee-4b09-933a-645de64b6668" />
           <condition />
+          <trigger-scene idTarget="Apuestas_1" x="900" y="806" transitionTime="0" transitionType="0" guid="76e7e991-986c-475f-905f-18a27711d732" />
+          <condition />
+          <activate flag="EnEscena2_1" guid="133b9f53-a2c4-4c6a-a160-ef9f0c53962f" />
+          <condition />
         </effect>
       </end-conversation>
     </dialogue-node>
@@ -1269,6 +1273,8 @@
         <effect>
           <activate flag="Ir a casa" guid="a00a83ed-8d4a-479a-9a0c-fd22a5c9d7b9" />
           <condition />
+          <trigger-scene idTarget="HabitacionConApostar_1" x="640" y="639" transitionTime="0" transitionType="0" guid="59de0f92-fa13-47e2-b0ab-133fd179a273" />
+          <condition />
         </effect>
       </end-conversation>
     </dialogue-node>
@@ -1300,6 +1306,8 @@
           <activate flag="Ir a casa" guid="eaaaf57c-e55c-40a1-bcf3-629bf1804762" />
           <condition />
           <activate flag="Apuestas1Ended" guid="026fd6c3-fc02-4017-8b94-156c72134fcc" />
+          <condition />
+          <trigger-scene idTarget="HabitacionConApostar_1" x="640" y="639" transitionTime="0" transitionType="0" guid="14146d65-b8d4-47d5-b9ea-894f1191c3ab" />
           <condition />
         </effect>
       </end-conversation>
@@ -2036,6 +2044,8 @@
         <effect>
           <activate flag="ApuestasEnded_2" guid="43fd7c04-60fe-4572-b49b-22763fe13a56" />
           <condition />
+          <trigger-scene idTarget="Habitacion_3" x="640" y="639" transitionTime="0" transitionType="0" guid="1b960e86-893c-49e0-a88e-ca05e2a3e97b" />
+          <condition />
         </effect>
       </end-conversation>
     </dialogue-node>
@@ -2062,14 +2072,23 @@
       </speak-player>
       <condition />
       <child nodeindex="3" />
+      <speak-player>
+        <text>Esta vez empatan, ya lo veréis</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="4" />
     </option-node>
     <dialogue-node nodeindex="2" editor-x="797" editor-y="16">
-      <child nodeindex="4" />
+      <child nodeindex="5" />
     </dialogue-node>
     <dialogue-node nodeindex="3" editor-x="799" editor-y="252">
-      <child nodeindex="4" />
+      <child nodeindex="5" />
     </dialogue-node>
-    <dialogue-node nodeindex="4" editor-x="1209" editor-y="38">
+    <dialogue-node nodeindex="4" editor-x="805" editor-y="494">
+      <child nodeindex="5" />
+    </dialogue-node>
+    <dialogue-node nodeindex="5" editor-x="1209" editor-y="38">
       <speak-char idTarget="Sofia">
         <resources name="No name" />
         <text> Espero que no apostaras mucho porque pierdes fijo. He mirado los números y lo tienes jodido la verdad</text>
@@ -2103,6 +2122,8 @@
       <end-conversation>
         <effect>
           <activate flag="ApuestasEnded_2" guid="aa693779-600f-4aa0-9978-0266f5fdbb12" />
+          <condition />
+          <trigger-scene idTarget="Habitacion_3" x="640" y="639" transitionTime="0" transitionType="0" guid="ca2ca5ef-a7b6-4752-b1f6-bcdb05027a99" />
           <condition />
         </effect>
       </end-conversation>
@@ -2658,7 +2679,7 @@
           <active flag="Grabbed" />
         </condition>
         <effect>
-          <trigger-scene idTarget="Movil1" x="400" y="298" transitionTime="5" transitionType="5" guid="2142613c-9dbc-435c-8460-2a667db320a6" />
+          <trigger-scene idTarget="Movil1" x="400" y="298" transitionTime="0" transitionType="0" guid="2142613c-9dbc-435c-8460-2a667db320a6" />
           <condition />
           <activate flag="EnCasaIntro_1" guid="e3cad1c6-6ce7-4168-8cf3-efab2e05e325" />
           <condition />

@@ -30,15 +30,17 @@ public class Phone : MonoBehaviour
         {
             ShowApp();
         });
+        
 
         if (GameManager.Instance.UAdvCheckFlag("LastText", 0))
         {
             leaveButton.gameObject.SetActive(false);
+            endButton.gameObject.SetActive(true);
             endButton.interactable = true;
             endButton.onClick.AddListener(() =>
             {
                 Debug.Log("ME PULSAN");
-                GameManager.Instance.UAdvChangeScene("Creditos");
+                GameManager.Instance.UAdvChangeScene("Final");
             });
         }
         else

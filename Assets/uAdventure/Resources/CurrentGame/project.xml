@@ -29,17 +29,21 @@
 <entry key="Chapter0.PuntoEncuentro_2.Y">-5</entry>
 <entry key="Chapter0.Apuestas_2.X">491</entry>
 <entry key="Chapter0.Apuestas_2.Y">393</entry>
-<entry key="Chapter0.Habitacion_3.X">455</entry>
-<entry key="Chapter0.Habitacion_3.Y">177</entry>
+<entry key="Chapter0.Habitacion_3.X">587</entry>
+<entry key="Chapter0.Habitacion_3.Y">178</entry>
 <entry key="Chapter0.EscenaCalle_3.X">-4</entry>
 <entry key="Chapter0.EscenaCalle_3.Y">382</entry>
-<entry key="Chapter0.Habitacion_4.X">-276</entry>
-<entry key="Chapter0.Habitacion_4.Y">447</entry>
+<entry key="Chapter0.Habitacion_4.X">-284</entry>
+<entry key="Chapter0.Habitacion_4.Y">448</entry>
 <entry key="Chapter0.MenuPrincipal.X">896</entry>
 <entry key="Chapter0.MenuPrincipal.Y">372</entry>
 <entry key="Chapter0.Creditos.X">893</entry>
 <entry key="Chapter0.Creditos.Y">-9</entry>
 <entry key="Chapter0.HabitacionCap_3.X">231</entry>
 <entry key="Chapter0.HabitacionCap_3.Y">165</entry>
+<entry key="Chapter0.Final.X">-18</entry>
+<entry key="Chapter0.Final.Y">190</entry>
+<entry key="Chapter0.Aviso.X">752</entry>
+<entry key="Chapter0.Aviso.Y">515</entry>
 </properties>
 
