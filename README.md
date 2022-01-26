@@ -11,6 +11,8 @@ Para lograr transmitir este mensaje, se ha producido una corta aventura gráfica
 
 
 # Desarrolladores #
+Desarrollado con uAdventure.
+
 Pablo Rodríguez-Bobada García-Muñoz prodra02@ucm.es
 
 Andrés de la Cuesta López ancues02@ucm.es
@@ -19,7 +21,5 @@ Daniel González Cerdeiras daniel20@ucm.es
 
 # Agradecimientos #
 Agradecer a nuestros profesores Baltasar Fernández Manjón y Antonio Calvo Morata.
-
-Agradecer al equipo de uAdventure con el que hemos realizado el proyecto en Unity.
 
 Agradecer también a Madrid Salud por sus consejos.
