@@ -1177,10 +1177,10 @@
         <text>¡Betis! </text>
       </speak-char>
       <condition />
-      <speak-player>
+      <speak-char idTarget="Sofia">
         <resources name="No name" />
         <text>...¡Betis! Agh, ¡fue idea mía, se lo había dicho antes a Javi a no ser de que pierda, entonces yo no tuve nada que ver!</text>
-      </speak-player>
+      </speak-char>
       <condition />
       <speak-char idTarget="Javier">
         <resources name="No name" />
