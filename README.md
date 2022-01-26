@@ -11,9 +11,11 @@ Para lograr transmitir este mensaje, se ha producido una corta aventura gráfica
 
 
 # Desarrolladores #
-Andrés de la Cuesta López  
-Pablo Rodríguez-Bobada García-Muñoz  
-Daniel González Cerdeiras  
+Pablo Rodríguez-Bobada García-Muñoz prodra02@ucm.es
+
+Andrés de la Cuesta López ancues02@ucm.es
+
+Daniel González Cerdeiras daniel20@ucm.es
 
 # Agradecimientos #
 Agradecer a nuestros profesores Baltasar Fernández Manjón y Antonio Calvo Morata.
