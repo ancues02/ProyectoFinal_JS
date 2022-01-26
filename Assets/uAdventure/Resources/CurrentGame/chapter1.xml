@@ -835,18 +835,18 @@
       <child nodeindex="8" />
     </dialogue-node>
     <dialogue-node nodeindex="6" editor-x="1141" editor-y="255">
-      <speak-player>
+      <speak-char idTarget="Sofia">
         <resources name="No name" />
         <text>...El circo  de la semana pasada se ha dejado un payaso en la ciudad... </text>
-      </speak-player>
+      </speak-char>
       <condition />
       <child nodeindex="8" />
     </dialogue-node>
     <dialogue-node nodeindex="7" editor-x="1149" editor-y="479">
-      <speak-player>
+      <speak-char idTarget="Sofia">
         <resources name="No name" />
         <text>... Que alguien me saque de aquí… </text>
-      </speak-player>
+      </speak-char>
       <condition />
       <child nodeindex="8" />
     </dialogue-node>
