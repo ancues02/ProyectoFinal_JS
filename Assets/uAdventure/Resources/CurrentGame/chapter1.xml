@@ -1028,7 +1028,7 @@
       <condition />
       <speak-char idTarget="Jorge">
         <resources name="No name" />
-        <text>#O Ese mismo, si señora. </text>
+        <text>Ese mismo, si señora. </text>
       </speak-char>
       <condition />
       <speak-char idTarget="Sofia">
@@ -1058,7 +1058,7 @@
       <condition />
       <speak-char idTarget="Antia">
         <resources name="No name" />
-        <text>#! Oye, Alex, no me gustan mucho las apuestas, ¿quieres irte y nos vamos a mi casa o algo? </text>
+        <text>Oye, Alex, no me gustan mucho las apuestas, ¿quieres irte y nos vamos a mi casa o algo? </text>
       </speak-char>
       <condition />
       <speak-char idTarget="Antia">
@@ -1616,7 +1616,7 @@
     <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
       <speak-player>
         <resources name="No name" />
-        <text>#! *Algo más tarde, en el sitio de siempre* </text>
+        <text>*Algo más tarde, en el sitio de siempre* </text>
       </speak-player>
       <condition />
       <speak-char idTarget="Antia">
@@ -1663,7 +1663,7 @@
       <condition />
       <speak-player>
         <resources name="No name" />
-        <text>#! # Vibración, vibración # </text>
+        <text># Vibración, vibración # </text>
       </speak-player>
       <condition />
       <child nodeindex="4" />
@@ -1696,7 +1696,7 @@
       <condition />
       <speak-player>
         <resources name="No name" />
-        <text>#! # Vibración, vibración # </text>
+        <text># Vibración, vibración # </text>
       </speak-player>
       <condition />
       <child nodeindex="4" />

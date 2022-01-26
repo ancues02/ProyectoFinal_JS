@@ -60,9 +60,9 @@ public class GameManager : MonoBehaviour
             if(UAdvCheckFlag("Apostar", FlagCondition.FLAG_ACTIVE))
                 Instance.betManager.Init(betDatas[0]);    
             else if(UAdvCheckFlag("Apostar_2", FlagCondition.FLAG_ACTIVE))
-                Instance.betManager.Init(betDatas[1]);    
-            else //if (UAdvCheckFlag("Apostar_3", FlagCondition.FLAG_ACTIVE))
                 Instance.betManager.Init(betDatas[2]);    
+            else //if (UAdvCheckFlag("Apostar_3", FlagCondition.FLAG_ACTIVE))
+                Instance.betManager.Init(betDatas[1]);    
         }
         if (Instance.phone)
         {
@@ -71,14 +71,14 @@ public class GameManager : MonoBehaviour
                 if(Instance.NumApuestas == 0)
                     Instance.phone.Init(Instance.sprites["Antia4"], Instance.sprites["app1"], true);
                 else
-                    Instance.phone.Init(Instance.sprites["Antia2"], Instance.sprites["app1"], true);//Aqui deberiamos bloquear el movil
+                    Instance.phone.Init(Instance.sprites["Antia2"], Instance.sprites["app2"], true);//Aqui deberiamos bloquear el movil
             }
             else if(UAdvCheckFlag("EscenaAcabada_3", FlagCondition.FLAG_ACTIVE))
-                Instance.phone.Init(Instance.sprites["Grupo"], Instance.sprites["app1"], true);
+                Instance.phone.Init(Instance.sprites["Grupo"], Instance.sprites["app2"], true);
             else if (UAdvCheckFlag("Intro3Hecha", FlagCondition.FLAG_ACTIVE))//
-                Instance.phone.Init(Instance.sprites["Grupo"], Instance.sprites["app2"], true);
+                Instance.phone.Init(Instance.sprites["Grupo"], Instance.sprites["app1"], true);
             else if (UAdvCheckFlag("Despertar_3", FlagCondition.FLAG_ACTIVE))//en casa, escena 3 al despertar.
-                Instance.phone.Init(Instance.sprites["Grupo"], Instance.sprites["app2"], true);
+                Instance.phone.Init(Instance.sprites["Grupo"], Instance.sprites["app1"], true);
 
             else if (UAdvCheckFlag("MirarMovilIntro_2", FlagCondition.FLAG_ACTIVE))//tercera vez que lo usas, en la plaza, escena 2
             {
