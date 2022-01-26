@@ -355,7 +355,7 @@
       <object-ref idTarget="Movil" x="792" y="782" scale="0.121213" glow="no" layer="0" hasInfluenceArea="no" />
     </objects>
     <active-areas>
-      <active-area id="Talk" rectangular="yes" x="6" y="-21" width="1271" height="670" hasInfluenceArea="no" behaviour="first-action">
+      <active-area id="Talk" rectangular="no" x="6" y="-21" width="1271" height="670" hasInfluenceArea="no" behaviour="first-action">
         <description>
           <name>
           </name>
@@ -384,6 +384,10 @@
             </effect>
           </examine>
         </actions>
+        <point x="6" y="-21" />
+        <point x="1277" y="-21" />
+        <point x="1277" y="649" />
+        <point x="6" y="649" />
       </active-area>
     </active-areas>
   </scene>
@@ -1273,7 +1277,7 @@
         <effect>
           <activate flag="Ir a casa" guid="a00a83ed-8d4a-479a-9a0c-fd22a5c9d7b9" />
           <condition />
-          <trigger-scene idTarget="HabitacionConApostar_1" x="640" y="639" transitionTime="0" transitionType="0" guid="59de0f92-fa13-47e2-b0ab-133fd179a273" />
+          <trigger-scene idTarget="HabitacionSinApostar_1" x="640" y="639" transitionTime="0" transitionType="0" guid="59de0f92-fa13-47e2-b0ab-133fd179a273" />
           <condition />
         </effect>
       </end-conversation>
